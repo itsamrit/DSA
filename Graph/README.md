@@ -1,5 +1,7 @@
 👉Dis from 1source to 1destination always bfs
 
+👉For all paths from source to destination use dfs.Bfs will be too complex
+
 👉As real bridges are always two ways & so as bridges & articulation point are always in two way i,e in undirectional graph
 
 👉Queue or Priority queue can be applied only to undirected graph.
