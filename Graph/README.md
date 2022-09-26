@@ -1,6 +1,6 @@
 👉Dis from 1source to 1destination always bfs
 
-👉For all paths from source to destination use dfs.Bfs will be too complex
+👉For all paths from source to destination use dfs.Bfs will be too complex.Use bfs from returning 1 path from source to destionation.
 
 👉As real bridges are always two ways & so as bridges & articulation point are always in two way i,e in undirectional graph
 
