@@ -1,3 +1,5 @@
+👉 IF you need to pick either from left or right at each step there will subarray in middle so its a subarray prob.
+
 👉 All subarray prob excepth this 4 types and printing are done by dp
 
 👉 For hashing char to int : s[i]-'a' because a-'a'=0  Any character minus itself is 0 in coding except integers(never used).
