@@ -1,3 +1,7 @@
+
+✅✅✅✅✅✅✅✅NORMAL recursion in tree like int dfs() stores all info of left and right childs but to store info of parallel right or left(which are not child of current node) or parent we use &sum or global variable 
+https://leetcode.com/problems/convert-bst-to-greater-tree/
+
 👉All questions in binary tree with 1 recursion are dp void & int all Tc =o(n)✅✅
 
 👉Subtree tc o(n*m)
