@@ -3,6 +3,7 @@
 https://leetcode.com/problems/convert-bst-to-greater-tree/
 and check why we do parent linking question 
 GUESS void is used to check if just current left & right child && int is used to get info of all right subchilds and  left subchilds sum or anything CHECK
+https://leetcode.com/problems/binary-tree-paths/
 
 👉All questions in binary tree with 1 recursion are dp void & int all Tc =o(n)✅✅
 
