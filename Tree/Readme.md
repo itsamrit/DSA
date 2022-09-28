@@ -1,9 +1,8 @@
+👉All questions can be solved with int,TreeNode* dfs except printing all paths or nodes but all questions cant be solved without any parameter i,e void.
+void and int,TreeNode* dfs have same tc since we are not using extenal dp array like in combination.
 
-✅✅✅✅✅✅✅✅NORMAL recursion in tree like int dfs() stores all info of left and right childs but to store info of parallel right or left(which are not child of current node) or parent we use &sum or global variable 
-https://leetcode.com/problems/convert-bst-to-greater-tree/
-and check why we do parent linking question 
-GUESS void is used to check if just current left & right child && int is used to get info of all right subchilds and  left subchilds sum or anything CHECK
-https://leetcode.com/problems/binary-tree-paths/
+👉If you data of nodes which is not left or right child i,e, parent node or any other node u need to link all nodes with parent nodes to make it like graph to traverse.
+If u want data saved in parent node use &data while passing in dfs & u will get data without linking to parent node.
 
 👉All questions in binary tree with 1 recursion are dp void & int all Tc =o(n)✅✅
 
