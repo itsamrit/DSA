@@ -10,7 +10,7 @@ int lengthOfLongestSubstring(string s) {
         int mx=0;
         while(j<s.size()){
             m[s[j]]++;   
-            while(m.size()<j+1-i){   //while(unique char< substring size)        //For Longest substring with k unique char i,e chars can repeat: while(m.size()>k) :while(unique char>k)
+            while(m.size()<j+1-i && i<s.size()){   //✅while(invalid keep deleting leftmost element)        //For Longest substring with k unique char i,e chars can repeat: while(m.size()>k) :while(unique char>k)
                     m[s[i]]--;
                     if(m[s[i]]==0)m.erase(s[i]);
                     i++;
