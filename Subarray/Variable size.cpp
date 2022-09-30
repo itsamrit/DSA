@@ -1,4 +1,4 @@
-// ✅✅Once window becomes invalid it cant become valid by adding more right pointer charater & without deleting left pointer charaters.
+// ✅✅Once window becomes invalid make it valid by inner loop which deletes leftmost element till it again becomes valid as per question
 
 // Unique elements longest or total subarray
 
