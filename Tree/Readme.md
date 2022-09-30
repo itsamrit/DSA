@@ -1,7 +1,7 @@
 👉All questions can be solved with int,TreeNode* dfs except printing all paths or nodes but all questions cant be solved without any parameter i,e void.
 void and int,TreeNode* dfs have same tc since we are not using extenal dp array like in combination.
 
-👉If you data of nodes which is not left or right child i,e, parent node or any other node u need to link all nodes with parent nodes to make it like graph to traverse.
+👉If data of nodes is not only affected by left or right child but also by parent node or any other node u need to link all nodes with parent nodes to make it like graph to traverse.
 If u want data saved in parent node use &data while passing in dfs & u will get data without linking to parent node.
 
 👉All questions in binary tree with 1 recursion are dp void & int all Tc =o(n)✅✅
