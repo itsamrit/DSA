@@ -4,7 +4,7 @@ int dfs(int a[],int i,int prev,int n){    //  Intialize : prev=-1
         if(i==n)return 0;
         if(dp[i][prev+1]!=-1)return dp[i][prev+1];
     
-        dp[i][prev+1]=dfs(a,i+1,prev,n);
+        dp[i][prev+1]=dfs(a,i+1,prev,n);     //✅prev doesn't change RATNA
         if(prev==-1 || a[prev]<a[i]){
             dp[i][prev+1]=max(dp[i][prev+1],1+dfs(a,i+1,i,n));
         }
