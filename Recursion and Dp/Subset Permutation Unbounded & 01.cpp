@@ -1,4 +1,6 @@
-// No questions till now asked on dp of permutations
+// Like all other dp questions all permutation except printing can be solved using adding dp
+//     eg: finding no of permutations having sum equal to target (1d dp since in void dfs(..,int sum) only 1 variable sum)
+
 void dfs(vector<int>& num, vi &vis, vi &temp, vector<vi>&ans){                                     
         if(temp.size()==num.size()){                                        
             ans.push_back(temp);
