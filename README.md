@@ -1,3 +1,9 @@
+
+??? all interval questions sort and then make pair<int,int>temp; to compare and make new intervals
+
+??? stacks question defintiin
+
+
 New question solve in leetcode and make notes there only
 
 👉Thumb rule : Always intialize the queue,stack,map etc before the doing any operation on it in loops.
