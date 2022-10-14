@@ -1,6 +1,6 @@
 // if(i==nums.size()){ans.push_back(temp);return;} dont use i>nums.size return otherwise when i==nums.size  temp.push_back(nums[i]) error
 // In min no of coins val[i] becomes 1 forever
-
+// ✅✅✅This recursion is not only for combination it can be used for any  2 choices like printing all words formed by taking 1 time letter as upper case and another time as lowercase
 // Start from n-1 for normal subset printing problems & -1 everthing accordingly.
 // U can start recursion from n-1 for printing all subsets for simplicity because u wont be able to convert that recursive code in dp.
 // ✅If u printing all combinations of array if(ind==n)ans.push_back(temp); all 1 digits to n digits combinations will be added
