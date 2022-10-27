@@ -1,3 +1,4 @@
+ROWs == RECORDs while column means attributes
 
 ??? all interval questions sort and then make pair<int,int>temp; to compare and make new intervals
 
