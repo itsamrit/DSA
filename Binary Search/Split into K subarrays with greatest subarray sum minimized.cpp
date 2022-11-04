@@ -1,5 +1,3 @@
-//Form subarray to have minimum sum of max subarray.
-
 bool isvalid(arr,n,k,max){
   int student =1;
   int sum=0;
