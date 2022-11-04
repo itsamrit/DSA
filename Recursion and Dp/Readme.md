@@ -1,8 +1,13 @@
-
 ✅✅1d or 2d dp is determined by no of variable parameters in void dfs(....)
 
 ✅✅Count of all incresing(length not specified) can be done using memoization but count of longest (length fixed) can be done using tabulation only.
 
+
+✅✅Backtracking is done same way in both memoization & tabulation. First run dp & then run another loop to backtrack the dp vector.
+
+eg: In memoization: dfs(nums,dp);   while(..)loop for backtracking.
+
+In tabulation : for(for(..)  while(..) loop for backtracking
 
 ✔✔ If not asked to print all recursion can be converted to dp
 
