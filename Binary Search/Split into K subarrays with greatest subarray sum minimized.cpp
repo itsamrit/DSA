@@ -1,4 +1,5 @@
-bool isvalid(arr,n,k,max){
+TC : o(n*logn) n for checking is all subarrays can be divided into k parts with max cap mx & logn for binary search of max cap mx.
+bool isvalid(arr,n,k,mx){
   int student =1;
   int sum=0;
   for(int i=0;i<n;i++){
