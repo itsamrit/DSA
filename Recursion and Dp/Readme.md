@@ -1,6 +1,9 @@
 
 ✅✅1d or 2d dp is determined by no of variable parameters in void dfs(....)
 
+✅✅Count of all incresing(length not specified) can be done using memoization but count of longest (length fixed) can be done using tabulation only.
+
+
 ✔✔ If not asked to print all recursion can be converted to dp
 
 
