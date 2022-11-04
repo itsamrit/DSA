@@ -1,5 +1,6 @@
 LONGEST INCREASING SUBSEQUENCE :  Generate all subsequence like subset 01 combination & take longest increasing of that.
-✅Whenever previous index is a parameter in recursion then in tabulation we run for(i=0 to n){ for(j=0 to i) otherwise wrong ans will come.
+✅Whenever previous index is a parameter in recursion then in tabulation 2nd loop i,e prev cant go beyond 1stloop i,e cur.  
+        So we run for(i=0 to n){ for(j=0 to i) otherwise wrong ans will come.
 
 int dfs(int a[],int i,int prev,int n){    //  Intialize : prev=-1
         if(i==n)return 0;
