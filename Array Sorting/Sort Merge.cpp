@@ -6,26 +6,21 @@ void merge(int *Arr, int start, int mid, int end,int &inversion) {
 	vector<int>temp;
 	int i = start, j = mid+1, k = 0;
     
-//     For find pairs/inversion such that arr[i]>2*arr[j] with i<j
+//     To find pairs/inversion such that arr[i]>2*arr[j] with i<j
 //     while(i<=mid && j<=end){    
-//         if(Arr[i]/2 <= Arr[j]) i++;
-//         else { inversion+=mid-i; j++;}
+//         if(Arr[i] <= Arr[j]*2) i++;      //For pair arr[i]>arr[j] simply : if(Arr[i] <= Arr[j]) i++;
+//         else { inversion+=mid-i; j++;}     
 //     }
     
 	while(i <= mid && j <= end) {
-		if(Arr[i] <= Arr[j]) 
-            temp.push_back(Arr[i++]);
-		else 
-            temp.push_back(Arr[j++]); //inversion+=mid-i; For inversion: arr[i]>arr[j] for i<j
+	     if(Arr[i] <= Arr[j]) temp.push_back(Arr[i++]);
+	     else temp.push_back(Arr[j++]);
 	}
-
-
 	while(i <= mid) { temp.push_back(Arr[i]); i++;}
-    
+  
 	while(j <= end) { temp.push_back(Arr[j]); j++;}
     
-	for(i = start; i <= end; i ++)
-		Arr[i] = temp[i - start]
+	for(i=start; i<=end; i++) Arr[i] = temp[i-start]
 	
 }
 
