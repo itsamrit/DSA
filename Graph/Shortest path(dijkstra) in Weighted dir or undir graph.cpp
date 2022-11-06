@@ -3,7 +3,7 @@ vi par;
 vector<vi>path;
 
 void bfs(int s){
-    priority_queue<pii,vector<pii>,greater<pii>> pq;     //Minheap : Sorting in ascending order
+    priority_queue<pii,vector<pii>,greater<pii>> pq;     //Minheap : Pops out minimum first
     dis.resize(n+3,INT_MAX);
     par.resize(n+3,-1);
     
