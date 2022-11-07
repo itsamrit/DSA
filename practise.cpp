@@ -3,6 +3,6 @@
 using namespace std;
 
 int main(){
-    cout<<343<<endl;
+    cout<<34<<endl;
     return 0;
 }
