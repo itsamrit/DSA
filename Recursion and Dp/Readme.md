@@ -5,6 +5,8 @@
 
 ✅✅Backtracking is done same way in both memoization & tabulation. First run dp & then run another loop to backtrack the dp vector.
 
+✅✅Whenever u are writing code for matrix which can go more than 2 directions u need to maintain a visited matrix like u do in graph.[Error]
+
 eg: In memoization: dfs(nums,dp);   while(..)loop for backtracking.
 
 In tabulation : for(for(..)  while(..) loop for backtracking
