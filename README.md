@@ -1,6 +1,8 @@
-for(auto &i:mapp) Use &i otherwise iterator will remain on 1st element
+👉 Maxheap(priority_queue<int>pq) pops maximum element & similarly minheap pops out mininum. Minheap : priority_queue<int,vector<int>,greater<int>>pq; 
 
-ROWs == RECORDs while column means attributes
+👉 for(auto &i:mapp) Use &i otherwise iterator will remain on 1st element
+
+👉 ROWs == RECORDs while column means attributes
 
 ??? all interval questions sort and then make pair<int,int>temp; to compare and make new intervals
 
@@ -11,9 +13,6 @@ lexographically maximum no subset more than 10 questions with different just rem
 
 BUT once rejected/deleted element for current is then rejected for all other element
 IN NGR  element which is not next greater than current cant be next greater for the rest behind it
-
-
-New question solve in leetcode and make notes there only
 
 👉Thumb rule : Always intialize the queue,stack,map etc before the doing any operation on it in loops.
 
