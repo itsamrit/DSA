@@ -1,5 +1,3 @@
-👉 Maxheap(priority_queue<int>pq) pops maximum element & similarly minheap pops out mininum. Minheap : priority_queue<int,vector<int>,greater<int>>pq; 
-
 👉 for(auto &i:mapp) Use &i otherwise iterator will remain on 1st element
 
 👉 ROWs == RECORDs while column means attributes
