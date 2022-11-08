@@ -1,7 +1,6 @@
-✅✅👉 If a subarray becomes valid again by adding left elements which are already deleted earlier then it cant be solved by sliding window.Solve it by recursion.
+✅✅👉 If a subarray becomes valid again by adding left elements which were already deleted earlier but without deleting any rightmost element then it cant be solved by sliding window.Solve it by recursion.
 
 eg: Substring with frequency of each character atleast k. acca & k=2.If we delete a & then go further then it agains become valid if we add a in cca.
-
 
 👉 IF you need to pick either from left or right at each step there will subarray in middle so its a subarray prob.
 
