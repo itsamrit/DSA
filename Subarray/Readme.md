@@ -1,3 +1,6 @@
+✅✅👉 If a subarray becomes valid again by adding left elements which are already deleted earlier then it cant be solved by sliding window.Solve it by recursion.
+
+
 👉 IF you need to pick either from left or right at each step there will subarray in middle so its a subarray prob.
 
 👉 All subarray prob excepth this 4 types and printing are done by dp
@@ -9,6 +12,6 @@
 ◉ We can also initialize our map before loop & then keep updating it in last line inside the loop. Loop will run till i=0 to i<n in both cases.
 
 TO FIND ITERATOR OF SET & MAP SIMILAR TO VECTOR *i > *(i-1)
-
+🤜
 
 ✅Except this problems all other subarray problem solved by dp except printing all subarray
