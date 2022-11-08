@@ -2,6 +2,8 @@
 
 eg: Substring with frequency of each character atleast k. acca & k=2.If we delete a & then go further then it agains become valid if we add a in cca.
 
+👉 Count of subarray with k distinct elements = Count of subarray with (ATMOST k element - ATMOST (k-1) elements) i,e to loops are required o(2n)
+
 👉 IF you need to pick either from left or right at each step there will subarray in middle so its a subarray prob.
 
 👉 All subarray prob excepth this 4 types and printing are done by dp
