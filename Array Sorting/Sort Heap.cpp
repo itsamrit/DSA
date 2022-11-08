@@ -1,6 +1,5 @@
 //Tc=o(n*logn=> n*logk)  n for loop and logk for sorting caz there are only k elements in heap
-//MINHEAP sorts in ascending order
-✅✅ Since we cant remove kth smallest element in minheap (because front pointer is pointing to 0th smallest) So, We use max_heap and reverse oour ans
+✅✅ 👉 Maxheap(priority_queue<int>pq) pops maximum element & similarly minheap pops out mininum. Minheap : priority_queue<int,vector<int>,greater<int>>pq; 
 
 vector<int> sort(vector<int>arr,int k){
     vector<int>ans;
