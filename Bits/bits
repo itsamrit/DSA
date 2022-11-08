@@ -1,4 +1,5 @@
 Arrow indicates whether left or right shift .If arrow points in left its left shift.
+
 >>Right shift (removes x bits from last)
   1101=11  by 2 
   num>>x = num/(2^x) 
@@ -15,7 +16,7 @@ Arrow indicates whether left or right shift .If arrow points in left its left sh
     =   1         =  00      = 100
  
 
-
+Dont do if(x&1 ==y&1) because x value changes here instead store a temporary int
 
  Result of c&b is always smaller than c and b.
   eg 3&14 =2    i.e(2<3 and 2<14)
@@ -66,7 +67,8 @@ There are n numbers between 0 to 2^n -1  with each n bits.
 
 
 1 denotes set bit or true and 0 denotes false. 
-&(same as &&)If both conditions are true(1) then whole condition becomes true(1).
+Compares last bits of two numbers :-
+&(same as &&)If both conditions are true(1) then whole condition becomes true(1). 
 |(same as ||)If atleast one of the condition is true(1) then whole condition becomes true(1).
 (a^b)xor ->If one of condition is true(1) and other is false(0) then whole condition becomes true i,e, gives 1.
   eg: 3^4=100
