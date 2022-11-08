@@ -1,4 +1,5 @@
-👉To convert graph codes for matrix convert for(auto &i:g[c]) to index to where u can move from current. If u can move in all 4 dir the for(int i=0 to 4)
+👉To convert graph codes for matrix convert for(auto &i:g[c]) to index to where u can move from current. If u can move in all 4 dir the for(int i=0 to 4).
+Change 1d visited to 2d visited
 
 👉Dis from 1source to 1destination always bfs
 
