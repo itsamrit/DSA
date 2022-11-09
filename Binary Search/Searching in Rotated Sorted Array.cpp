@@ -7,7 +7,7 @@ int getPivot(vector<int>& nums, int n){
             int m = s+(e-s)/2;
             if(nums[m] > nums[e]) s=m+1;  // ✅left side has big values.✅TLE : INCREMENT MID SINCE nums[mid]>nums[e],so it is fixed that mid is not pivot. 
             else if(nums[m]<nums[s])e=m;           // right side has big value ✅U cant decrement e=m-1; Since it is mid can be pivot.
-            else e--;
+            else e--;                    //✅ For upper bound e++; when both found equal
         }
         return s;
 }
@@ -18,7 +18,8 @@ int binarySearch(vector<int>& nums, int s, int e, int target){  //Apply to that 
             m = s + (e-s)/2;
             if(nums[m]== target) return m;
             else if(nums[m]< target) s = m+1;
-            else e = m-1;
+            else if(nums[m]>target) e = m-1;
+            else e--;
         }
         return -1;
 }
