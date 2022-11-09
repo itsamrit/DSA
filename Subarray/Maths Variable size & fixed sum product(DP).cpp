@@ -3,10 +3,12 @@
 // ✅Except SUM QUESTIONS AND VARIABLE SLIING WINDOW are takes o(n^2) time
 // ✅✅✅IF ASKED VARIABLE SIZE AND SEMI VARIABLE i,e greater than or smaller than given value with all positive elements in array then use sliding window VARIABLE SUBARRAY  
 //        eg: Smallest subarray with sum greater than or equal to x
+// ✅Some maths questions which cant be solved by sliding can be solved by this dp using map. Like subarray with sum 0 with neg elements
 Tc=o(nlogn)
 // If asked you need to select k element from left end or right end of array such that its sum is max then ans= total sum of array - subarray with min sum of k elements
 // This works for both pos and neg while sliding works only for positive
 // We can print all subarrays for given sum if array does not contain 0 and negative values
+   
 NOTE: In subarray if(find(sum-target)), while in 2sum if(find(target-sum))
     
 int lenOfLongSubarr(int arr[],  int n, int k) {    
