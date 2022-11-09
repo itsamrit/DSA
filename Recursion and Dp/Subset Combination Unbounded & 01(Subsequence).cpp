@@ -6,6 +6,8 @@
 // ✅If u printing all combinations of array if(ind==n)ans.push_back(temp); all 1 digits to n digits combinations will be added
 // ✅IF u are printing all combinations having 3 or k digits then if(ind>k){ans.push_back(temp); return;} dont forget to return otherwise same things will be printed as dfs having no push_back will be called and if(ind>k)same thing printed many times
 
+// ✅If asked to return no of subsequences in a string which is equal to given in a vector<string>v. Check each word of v . SO tc=o(n^2) instead of checking each subsequnce o(2^n)
+
 int f(vector<int>& wt, vector<int>& val, int ind, int W, vector<vector<int>>& dp){
     if(wt==0)return 1;                 //Boundry conditions   //For max/min value return 0; Think if wt is 0 max we can have 0 while if wt=0, total ways is 1 
     if(ind<0)return 0;                 //Boundry conditions
