@@ -43,6 +43,6 @@ Total:Both for pos and neg elements
     for(int i = 0; i < A.size(); i++) {
             m[rem]++;
             rem = (rem + A[i]) % K; 
-            if(m.find(rem)!=m.end())   //Here rem is remainder not sum. So if a b c are 3 subarrays in sequence & if a & c gives same remainder with k then b be having sum divisible by k 
+            if(m.find(rem)!=m.end())   //✅Here rem is remainder not sum. So if a b c are 3 subarrays in sequence & if a & c gives same remainder with k then b be having sum divisible by k 
                cnt += m[rem]; 
     }
