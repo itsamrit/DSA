@@ -41,9 +41,8 @@ Total:Both for pos and neg elements
 
     //Total subarray divisible by k (DIVISIBILITY TEST : ✅Change all negative in pos by adding K. Since divisiblity cant be affected by pos or neg no. 
     for(int i = 0; i < A.size(); i++) {
-            m[sum]++;
-            sum = (sum + A[i]) % K; 
-            if(sum<0) sum+=K; 
-            if(m.find(sum)!=m.end())
-               cnt += m[sum]; 
+            m[rem]++;
+            rem = (rem + A[i]) % K; 
+            if(m.find(rem)!=m.end())   //Here rem is remainder not sum. So if a b c are 3 subarrays in sequence & if a & c gives same remainder with k then b be having sum divisible by k 
+               cnt += m[rem]; 
     }
