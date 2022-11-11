@@ -1,3 +1,8 @@
+??? We need a monotically increasing stack and popping left elemetn of subarray for Shortest Subarray(contains neg element) with Sum at Least K .
+
+SO we use deque (doubly ended queue)
+
+
 ✅✅👉 If a subarray becomes valid again by adding left elements which were already deleted earlier but without deleting any rightmost element then it cant be solved by sliding window.Solve it by recursion.
 
 eg: Substring with frequency of each character atleast k. acca & k=2.If we delete a & then go further then it agains become valid if we add a in cca.
