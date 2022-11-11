@@ -1,1 +1,1 @@
-Next greater element or Larget possible number from string uses stack as monotonic stack . AT each point stack has either increasing or decreasing value.
+Next greater element or Larget possible number from string maintains the stack as monotonically increasing.Each element of stack is smaller than prev element in next greater
