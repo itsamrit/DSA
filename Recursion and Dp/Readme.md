@@ -1,6 +1,4 @@
-✅✅Error : Never use bool or int as boolean in recursion while memoization.
-
-eg: Can we place n no adjacent. Find no of people we can place if greater then return true int dfs()
+👉For bool memoization use int for : if(dp[i]!=-1)
 
 ✅✅1d or 2d dp is determined by no of variable parameters in void dfs(....)
 
