@@ -7,6 +7,10 @@ Exception : Maths : Subarray with sum atleast k using deque
 👉 Monotonically increasing: Each element is greater than previous one.
 
 eg: prefix sum of pos array is always monotonically increasing
+    
+    To make prefix sum of neg array we use deque
+    
+    We use stack for next greater element to store monotonically increasing element
 
 👉 Count of subarray with k distinct elements = Count of subarray with (ATMOST k element - ATMOST (k-1) elements) i,e to loops are required o(2n)
 
