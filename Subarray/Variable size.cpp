@@ -60,3 +60,36 @@ string minWindow(string s, string t) {
         if (ans != INT_MAX) return s.substr(start, ans);
         else return "";
 }
+
+
+// Shortest Subarray with sum at least k with array having no negative value : 👉Prefix sum of array is monotonic increasing.
+//          So we dont store prefix sum & dont pop any right element to make prefix sum monotinically increasing
+//          When subarray found store it in ans & then pop left element till it subarray sum becomes less than k & then again start adding right element. again found subarray store (ans=min(..)) repeat the process
+
+
+
+// Shortest Subarray with Sum at Least K with array having negative value : We need to pop rightmost elements to make prefix sum monotonically increasing
+                                                                            // We need basic feature of pop left most element
+                                                                        // We need to store prefix sum of each index . 
+                  // SO perfect data structure : deque<pair<int,int>>d;
+
+    int shortestSubarray(vector<int>& nums, int k) {
+        deque<pair<long long,int>>d;
+        long long sum=0;
+        int ans=INT_MAX;
+        for(int i=0;i<nums.size();i++){
+            sum+=nums[i];
+            if(sum>=k)ans=min(ans,i+1);
+            while(d.size() && d.back().first>sum){   // pop till queue contains only monotonically increasing prefix sum
+                d.pop_back();
+            }
+            while(d.size() && sum-d.front().first>=k){
+                ans=min(ans,i-d.front().second);
+                d.pop_front();
+            }
+            
+            d.push_back({sum,i});
+        }
+        if(ans!=INT_MAX)return ans;
+        return -1;
+    }
