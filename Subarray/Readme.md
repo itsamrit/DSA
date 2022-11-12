@@ -2,7 +2,7 @@
 
 eg: Substring with frequency of each character atleast k. acca & k=2.If we delete a & then go further then it agains become valid if we add a in cca.
 
-Exception : Subarray with sum atleast k using deque
+Exception : Maths : Subarray with sum atleast k using deque
 
 👉 Monotonically increasing: Each element is greater than previous one.
 
