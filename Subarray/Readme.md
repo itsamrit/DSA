@@ -8,9 +8,9 @@ Exception : Maths : Subarray with sum atleast k using deque
 
 eg: 
     
-    Prefix sum of pos array is always monotonically increasing
+    Sum/Prefix sum of pos array is always monotonically increasing
     
-    To make prefix sum of neg array we use deque
+    To make sum /prefix sum of neg array we use deque
     
     We use stack for next greater element to store monotonically increasing element
 
