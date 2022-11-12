@@ -6,6 +6,8 @@ Exception : Subarray with sum atleast k using deque
 
 👉 Monotonically increasing: Each element is greater than previous one.
 
+eg: prefix sum of pos array is always monotonically increasing
+
 👉 Count of subarray with k distinct elements = Count of subarray with (ATMOST k element - ATMOST (k-1) elements) i,e to loops are required o(2n)
 
 👉 IF you need to pick either from left or right at each step there will subarray in middle so its a subarray prob.
