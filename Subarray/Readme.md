@@ -6,7 +6,8 @@ Exception : Maths : Subarray with sum atleast k using deque
 
 👉 Monotonically increasing: Each element is greater than previous one.
 
-eg: prefix sum of pos array is always monotonically increasing
+eg: 
+    Prefix sum of pos array is always monotonically increasing
     
     To make prefix sum of neg array we use deque
     
