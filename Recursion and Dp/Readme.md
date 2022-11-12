@@ -1,3 +1,7 @@
+✅✅Error : Never use bool or int as boolean in recursion while memoization.
+
+eg: Can we place n no adjacent. Find no of people we can place if greater then return true int dfs()
+
 ✅✅1d or 2d dp is determined by no of variable parameters in void dfs(....)
 
 ✅✅Count of all incresing(length not specified) can be done using memoization but count of longest (length fixed) can be done using tabulation only.
