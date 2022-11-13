@@ -1,3 +1,17 @@
+💚 TLE ERROR AFTER MEMOIZATION (ans is right but tle even after memoizing): You must have 1 or more parameters which is useless.
+
+Avoid using boolean recursion/memoization
+
+eg : Return true if robbers can rob k adjacent houses : 
+
+Dont do:- bool dfs(int i,int cnt) if(cnt==k)return true. //2 parameters o(n^2)
+
+Find max house which can be robbed. & in int main() if(dfs()>k) return true;
+
+Do :- int dfs(int i) if(i==arr.size())return 0;   int canROb= 1 + dfs(); int cantRob=dfs(); return canROb+cantRob;   // 1 parameter o(n)
+
+
+
 👉We cant apply dp only while printing
 
 👉For count of subset if(subset with given conditions)return 1;
