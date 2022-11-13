@@ -1,6 +1,8 @@
-💚 TLE ERROR AFTER MEMOIZATION (ans is right but tle even after memoizing): You must have 1 or more parameters which is useless.
+👉 Tle after memoization: You must have 1 or more parameters which is useless.
 
-Avoid using boolean recursion/memoization
+Avoid using return type bool in recursion/memoization.
+
+For problems like return true if alleast k can be placed : Find atlmost things which can be placed using int dfs() & return true if(dfs()>=k). Similarly for atmost k.
 
 eg : Return true if robbers can rob k adjacent houses : 
 
