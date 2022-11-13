@@ -1,4 +1,4 @@
-👉In BFS,when using normal queue we define size sz while(q.size()){ sz=q.size(); for(int i=0 to sz)..}
+👉In BFS,while using normal queue we can fix the size of each loop if required while(q.size()){ sz=q.size(); for(int i=0 to sz)..}
 
 When using priority_queue we dont fix the size of loop as priority queue changes at each iteration. while(pq.size()) NO sz defined
 
