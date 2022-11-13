@@ -1,3 +1,7 @@
+👉In BFS,when using normal queue we define size sz while(q.size()){ sz=q.size(); for(int i=0 to sz)..}
+
+When using priority_queue we dont fix the size of loop as priority queue changes at each iteration. while(pq.size()) NO sz defined
+
 👉All questions can be solved with int,TreeNode* dfs except printing all paths or nodes but all questions cant be solved without any parameter i,e void.
 void and int,TreeNode* dfs have same tc since we are not using extenal dp array like in combination.
 
