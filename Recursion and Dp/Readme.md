@@ -1,3 +1,8 @@
+👉We cant apply dp only while printing
+
+👉For count of subset if(subset with given conditions)return 1;
+if(boundry condition crossed)return 0;
+
 👉For bool memoization use int for : if(dp[i]!=-1)
 
 ✅✅1d or 2d dp is determined by no of variable parameters in void dfs(....)
