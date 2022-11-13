@@ -1,8 +1,10 @@
 👉 Tle after memoization: You must have 1 or more parameters which is useless.
 
-Avoid using return type bool in recursion/memoization.
+Avoid using return type bool in recursion/memoization 
 
 For problems like return true if alleast k can be placed : Find atlmost things which can be placed using int dfs() & return true if(dfs()>=k). Similarly for atmost k.
+
+Since you we use extra parameter for counting in bool & in int return type, return type itself gives count.
 
 eg : Return true if robbers can rob k adjacent houses : 
 
