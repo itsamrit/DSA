@@ -1,5 +1,12 @@
+👉For shortest dis between 2 index in matrix use dfs/bfs, In graph bfs.
+
+👉For shortest dis between 2 group of indexes like island in matrix/graph use dfs+bfs.Find all index of 1st group using dfs & intialize the bfs queue with it.
+
+Using Dfs :U can store all index of group1 & group2 in separete vector & run loop to find dis between all pair & select smallest dis.
+
 👉To convert graph codes for matrix convert for(auto &i:g[c]) to index to where u can move from current. If u can move in all 4 dir the for(int i=0 to 4).
 Change 1d visited to 2d visited
+
 
 👉Dis from 1source to 1destination always bfs
 
