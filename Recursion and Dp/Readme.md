@@ -1,3 +1,5 @@
+👉 Tle : If in a arr u can move forward as well as backward then mark arr[i]=-1 when visiting like u mark in graph. Otherwise tle.
+
 👉 Tle after memoization: You must have 1 or more parameters which is useless.
 
 Avoid using return type bool in recursion/memoization 
