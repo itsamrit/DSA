@@ -13,7 +13,7 @@ int path; //: diameter : max path betn any 2 nodes when distance is calculated o
 void dfs(Node* root){  
    if(!root)return;
    //cout<<root->data; For Preorder : root-> left->right
-   dfs(root->left);
+   dfs(root->left);  🙃U can also write dfs(root->right) first if required.
    //cout<<root->data; ans.push_back(root->data) For Inorder : left -> root -> right .If for(i=0to nodes) if(ans[i]<ans[i+1]) IT IS binaray search tree
    dfs(root->right);
    //cout<<root->data; For Postorder left->right->root
