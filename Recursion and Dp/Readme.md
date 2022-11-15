@@ -1,3 +1,5 @@
+👉 Common error : See if u are not returning same thing when wrong ans as well as right ans. eg :if(i>arr.size())return 0; if(k==n)return 0;
+
 👉 Tle : If in a arr u can move forward as well as backward then mark arr[i]=-1 when visiting like u mark in graph. Otherwise tle.
 
 👉 Tle after memoization: You must have 1 or more parameters which is useless.
