@@ -1,6 +1,6 @@
 👉 Common error : See if u are not returning same thing when wrong ans as well as right ans. eg :if(i>arr.size())return 0; if(k==n)return 0;
 
-Return count of index with value 1 if u reach grid[n-1][n-1] .  if(i=n-1 && j=n-1)return 0;  if(i>n ||j>n)return INT_MIN;  return max(1+dfs()...) so that adding 1  cant improve iNT_MIN
+Return count of index with value 1 only if u can reach grid[n-1][n-1] .  if(i=n-1 && j=n-1)return 0;  if(i>n ||j>n)return INT_MIN;  return max(1+dfs()...) because adding 1 in INT_MIN will be INT_MIN & max filter will filter out that.
 
 👉 Tle : If in a arr u can move forward as well as backward then mark arr[i]=-1 when visiting like u mark in graph. Otherwise tle.
 
