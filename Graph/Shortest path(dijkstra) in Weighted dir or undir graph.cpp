@@ -1,5 +1,4 @@
-✅If only points given on xy graph with no connections & u need to generate shortest path or prim tree then connect all points i,e direct path from 1 point to another point.
-
+✅If u need to find prim min tree or dijkstra between points i,e graph not given. Then to get all possible paths/edges, make a graph with all points connected to each other with direct edges.
 vi dis;
 vi par;
 vector<vi>path;
