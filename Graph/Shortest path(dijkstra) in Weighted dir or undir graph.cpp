@@ -13,7 +13,7 @@ void bfs(int s){
     while (pq.size()) {
         int c=pq.top();
         pq.pop();
-        for(auto i:g[u]){
+        for(auto i:g[c]){
             if (dis[i.first] > dis[c.second] + i.second){//IN prim's : Since its a tree we dont check dis[i.first]>i.second+ c because then it may find shortest path but with cycle.
                 dis[i.first] = dis[c.second] + i.second;   
                 pq.push({dis[i.first], i.first});
