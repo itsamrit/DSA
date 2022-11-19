@@ -1,6 +1,7 @@
-👉If we need to start a fresh traversing from topmost root for each node our soln is o(n^2) i,e not dp
+🟢If we need to start a fresh traversing from topmost root for each node our soln is o(n^2) i,e not dp
 
-else o(n) soln.
+else we are using data of parent node in child node then solution is dp i,e o(n)
+
 
 🟢To make dp soln there is no fixed formula u need to think considering tree of either 0 node , 3 nodes , 5 nodes.
 
