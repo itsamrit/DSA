@@ -9,7 +9,7 @@ else we are using data till parent node in child node then solution is called dp
 
 👉In BFS,while using normal queue we can fix the size of each loop if required while(q.size()){ sz=q.size(); for(int i=0 to sz)..}
 
-When using priority_queue we dont fix the size of loop as priority queue changes at each iteration. while(pq.size()) NO sz defined
+When using priority_queue/multiset/set we dont fix the size of loop as priority queue changes at each iteration. while(pq.size()) NO sz defined
 
 
 👉All questions can be solved with int,TreeNode* dfs except printing all paths or nodes but all questions cant be solved without any parameter i,e void.
