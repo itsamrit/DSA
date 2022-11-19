@@ -7,3 +7,6 @@ Some times conditons is satisfied in 1 pop_out like k elements withh most sum
 some times satisfied by popping till condition
 
 multiset<int,greater<int>>st; given first element as maximum i,e like maxheap.     st.erase(st.begin())  like pq.pop()
+
+
+TO check whether problem can be solved by priority_queue see if u can store & pop out irrelevant/relevant data when coditions fails & get the ans otherwise apply memoization
