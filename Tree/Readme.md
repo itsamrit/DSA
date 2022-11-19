@@ -1,6 +1,7 @@
 🟢If we need to start a fresh traversing from topmost root for each node our soln is o(n^2) i,e data till parent node is not used by child node then not dp
+or data of leaf to child node is not used in parent node.
 
-else we are using data till parent node in child node then solution is called dp i,e o(n)
+else we are using data till parent node in child node or or data of leaf to child node is used in parent node. then solution is called dp i,e o(n)
 
 
 🟢NO FIXED FORMAT to make dp soln,(either pre,post or in depends) u need to think considering tree of either 0 node,1 node i,e 1 level ,2 levels , 3 level.
