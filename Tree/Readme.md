@@ -1,9 +1,9 @@
-🟢If we need to start a fresh traversing from topmost root for each node our soln is o(n^2) i,e not dp
+🟢If we need to start a fresh traversing from topmost root for each node our soln is o(n^2) i,e data till parent node is not used by child node then not dp
 
-else we are using data of parent node in child node then solution is dp i,e o(n)
+else we are using data till parent node in child node then solution is called dp i,e o(n)
 
 
-🟢NO FIXED FORMAT to make dp soln, u need to think considering tree of either 0 node,1 node i,e 1 level ,2 levels , 3 level.
+🟢NO FIXED FORMAT to make dp soln,(either pre,post or in depends) u need to think considering tree of either 0 node,1 node i,e 1 level ,2 levels , 3 level.
  
  In most cases making dfs for 2 or 3 level solves problem for whole
 
