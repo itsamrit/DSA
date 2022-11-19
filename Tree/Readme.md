@@ -3,7 +3,9 @@
 else we are using data of parent node in child node then solution is dp i,e o(n)
 
 
-🟢To make dp soln there is no fixed formula u need to think considering tree of either 0 node , 3 nodes , 5 nodes.
+🟢NO FIXED FORMAT to make dp soln, u need to think considering tree of either 0 node,1 node i,e 1 level ,2 levels , 3 level.
+ 
+ In most cases making dfs for 2 or 3 level solves problem for whole
 
 👉In BFS,while using normal queue we can fix the size of each loop if required while(q.size()){ sz=q.size(); for(int i=0 to sz)..}
 
