@@ -1,9 +1,3 @@
-???? When to use bfs over dp  bfs can be applied everywhere where dp is applied bfs>=dp
-
-when graph question or in matrix when source & target given (MaYbe)
-
-
-
 🟢U can apply recursion & memoization to any problem which may not be listed above. Above are just some standard ones. There are many more than this.
 
 Recursion : Just write all choices u can make from any point of time.
