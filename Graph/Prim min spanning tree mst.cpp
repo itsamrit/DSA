@@ -1,4 +1,4 @@
-// MST is only possible in undirected graph .SInce tree is only undirected ascylic graph
+// 🟩MST is only possible in undirected graph .SInce tree is only undirected ascylic graph
 // tc = o((e+v)logv) because it is dijkstra algo with backtracking
 vi par;
 vi dis;
