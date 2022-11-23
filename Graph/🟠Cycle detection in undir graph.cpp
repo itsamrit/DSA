@@ -11,7 +11,7 @@ void bfs(int s){
         int c = q.front().first;
         int p = q.front().second;
         q.pop();  
-     
+    
         for(auto i:g[c]){  
             if (vis[i]==0) {  
                 vis[i]=1;   // In bfs vis[i] is marked here unlike dfs
