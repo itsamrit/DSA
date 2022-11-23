@@ -28,6 +28,8 @@ Do :- int dfs(int i) if(i==arr.size())return 0;   int canROb= 1 + dfs(); int can
 
 👉We cant apply dp only while printing
 
+👉We cant apply dp while dividing set into k subset with equal sum
+
 👉For count of subset if(subset with given conditions)return 1;
 if(boundry condition crossed)return 0;
 
