@@ -2,6 +2,7 @@
 //          Min cost to connect all points = Min spanning tree
 //✅Dis betn all pair = 1 apply this same algo but with normal queue
 //✅U cant convert bfs to dfs & find shortest dis.It works only with queue i,e bfs
+// 🟩MST is only possible in undirected graph .SInce tree is only undirected ascylic graph
 vi dis;
 vi par;
 vector<vi>path;
