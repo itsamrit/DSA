@@ -1,4 +1,4 @@
-✅Dis betn all pair = 1 apply bfs with normal queue. o(n)
+✅Shortest dis/weight when dis/weight betn all pair = 1 then apply bfs with normal queue. o(n)
 
 🟢Solve all shortest distance graph problem from 1 point with all pos weight with bfs o(n) or o(nlogn)(priority). Else if you convert in matrix it will cost u can t solve it using normal dp since normal dp move only with adjacent nodes in matrix & non cyclic So u will apply bellman ford which will cost o(n^2).
 
