@@ -1,6 +1,7 @@
 //✅If u need to find prim min tree or dijkstra between points i,e graph not given. Then to get all possible paths/edges, make a graph with all points connected to each other with direct edges.
 //          Min cost to connect all points = Min spanning tree
 //✅Dis betn all pair = 1 apply this same algo but with normal queue
+//✅U cant convert bfs to dfs & find shortest dis.It works only with queue i,e bfs
 vi dis;
 vi par;
 vector<vi>path;
