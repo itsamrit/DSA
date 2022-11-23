@@ -30,6 +30,8 @@ Do :- int dfs(int i) if(i==arr.size())return 0;   int canROb= 1 + dfs(); int can
 
 👉We cant apply dp while dividing set into k subset with equal sum
 
+👉If u want to check whether a word1 matches with any subsequence of word2 then dont check each subsequence just run a loop if each char of word1 occur in word2 subsequencetly then ok otherwise not
+
 👉For count of subset if(subset with given conditions)return 1;
 if(boundry condition crossed)return 0;
 
