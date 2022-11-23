@@ -7,7 +7,7 @@ void prim(int s){
     par.resize(n+3,-1);
     dis.resize(n+3,inf);
     priority_queue<pii,vector<pii>,greater<pii>> pq;  //Minheap : Sorting in Ascending order
-    vi inMST(n+3,0);
+    vi vis(n+3,0);
     
     pq.push({0,s});
     dis[s]=0;
@@ -15,10 +15,10 @@ void prim(int s){
     while(pq.size()){
         int c = pq.top().second;
         pq.pop();
-        if(inMST[c] == 1)continue;
-        inMST[c] = 1;
+        if(vis[c] == 1)continue;
+        vis[c] = 1;
         for(auto i:g[c]){
-            if (inMST[i.first] == 0 && dis[i.first] > i.second){  //Since its a tree we dont check dis[i.first]>i.second+ c because then it may find shortest path but with cycle.
+            if (vis[i.first] == 0 && dis[i.first] > i.second){  //Since its a tree we dont check dis[i.first]>i.second+ c because then it may find shortest path but with cycle.
                 dis[i.first] = i.second;                          
                 pq.push({dis[i.first], i.first});
                 par[i.first]=c;
