@@ -2,11 +2,11 @@
 
 🟢Solve all shortest distance graph problem from 1 point with all pos weight with bfs o(n) or o(nlogn)(priority). Else if you convert in matrix it will cost u can t solve it using normal dp since normal dp move only with adjacent nodes in matrix & non cyclic So u will apply bellman ford which will cost o(n^2).
 
-Solve all shortest dis matrix problem where u can go to adjacent movement node like diagonal,right,left with dp. If u solve using bfs it will cost u same o(n^2logn)(priotiy).
+Solve all shortest dis matrix problem where u can go to adjacent movement node like diagonal,right,left with dp. If u solve using bfs it will cost u same o(n^2 + (2n)^2) or o(n^2 + (2n)^2)log(n^2) if use priority_queue . (2n)^2 edges in normal matrix going to right down. So dont use in non cyclic traversal.
 
 If more than 2 variable in normal matrix with adjacent movement then dp will cost o(n^3).Consider bfs if possible.
 
-🟢If in normal matrix we can move cyclic i,e like moving in all 4 directions & distance is postive then apply bfs it will take o(n^2) or o(n^2logn)
+🟢If in normal matrix we can move cyclic i,e like moving in all 4 directions & distance is postive then apply bfs it will take o(n^2 + (4n)^2) or o(n^2 + (4n)^2)logn^2 if use priority  which is still lower than o(2^n).
 
 For shortest dis between 2 group of indexes like island in matrix/graph use dfs+bfs.Find all index of 1st group using dfs & intialize the bfs queue with it.
 
