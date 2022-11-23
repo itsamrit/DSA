@@ -11,4 +11,6 @@ some times satisfied by popping till condition
 multiset<int,greater<int>>st; given first element as maximum i,e like maxheap.     st.erase(st.begin())  like pq.pop()
 
 
+Example : Check if it is possible to organise string such that no 2 same char are adjacent
 
+Min stops at petrol pump with variable amount of fuel by which u can reach u can reach end 
