@@ -1,3 +1,5 @@
+
+
 ✅Shortest dis/weight when dis/weight betn all pair = 1 i,e unweighted then apply bfs with normal queue. o(n)
 
 🟢Solve all shortest distance graph problem from 1 point with all pos weight with bfs o(n) or o(nlogn)(priority). Else if you convert in matrix it will cost u can t solve it using normal dp since normal dp move only with adjacent nodes in matrix & non cyclic So u will apply bellman ford which will cost o(n^2).
@@ -13,6 +15,7 @@ For shortest dis between 2 group of indexes like island in matrix/graph use dfs+
 Using Dfs :U can store all index of group1 & group2 in separete vector & run loop to find dis between all pair & select smallest dis.
 
 
+👉All path from source to target : just like normal matrix use dfs.
 
 👉To convert graph codes for matrix convert for(auto &i:g[c]) to index to where u can move from current. If u can move in all 4 dir the for(int i=0 to 4).
 Change 1d visited to 2d visited
