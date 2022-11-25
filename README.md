@@ -1,12 +1,10 @@
+lexographically maximum no subset more than 10 questions with different just remember it is solved by stack
+
 👉 for(auto &i:mapp) Use &i otherwise iterator will remain on 1st element
 
 👉 ROWs == RECORDs while column means attributes
 
 ??? all interval questions sort and then make pair<int,int>temp; to compare and make new intervals
-
-??? ???stacks question defintiin + similar to code is similar to variable size subarray but (THERE iS no window)in stack we dont make 2 pointer we start iterating from current lement to already iterated but not rejected no window 
-
-lexographically maximum no subset more than 10 questions with different just remember it is solved by stack
 
 
 BUT once rejected/deleted element for current is then rejected for all other element
