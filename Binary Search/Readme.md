@@ -1,6 +1,6 @@
 👉WE COMPARE MID WITH RIGHTMOST ELEMENT while serching pivot element in rotated sorted array. NO USE OF LEFT element.
 
-👉while(left<=right) mid=left + (right-left)/2;
+👉while(left<=right) mid=(left+right)/2  =  left + (right-left)/2 [both are totally same in all cases][used for int overflow];
 
 👉Universal truth = upper - lower = no of elements present of given value
 
