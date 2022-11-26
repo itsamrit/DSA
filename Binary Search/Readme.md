@@ -2,9 +2,9 @@
 
 For that inclusivity,Specify the target u are searching for all edge case if its inddex i,e like 
 
-while(start<=end) //always <= if start or end is the target (INCLUSIVITY)
+while(start<=end) //(<= : To also check left & right instead of only checking index betw them INCLUSIVITY)
 
-if((mid==0 || nums[mid-1]<nums[mid]))   //define target for edge cases such that while writing else if & else we dont are sure its not mid i,e write mid-1 & mid+1
+if((mid==0 || nums[mid-1]<nums[mid]))   //🟢define target for edge cases such that while writing else if & else we are damn sure its not mid i,e write else if mid-1 & mid+1
 
 else if() r=mid-1;  
 
@@ -12,7 +12,6 @@ else l = mid+1;
 
 👉while(left<=right) mid=(left+right)/2  =  left + (right-left)/2 [both are totally same in all cases][used for int overflow];
 
-This is inclusive even if it also search for edge indexes left or right not only index between left & right
 
 👉Universal truth = upper - lower = no of elements present of given value
 
