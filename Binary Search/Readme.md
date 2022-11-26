@@ -1,8 +1,12 @@
-1.Specify the target u are searching for all edge case if its inddex 
+🟢Inclusive binary serc algo i,e if start or end are target then it has abilty to find them. 
 
-1.inclusive binary serc algo i,e if start or end are target then it has abilty to find them.
+For that inclusivity,Specify the target u are searching for all edge case if its inddex i,e like 
 
-👉WE COMPARE MID WITH RIGHTMOST ELEMENT while serching pivot element in rotated sorted array. NO USE OF LEFT element.
+if((mid==0 || nums[mid-1]<nums[mid]))   //define target for edge cases such that while writing else if & else we dont are sure its not mid i,e write mid-1 & mid+1
+
+else if() r=mid-1;  
+
+else l = mid+1;
 
 👉while(left<=right) mid=(left+right)/2  =  left + (right-left)/2 [both are totally same in all cases][used for int overflow];
 
