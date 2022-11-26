@@ -6,9 +6,20 @@ while(start<=end) //(<= : To also check left & right instead of only checking in
 
 if((mid==0 || nums[mid-1]<nums[mid]))   //🟢define target for edge cases such that while writing else if & else we are damn sure its not mid i,e write else if mid-1 & mid+1
 
+
 else if() r=mid-1;  
 
 else l = mid+1;
+
+🟢For upper bound/lower bound & lower bound 
+
+if(target==nums[mid] with no same element after that i,e edge case) 
+
+else if(target==nums[mid]) mid--/++;  //🟢Doing mid-- doesnt take o(n) it again in next iteration gives mid=start+end-.. 
+
+else if(>) s=mid-1;
+
+else e=mid+1;
 
 👉while(left<=right) mid=(left+right)/2  =  left + (right-left)/2 [both are totally same in all cases][used for int overflow];
 
