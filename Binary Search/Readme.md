@@ -12,6 +12,8 @@ else l = mid+1;
 
 👉while(left<=right) mid=(left+right)/2  =  left + (right-left)/2 [both are totally same in all cases][used for int overflow];
 
+This is inclusive even if it also search for edge indexes left or right not only index between left & right
+
 👉Universal truth = upper - lower = no of elements present of given value
 
 👉lower_bound(v.begin(),v.end(),val) gives index of 1st occurence of val if present
