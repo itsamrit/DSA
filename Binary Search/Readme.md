@@ -11,6 +11,9 @@ else if() r=mid-1;
 
 else l = mid+1;
 
+
+🟢Writing an algo by not returning/break when target found & assuming it will loop will stop when target found & then RETURN MID after loop ends cause many severe edge case problem
+
 🟢For upper bound/lower bound & lower bound 
 
 if(target==nums[mid] with no same element after that i,e edge case) 
