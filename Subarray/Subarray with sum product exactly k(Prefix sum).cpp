@@ -10,7 +10,8 @@ Tc=o(nlogn)
 // We can print all subarrays for given sum if array does not contain 0 and negative values
    
 NOTE: In subarray if(find(sum-target)), while in 2sum if(find(target-sum))
-    
+//LONGEST/SHORTEST/TOTAL SUBARRAYS WITH SUM EXACTLY K
+   
 int lenOfLongSubarr(int arr[],  int n, int k) {    
     map<int, int>m;
     int sum = 0, maxLen = 0;
