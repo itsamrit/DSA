@@ -27,7 +27,7 @@ int lenOfLongSubarr(int arr[],  int n, int k) {
 } 
 
 
-Total:Both for pos and neg elements
+🟢Total subarray with sum is equals k:Both for pos and neg elements
     int subarraySum(vector<int>& nums, int k) {
         int sum=0;
         map<int,int> m;
