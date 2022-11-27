@@ -1,4 +1,5 @@
-//✅✅ When u want to check all subarrays.
+//✅✅DEPENDENT ON ADJACENT SUBARRAY FORMED
+// Count all subarrays having sum=k with neg element. Simply 
 Tc:n^2 
 
 TYPE 1 DP : BASED ON CHECKING EACH SUBSTRING
@@ -7,7 +8,7 @@ TYPE 1 DP : BASED ON CHECKING EACH SUBSTRING
 int f(int i,int n,string &str,vector<int>&dp){
     if(i==n) return 0;
     if(dp[i]!=-1)return dp[i];
-    dp[i]=INT_MAX;
+    dp[i]=INT_MAX;            
     
     for(int j=i;j<n;j++){
         if(palindrome(i,j,str))  // For word break : if(s.find(s.substr(i, j-i+1))!= s.end()){.. 
