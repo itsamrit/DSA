@@ -1,5 +1,6 @@
 //✅✅DEPENDENT ON ADJACENT SUBARRAY FORMED
-// Count all subarrays having sum=k with neg element. Simply 
+//🟢If non indepenet of adjacent subarray, then u can run 2 loop to check iteratively check all subarray.o(n^2) but most of indepent questions are solved using sliding window or some technique descriped in SUBARRAY repo
+
 Tc:n^2 
 
 TYPE 1 DP : BASED ON CHECKING EACH SUBSTRING
