@@ -1,7 +1,8 @@
-✅When u want to check random path to reach a node use dfs. Dfs doesnt check all possible paths since once visited node cant be visited again.
+✅Dfs checks all possibilities,but here is a restriction that once visited cant be visited again. So we visit a node with random possible path & after that we cant visit that node again with any other possible path.
 
-In non-cyclic undirected graph any random path will always give shortest distance to current node from dfs(0 or any called source).So either run BFS or DFS here.
+In graph where there is only one possible path from source to a node like non-cyclic undirected graph :-
 
+U can also use dfs to calculate shortest/longest distance since there is only one possible path i,e it is both shotest & longest.
 
 ✅Shortest dis/weight when dis/weight betn all pair = 1 i,e unweighted then apply bfs with normal queue. o(n)
 
