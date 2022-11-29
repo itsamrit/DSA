@@ -2,7 +2,7 @@
 
 In graph where there is only one possible path from source to a node like non-cyclic undirected graph :-
 
-U can also use dfs to calculate shortest/longest distance since there is only one possible path i,e it is both shotest & longest.
+U can also use dfs to calculate shortest/longest distance since there is only one possible path i,e it is both shotest & longest. Use either bfs or dfs in this case.
 
 ✅Shortest dis/weight when dis/weight betn all pair = 1 i,e unweighted then apply bfs with normal queue. o(n)
 
