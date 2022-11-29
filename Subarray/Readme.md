@@ -2,7 +2,7 @@
 
 Then check if u need to just check all subarrays and subarrays are not dependent on adjacent subarrays i,e recursion then just run 2 loop 
 
-eg: No of subarrays with lcm = k, Storing all subarrays in vector<vector<int>>
+eg: No of subarrays with lcm/gcd = k, Storing all subarrays in vector<vector<int>>
 
 Else do that problem using recursion.
 
