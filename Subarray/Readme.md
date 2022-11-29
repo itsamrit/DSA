@@ -1,4 +1,10 @@
-✅✅👉 If a subarray becomes valid again by adding left elements which were already deleted earlier but without deleting any rightmost element then it cant be solved by sliding window.Solve it by recursion.
+✅✅👉 If a subarray becomes valid again by adding left elements which were already deleted earlier but without deleting any rightmost element then it cant be solved by sliding window.
+
+Then check if u need to just check all subarrays and subarrays are not dependent on adjacent subarrays i,e recursion then just run 2 loop 
+
+eg: No of subarrays with lcm = k, Storing all subarrays in vector<vector<int>>
+
+Else do that problem using recursion.
 
 eg: Substring with frequency of each character atleast k. acca & k=2.If we delete a & then go further then it agains become valid if we add a in cca.
 
