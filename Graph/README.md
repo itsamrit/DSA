@@ -1,6 +1,6 @@
-✅When u want to check all possibility like checking all possible paths to reach a node, all possible colorings using toposort.
+✅When u want to check random path to reach a node use dfs. Dfs doesnt check all possible paths since once visited node cant be visited again.
 
-Dfs time complexity will be same as bfs in non cyclic graph, since all nodes are visited once.
+
 
 ✅Shortest dis/weight when dis/weight betn all pair = 1 i,e unweighted then apply bfs with normal queue. o(n)
 
