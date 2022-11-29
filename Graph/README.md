@@ -4,7 +4,7 @@ In graph where there is only one possible path from source to a node like non-cy
 
 U can also use dfs to calculate shortest/longest distance since there is only one possible path i,e it is both shotest & longest. Use either bfs or dfs in this case.
 
-✅Shortest dis/weight when dis/weight betn all pair = 1 i,e unweighted then apply bfs with normal queue. o(n+e) i,e check all adjacent nodes & then go to next node
+✅Shortest dis/weight when dis/weight betn all pair = 1 i,e unweighted then apply bfs with normal queue. o(n+e) i,e check all adjacent nodes attached first & then go to next node
 
 🟢Solve all shortest distance graph problem from 1 point with all pos weight with bfs o(n) or o(nlogn)(priority). Else if you convert in matrix it will cost u can t solve it using normal dp since normal dp move only with adjacent nodes in matrix & non cyclic So u will apply bellman ford which will cost o(n^2).
 
