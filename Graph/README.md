@@ -1,4 +1,6 @@
-✅When u want to check all possible paths to reach a node just like recursion we use dfss
+✅When u want to check all possibility like checking all possible paths to reach a node, all possible colorings using toposort.
+
+Dfs time complexity will be same as bfs in non cyclic graph, since all nodes are visited once.
 
 ✅Shortest dis/weight when dis/weight betn all pair = 1 i,e unweighted then apply bfs with normal queue. o(n)
 
