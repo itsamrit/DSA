@@ -1,4 +1,4 @@
-
+✅When u want to check all possible paths to reach a node just like recursion we use dfss
 
 ✅Shortest dis/weight when dis/weight betn all pair = 1 i,e unweighted then apply bfs with normal queue. o(n)
 
