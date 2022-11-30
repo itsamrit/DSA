@@ -1,3 +1,5 @@
+🟢Always try to think such code which can be converted in memoization like not using &ans instead using return ans+left+right;
+
 🟢U can apply recursion & memoization to any problem which may not be listed above. Above are just some standard ones. There are many more than this.
 
 Recursion : Just write all choices u can make from any point of time.
