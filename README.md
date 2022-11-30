@@ -21,3 +21,5 @@ for(auto i=m.begin(); i!=m.end(); i++) m
 👉 If 2 or more arrays or numbers in questions for comparision like A & B.
 
 Always make 1 smaller if(A>B) swap(A,B) & then solve accordingly.
+
+👉 Never do modulo as %10^7+7 [Error]. Instead do %1000007
