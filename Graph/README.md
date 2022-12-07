@@ -6,13 +6,15 @@ U can also use dfs to calculate shortest/longest distance since there is only on
 
 ✅Shortest dis/weight when dis/weight betn all pair = 1 i,e unweighted then apply bfs with normal queue. o(n+e) i,e check all adjacent nodes attached first & then go to next node
 
-🟢Solve all shortest distance graph problem from 1 point with all pos weight with bfs o(n) or o(nlogn)(priority). Else if you convert in matrix it will cost u can t solve it using normal dp since normal dp move only with adjacent nodes in matrix & non cyclic So u will apply bellman ford which will cost o(n^2).
+🟢You cant solve any graph distance problem with normal matrix dp because even if you convert it in adjaceny matrix, u can move from 1 cell to any cell having 1 in that row. So dp cant be applied. i,e solve using priority_queue,queuue 2.Specilized dp for graph like bellman ford or floyd warshall
 
-Solve all shortest dis matrix problem where u can go to adjacent movement node like diagonal,right,left with dp. If u solve using bfs it will cost u same o(n^2 + (2n)^2) or o(n^2 + (2n)^2)log(n^2) if use priority_queue . (2n)^2 edges in normal matrix going to right down. So dont use in non cyclic traversal.
+🟢Solve all shortest dis matrix problem where u can go to adjacent movement node like diagonal,right,left with dp. If u solve using bfs it will cost u same o(n^2 + (2n)^2) or o(n^2 + (2n)^2)log(n^2) if use priority_queue . (2n)^2 edges in normal matrix going to right down. So dont use in non cyclic traversal.
 
-If more than 2 variable in normal matrix with adjacent movement then dp will cost o(n^3).Consider bfs if possible.
+-> When to apply bfs in normal matrix -: 
 
-🟢If in normal matrix we can move cyclic i,e like moving in all 4 directions & distance is postive then apply bfs it will take o(n^2 + (4n)^2) or o(n^2 + (4n)^2)logn^2 if use priority  which is still lower than o(2^n).
+1.If more than 2 variable in recursive function( int i,int j, int 3rd) in normal matrix even with adjacent movement i,e no cicular movement even then dp will cost o(n^3).Consider bfs,if possible.
+
+2.If in normal matrix we can move cyclic i,e like moving in all 4 directions & distance is postive then apply bfs it will take o(n^2 + (4n)^2) or o(n^2 + (4n)^2)logn^2 if use priority  which is still lower than o(2^n).
 
 For shortest dis between 2 group of indexes like island in matrix/graph use dfs+bfs.Find all index of 1st group using dfs & intialize the bfs queue with it.
 
