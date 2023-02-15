@@ -4,7 +4,7 @@ Then check if u need to just check all subarrays and subarrays are not dependent
 
 eg: No of subarrays with lcm/gcd = k, Storing all subarrays in vector<vector<int>>
 
-Else do that problem using recursion.
+Else if subarray are dependent on adjacent subarray then do that problem using recursion.
 
 eg: Substring with frequency of each character atleast k. acca & k=2.If we delete a & then go further then it agains become valid if we add a in cca.
 
