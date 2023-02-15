@@ -2,6 +2,7 @@
 
 // ✅✅If a question becomes again valid by adding left element then it cant be solved by sliding window.Solve it by recursion.
 //         eg: Substring with frequency of each character atleast k. acca & k=2.If we delete a & then go further then it agains become valid if we add a in cca.
+//                 Done by checking all substrings using recursion.Can be optimized to o(26*slidingwindow) = o(26*n)
 //         eg: Subarray with sum 0 with negative element cant be solved using sliding window because negative again become positive and make 0.
 
 // Unique elements longest or total subarray
