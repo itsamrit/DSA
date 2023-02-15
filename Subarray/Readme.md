@@ -20,7 +20,7 @@ eg:
     
     We use stack for next greater element to store monotonically increasing element
 
-👉 Count of subarray with k distinct elements = Count of subarray with (ATMOST k element - ATMOST (k-1) elements) i,e to loops are required o(2n)
+👉 Count of subarray with k distinct elements = Count of subarray with (ATMOST k distinct element - ATMOST (k-1) distinct elements) i,e to loops are required o(2n)
 
 👉 IF you need to pick either from left or right at each step there will subarray in middle so its a subarray prob.
 
