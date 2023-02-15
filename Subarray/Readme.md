@@ -35,4 +35,6 @@ eg:
 TO FIND ITERATOR OF SET & MAP SIMILAR TO VECTOR *i > *(i-1)
 🤜
 
+✅Always do hashing using map in variable size subarray. After that check if it could be done using vector<int>cnt.
+
 ✅Except these problems all other subarray problem solved by dp except printing all subarray
