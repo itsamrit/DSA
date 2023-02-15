@@ -10,7 +10,7 @@ int maxSubArray(vector<int>& nums) {
 }
 
 
-//In max product subarray : You need to maintain both min subarray and max subarray because min can max if any another neg is multiplied with it.
+//In max product subarray : You need to maintain both min subarray and max subarray because min can become max if any another neg is multiplied with it.
 int maxProduct(vector<int>& nums) {
         int minn=1,maxx=1,ans=INT_MIN;
         
