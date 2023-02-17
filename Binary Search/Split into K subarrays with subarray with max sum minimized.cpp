@@ -8,8 +8,8 @@ bool isvalid(arr,n,k,mx){
       student++;
       sum=arr[i];
     }
-    if(student>k)return false;
   }
+  if(student>k)return false;
   return true;
 }
 
