@@ -1,3 +1,5 @@
+🟢Only normal queue & deque has front back
+
 lexographically maximum no subset more than 10 questions with different just remember it is solved by stack
 
 👉 for(auto &i:mapp) Use &i otherwise iterator will remain on 1st element
