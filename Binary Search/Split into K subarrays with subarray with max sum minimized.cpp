@@ -15,13 +15,8 @@ bool isvalid(arr,n,k,mx){
 
 
 
-
-
-
-
-
-int start=max in array
-int end=sum of array
+int start=max in array   //🟢1st step i,e Smallest sum can be max element of array
+int end=sum of array     //🟢2nd i,e max sum can be sum of whole array use a loop to find sum of whole array
 int res=-1;
 
 while(start<=end){
