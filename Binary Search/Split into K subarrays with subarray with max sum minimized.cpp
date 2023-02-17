@@ -3,10 +3,10 @@ bool isvalid(arr,n,k,mx){
   int student =1;
   int sum=0;
   for(int i=0;i<n;i++){
-    sum=sum+v[i];
+    sum=sum+arr[i];
     if(sum>mx){
       student++;
-      sum+=arr[i];
+      sum=arr[i];
     }
     if(student>k)return false;
   }
