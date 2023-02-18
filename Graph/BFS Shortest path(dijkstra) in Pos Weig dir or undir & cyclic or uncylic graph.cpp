@@ -19,7 +19,8 @@ void bfs(int s){
         int c=pq.top();
         pq.pop();
         for(auto i:g[c]){
-            if (dis[i.first] > dis[c.second] + i.second){//IN prim's : Since its a tree we dont check dis[i.first]>i.second+ c because then it may find shortest path but with cycle.
+            if (dis[i.first] > dis[c.second] + i.second){//Prim MST: Normal dijkstra will give shortest dis from root to all nodes which may include cycles because at each step it checks pq pops out or gives shortest from root
+                                                         //To avoid cycle We dont check shortest from root.We check shortest from cur node. So we dont include the dis of par dis[c.second]
                 dis[i.first] = dis[c.second] + i.second;   
                 pq.push({dis[i.first], i.first});
                                                     // To find path : par[i.first]=c;
