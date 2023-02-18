@@ -1,3 +1,5 @@
+//🟩This code is standard DFS code & can be used for DFS in any other problem
+
 //[Note: Dont try to print cycle because there is algo for printing cycle on cp alogithm website but there is no question ever asked on printing cycle]
 bool checkCycle(int node, vector < int > adj[], int vis[],int p) {
       vis[node] = 1;
