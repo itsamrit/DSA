@@ -1,5 +1,5 @@
 //✅If u need to find prim min tree or dijkstra between points i,e graph not given. Then to get all possible paths/edges, make a graph with all points connected to each other with direct edges.
-//          Min cost to connect all points = Min spanning tree
+//          Min cost to connect all points will be Min spanning tree i,e find mst
 //✅Dis betn all pair = 1 apply this same algo but with normal queue
 //✅U cant convert bfs to dfs & find shortest dis.It works only with queue i,e bfs
 // 🟩MST is only possible in undirected graph .SInce tree is only undirected ascylic graph
