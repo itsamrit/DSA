@@ -1,3 +1,4 @@
+//✅This code is standard BFS code.Can be modified and used as BFS in any problem
 //✅If Dis betn each pair is 1, then apply this same algo but with normal queue
 //✅If u need to find prim min tree or dijkstra between points i,e graph not given. Then to get all possible paths/edges, make a graph with all points connected to each other with direct edges.
 //          Min cost to connect all points will be Min spanning tree i,e find mst
