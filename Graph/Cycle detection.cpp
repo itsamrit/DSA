@@ -13,7 +13,7 @@ bool checkCycle(int node, vector < int > adj[], int vis[],int p) {
       vis[node]=2;   //For directed. Since in undirected after running one dfs nodes which are visited cant come again in another dfs but in directed in another same nodes may come.
                   // So to avoid nodes which are already visited in previous dfs in directed, we use vis[node]=2;
       topo.pb(node);  // If no cycle found print topo in reverse order else no topology is possible.
-      return false;  // Used when dfs is running more than 1 times like in a for loop for(){dfs} in the below function
+      return false;  
 }
 
 bool isCycle(int N, vector<int> adj[]) {
