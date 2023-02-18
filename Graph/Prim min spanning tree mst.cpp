@@ -1,4 +1,6 @@
 // 🟩MST is only possible in undirected graph .SInce tree is only undirected ascylic graph
+// 🟩In dijkstra we go further in path which has lowest dis from root.To check dis from root we need to dis[i.first]>dis[c.second]+i.second;
+// 🟩But in prim we check which node has shortest dis from cur node. So we dont bagge of root node so we check dis[i.first]>i.second; & include it in minheap
 // tc = o((e+v)logv) because it is dijkstra algo with backtracking
 vi par;
 vi dis;
@@ -17,6 +19,7 @@ void prim(int s){
         pq.pop();
         if(vis[c] == 1)continue;
         vis[c] = 1;
+        
         for(auto i:g[c]){
             if (vis[i.first] == 0 && dis[i.first] > i.second){ 
                 dis[i.first] = i.second;                          
