@@ -18,7 +18,7 @@ void prim(int s){
         if(vis[c] == 1)continue;
         vis[c] = 1;
         for(auto i:g[c]){
-            if (vis[i.first] == 0 && dis[i.first] > i.second){  //Since its a tree we dont check dis[i.first]>i.second+ c because then it may find shortest path but with cycle.
+            if (vis[i.first] == 0 && dis[i.first] > i.second){ 
                 dis[i.first] = i.second;                          
                 pq.push({dis[i.first], i.first});
                 par[i.first]=c;
