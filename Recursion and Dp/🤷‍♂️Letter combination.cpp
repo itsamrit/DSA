@@ -13,6 +13,9 @@ void helper(string &digits, int i, string combi){
 		return;
 	}
 
-	for(auto &c : mappings[digits[i] - '2'])
-		helper(digits, i + 1, combi + c);
+	for(auto &c : mappings[digits[i] - '2']){
+		combi.push_back(c);
+		helper(digits, i + 1, combi);
+		combi.pop_back();
+	}
 }
