@@ -39,10 +39,10 @@ string minWindow(string s, string t) {
         for(auto x:t)  mp[x]++;
         
         int count = mp.size();
-        int i = 0, j = 0 , start=0 , ans=INT_MAX;  // ans means length of required substring.
+        int i = 0, j = 0 , start=0 , ans=INT_MAX;
 
         while (j < s.length()) {
-            mp[s[j]]--;                   //This will make faltu elements count negative so that in mp[s[i]]++ cant make them 1 max go to 0
+            mp[s[j]]--;                   //🟩This will make faltu elements count negative so that in mp[s[i]]++ cant make them 1 max go to 0
             if (mp[s[j]] == 0) count--;          
  
             while (count == 0) {         // Till all element of t are present in current substring with respected amount of frequecies
