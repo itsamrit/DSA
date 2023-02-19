@@ -25,3 +25,5 @@ for(auto i=m.begin(); i!=m.end(); i++) m
 Always make 1 smaller if(A>B) swap(A,B) & then solve accordingly.
 
 👉 Never do modulo as %10^7+7 [Error]. Instead do %1000007
+
+👉lower_bound(v.begin(),v.end(),val) gives index of 1st occurence of val if present
