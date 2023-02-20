@@ -3,7 +3,7 @@ or data of leaf to child node is not used in parent node.
 
 else we are using data till parent node in child node or or data of leaf to child node is used in parent node. then solution is called dp i,e o(n)
 
-Generally if child property is used by parent wanted postorder i,e core/main computation is done after recursive calls. If parent property is used by child then preorder.
+🟢""Generally"", if child property is used by parent wanted postorder i,e core/main computation is done after recursive calls. If parent property is used by child then preorder. There may be small computation done before or after recursive calls in any case.
 
 
 🟢NO FIXED FORMAT to make dp soln,(either pre,post or in depends) u need to think considering tree of either 0 node,1 node i,e 1 level ,2 levels , 3 level.
