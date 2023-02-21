@@ -37,4 +37,6 @@ Change 1d visited to 2d visited
 
 In topo sort g[a].push_back(b) means a can be done only after b;
 
+🟢Dont put unnecessary return; everywhere
+
 ![148628820-a8fe0424-35ff-41ec-9280-6b5c15820fdf](https://user-images.githubusercontent.com/86003701/150728388-6999d308-8fdd-4005-8a70-75f6112d9dea.jpg)
