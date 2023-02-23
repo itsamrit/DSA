@@ -1,4 +1,5 @@
-    int countNodes(TreeNode* root) {
+   Tc 0(height) = o(logn)
+ int countNodes(TreeNode* root) {
         if(root == NULL) return 0; 
         
         int lh = findHeightLeft(root); 
