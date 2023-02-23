@@ -7,7 +7,8 @@
         
         if(lh == rh) return (1<<lh) - 1; 
         
-        return 1 + countNodes(root->left) + countNodes(root->right); 
+        return 1 + countNodes(root->left) + countNodes(root->right);// this condition will be provided 1 or 2 times only so o(h) 
+
     }
     int findHeightLeft(TreeNode* node) {
         int hght = 0; 
