@@ -141,7 +141,7 @@ int MaxAreaInBinaryMatrix(vector<vector<int>>&matrix){
         int n=matrix.size(),m=matrix[0].size();
         for(int i=1;i<n;i++)
             for(int j=0;j<m;j++)
-                if(matrix[i][j])     
+                if(matrix[i][j]==1)     🟩//If histogram must start from the current index 
                   matrix[i][j] += matrix[i-1][j];
 
         int ans = 0;
