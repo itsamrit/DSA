@@ -1,4 +1,4 @@
-MAX AREA IN SQUARE IS SIMPLE ITERATIVE DP USE YOUR OWN LOGIC
+🟩🟩🟩MAX AREA IN SQUARE IS SIMPLE ITERATIVE DP USE YOUR OWN LOGIC
 
 Stock Span :No of consecutive days for which stocks were smaller or equal to current days price = Index of current day-NGL INDEX
 vector<int> NextGreaterLeft(vector<int> nums,int n){
@@ -88,7 +88,7 @@ int solve(vector<int>& height,int n) {
 
 
 
-//  Max AreaorReactangle in Binary Matrix & Histogram.cpp
+//  Max Reactangle in Binary Matrix & Histogram.cpp
 
 
 //You dont need to store nsr rather store nsr index in stack and vector
@@ -116,6 +116,7 @@ vector<int> nsl(vector<int> heights, int n){
         return res;        
 }
 
+//🟩For each height[i] we find max area with that height.
 int MaxAreaInHistogram(vector<int>& heights) {
         int n = heights.size();        
         vector<int> left(n), right(n);
@@ -128,13 +129,14 @@ int MaxAreaInHistogram(vector<int>& heights) {
             if(right[i]==-1) right[i]= n;
             
             int w = right[i]-left[i]-1;
-            res = max(res,heights[i]*w);
+            res = max(res,heights[i]*w);  
         }        
         return res;
 }
 
 
-//MaxAreaInBinaryMatrix: THIS QUESTION SO LONG THAT IT WILL RARERLY COME IN INTERVIEWS As it uses histograms code also:-
+//MaxRectangleInBinaryMatrix: THIS QUESTION SO LONG THAT IT WILL RARERLY COME IN INTERVIEWS As it uses histograms code also:-
+//🟩Make reactangle into histogram where each matrix[i][j] defines height of poll from that index
 int MaxAreaInBinaryMatrix(vector<vector<int>>&matrix){
         int n=matrix.size(),m=matrix[0].size();
         for(int i=1;i<n;i++)
@@ -143,6 +145,6 @@ int MaxAreaInBinaryMatrix(vector<vector<int>>&matrix){
                   matrix[i][j] += matrix[i-1][j];
 
         int ans = 0;
-        for(int i=0;i<n;i++) ans = max(ans, MaxAreaInHistogram(matrix[i]));   //Calculating ans for all n Histograms
+        for(int i=0;i<n;i++) ans = max(ans, MaxAreaInHistogram(matrix[i]));   //Calculating ans for all n Histograms  //🟩Find max histogram for each level i,e row
         return ans;
 }
