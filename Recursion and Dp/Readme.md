@@ -1,3 +1,5 @@
+🟢We can apply dp to all 4 direction if we need to run 4 direction for each cell : https://leetcode.com/problems/longest-increasing-path-in-a-matrix/
+
 🟢First think of first line i,e what if array of 0 size in recursion, half problem solved
 
 🟢Always try to think such code which can be converted in memoization like not using &ans instead using return ans+left+right;
