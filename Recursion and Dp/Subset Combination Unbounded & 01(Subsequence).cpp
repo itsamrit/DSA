@@ -14,7 +14,6 @@ int f(vector<int>& wt, vector<int>& val, int ind, int W, vector<vector<int>>& dp
     if(ind == 0 || W==0 )return 0;            //Base condition But in unbounded : if(ind==0||W==0) return (W==0)?0:INT_MAX;
     
     if(dp[ind][W]!=-1) return dp[ind][W];
-    // if(i<(nums.size()-1) && nums[i]==nums[i+1] && (!pre))  return; //pre to check wheter we took or not previous element// Sort the array first if it could have dulplicate
     
     dp[ind][W]=INT_MIN;
     dp[ind][W] = max(dp[ind][W] , f(wt,val,ind-1,W,dp)); 
@@ -51,6 +50,23 @@ int f(vector<int>wt,vector<int>val,int n,int maxWeight){
      return dp[n][maxWeight];
 }
 
+//First sort the array in main
+    void Solve(vector<int>& candidates, int target, int sum, vector<vector<int>>& output, vector<int>& ans, int index){
+        if(target == sum){
+            output.push_back(ans);
+            return;
+        }
+        if(candidates.size() == index)
+            return;
+        if(sum > target)
+            return;
+        ans.push_back(candidates[index]);
+        Solve(candidates, target, sum + candidates[index], output, ans, index + 1);
+        ans.pop_back();
+        while(index < candidates.size()-1 && candidates[index] == candidates[index + 1])
+            index++;
+        Solve(candidates, target, sum, output, ans, index + 1);
+    }
 // Target Sum : No of ways in which we can get target by applying +- in elements : call the dfs with sum+nums[i] & another time sum-nums[i]
 
 
