@@ -1,7 +1,46 @@
 //🟢Convert tree in graph 
 
 
-
+    vector<int> distanceK(TreeNode* root, TreeNode* target, int k) {
+        vector<vector<int>>g(504);
+        queue<TreeNode*>q;
+        q.push(root);
+        while(q.size()){
+            TreeNode*c=q.front();
+            q.pop();
+            if(c->left){
+                g[c->val].push_back(c->left->val);
+                g[c->left->val].push_back(c->val);
+                q.push(c->left);
+            }
+            if(c->right){
+                g[c->val].push_back(c->right->val);
+                g[c->right->val].push_back(c->val);
+                q.push(c->right);
+            }
+        }
+        vector<int>ans;
+        queue<int>q2;
+        q2.push(target->val);
+        int cnt=0;
+        vector<int>dis(504,INT_MAX);
+        dis[target->val]=0;
+        while(q2.size()){
+            int sizee=q2.size();
+            for(int i=0;i<sizee;i++){
+                int c=q2.front();
+                q2.pop();
+                if(cnt==k)ans.push_back(c);
+                for(auto &j:g[c]){
+                    if(dis[j]!=INT_MAX)continue;
+                    q2.push(j);
+                    dis[j]=cnt+1;
+                }
+            }
+            cnt++;
+        }
+        return ans;
+    }
 
 
 
