@@ -6,7 +6,6 @@ lexographically maximum no subset more than 10 questions with different just rem
 
 👉 ROWs == RECORDs while column means attributes
 
-??? all interval questions sort and then make pair<int,int>temp; to compare and make new intervals
 
 
 BUT once rejected/deleted element for current is then rejected for all other element
