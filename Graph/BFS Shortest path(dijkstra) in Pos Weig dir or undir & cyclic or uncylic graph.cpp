@@ -19,7 +19,7 @@ void bfs(int s){
     dis[s] = 0;
     pq.push({0,s});  ✅Always put weight 1st in pair so that pq is sorted according to weight
     while (pq.size()) {
-        int c=pq.top();
+        pair<int,int> c=pq.top();
         pq.pop();
         for(auto i:g[c]){
             if (dis[i.first] > dis[c.second] + i.second){//Prim MST: Normal dijkstra will give shortest dis from root to all nodes which may include cycles because at each step it checks pq pops out or gives shortest from root
