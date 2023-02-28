@@ -36,3 +36,5 @@ lca is also dp cant be solved using void
 👉 In tree Bfs we dont write loop for all conneted nodes instead we directlly write algo for left & right
 
 👉 Pass & in tree just like we pass normally void dfs(TreeNode* &root1)
+
+🟩1d dp like house robber, do memoization with map<TreeNode*,int>m; && since u go i+2 so, if(root->left) dfs(root->left->left)
