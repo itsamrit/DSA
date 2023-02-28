@@ -4,6 +4,8 @@
 //          Min cost to connect all points will be Min spanning tree i,e find mst
 //✅U cant convert bfs to dfs & find shortest dis.Shortest dis can be find only by bfs/queue not by dfs
 //🟩MST tree is only possible in undirected graph .Since a tree is basically undirected ascylic graph
+//🟩Shortest weighted path with k distance : use normal queue instead of priority.Exact same code as dijkstra of priority except : use sizee like u do in level order traversal 
+//                                           && second if(dis[i.first]>c.first+i.second)  instead of dis[c.second] .Since dis is being updated continuosly & c.first will only give shortest till previous iteration while dis may include current level iterations also,so may have more than k distan i,e no level mainted
 
 vi dis;
 vi par;
