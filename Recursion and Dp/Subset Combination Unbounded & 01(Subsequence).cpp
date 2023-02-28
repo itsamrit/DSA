@@ -63,7 +63,7 @@ int f(vector<int>wt,vector<int>val,int n,int maxWeight){
         ans.push_back(candidates[index]);
         Solve(candidates, target, sum + candidates[index], output, ans, index + 1);
         ans.pop_back();
-        while(index < candidates.size()-1 && candidates[index] == candidates[index + 1])
+        while(index < candidates.size()-1 && candidates[index] == candidates[index + 1])  //🟩ALways i<candidates with greater i+1 comparision in this
             index++;
         Solve(candidates, target, sum, output, ans, index + 1);
     }
