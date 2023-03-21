@@ -9,7 +9,7 @@ void dfs(TreeNode*root,TreeNode*&pre){
         if(!first && root->val<pre->val){
             first=pre;
         }
-        if(first && root->val<pre->val){
+        if(first && root->val<pre->val){    
             second=root;
         }
         pre=root;
