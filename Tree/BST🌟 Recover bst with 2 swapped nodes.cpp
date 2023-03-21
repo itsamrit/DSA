@@ -1,29 +1,23 @@
 // tc:o(n) sc other than auxiliary space:o(1)  Auxiliary space: o(n) 
 // We can further do morris traversal to reduce auxiliary stack space to o(1)
 
-TreeNode* first, prev, middle, last; 
+TreeNode*first,second;
 
-void inorder(TreeNode* root) {
-        if(!root == NULL) return;  
-        inorder(root->left);
-       
-        if (prev && (root->val < prev->val)){        
-            if (!first){    //First 2 adjacent unsorted element found 
-                first = prev;
-                middle = root;
-            }      
-            else           //3rd & 4th adjacent unsorted found
-                last = root;
+void dfs(TreeNode*root,TreeNode*&pre){
+        if(!root)return;
+        dfs(root->left,pre);
+        if(!first && root->val<pre->val){
+            first=pre;
         }
-    
-        prev = root;
-        inorder(root->right); 
+        if(first && root->val<pre->val){
+            second=root;
+        }
+        pre=root;
+        dfs(root->right,pre);
 }
-
+    
 void recoverTree(TreeNode* root) {
-        first = middle = last = NULL; 
-        prev = new TreeNode(INT_MIN); 
-        inorder(root);
-        if(first && last) swap(first->val, last->val);  // Since it is fixed that only 2 elements are swapped. So signifies that if 4 element found swapping  first and last would solve the problem.
-        else if(first && middle) swap(first->val, middle->val);   //else swap the first 2 adjcent
+        TreeNode*pre =new TreeNode(INT_MIN);
+        dfs(root,pre);
+        swap(first->val,second->val);
 }
