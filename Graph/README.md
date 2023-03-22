@@ -16,10 +16,11 @@ U can also use dfs to calculate shortest/longest distance since there is only on
 
 2.If in normal matrix we can move cyclic i,e like moving in all 4 directions & distance is postive then apply bfs it will take o(n^2 + (4n)^2) or o(n^2 + (4n)^2)logn^2 if use priority  which is still lower than o(2^n).
 
-For shortest dis between 2 group of indexes like island in matrix/graph use dfs+bfs.Find all index of 1st group using dfs & intialize the bfs queue with it.
+⭐SubTopic :For shortest dis between 2 group of indexes like island in matrix/graph use dfs+bfs.Find all index of 1st group using dfs & intialize the bfs queue with it.
 
 Using Dfs :U can store all index of group1 & group2 in separete vector & run loop to find dis between all pair & select smallest dis.
 
+⭐SubTopic : Given 01 matrix,find nearest 0 for each cell. Store all the 0 in queue as group1 like in above problem & initalize all nodes which are in queue as 0 distance from 0 & apply normal bfs to find no of steps to go to each cell
 
 👉All path from source to target : just like normal matrix use dfs.
 
