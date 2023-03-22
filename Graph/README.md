@@ -22,6 +22,8 @@ Using Dfs :U can store all index of group1 & group2 in separete vector & run loo
 
 ⭐SubTopic : Given 01 matrix,find nearest 0 for each cell. Store all the 0 in queue as group1 like in above problem & initalize all nodes which are in queue as 0 distance from 0 & apply normal bfs to find no of steps to go to each cell
 
+⭐ There are many prob in which u need to store a group of nodes or start dfs or bfs from a grp of nodes.
+
 👉All path from source to target : just like normal matrix use dfs.
 
 👉To convert graph codes for matrix convert for(auto &i:g[c]) to index to where u can move from current. If u can move in all 4 dir the for(int i=0 to 4).
