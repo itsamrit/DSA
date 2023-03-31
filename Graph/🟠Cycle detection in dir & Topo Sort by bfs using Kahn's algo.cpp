@@ -1,5 +1,5 @@
-Direct Cyle BFS : Kahn algorithm : If topological sort not possible than cycle
-
+Direct Cyle BFS : Kahn algorithm : If topological sort not possible than there is cycle
+// Minimum Height Trees : give all root node starting from which graph has min height : store all leaf node having indeg =1 in queue & start when indeg[1]q.push instead of indeg[o] in for(auto i:g[c])
 // Here we dont convert dfs into bfs instead we use kahn algo if topo order found no cycle else cycle
 //Indegree is no of edges coming towards or inside node & Outdegree is no of edges going out from node. In undirected both are same.
 // One graph can have multiple toposort 
