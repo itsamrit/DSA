@@ -1,5 +1,5 @@
 //Time Complexity : o(n) for both cases
-
+// https://takeuforward.org/data-structure/implement-stack-using-array/
 class Stack {
   int size;
   int * arr;
@@ -38,7 +38,7 @@ int main() {
 
 
 //USING QUEUE(SINGLE QUEUE so that even if interviewer asks for doubly u can write this code)
-
+//https://takeuforward.org/data-structure/implement-stack-using-single-queue/
 class Stack {
   queue < int > q;
   public:
