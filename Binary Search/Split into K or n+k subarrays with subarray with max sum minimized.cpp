@@ -1,4 +1,5 @@
 TC : o(n*logn) n for checking is all subarrays can be divided into k parts with max cap mx & logn for binary search of max cap mx.
+// KOKO EATING BANANAS : array of n to be split in n+k size opposite of this
 bool isvalid(arr,n,k,mx){
   int student =1;
   int sum=0;
