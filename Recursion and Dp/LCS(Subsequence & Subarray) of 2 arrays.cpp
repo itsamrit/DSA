@@ -1,25 +1,45 @@
 DP ON Comparision of STRINGS (Comparision between two or more strings or vectors)   eg wildcard matching, lca, edit distance etc
 
-int substring;
-int f(int i,int j,string &s,string &t,vector<vector<int>>&dp){
+int f(int i,int j,string &s,string &t,vector<vector<int>>&dp){ 
         if(i==0||j==0)return 0;    // Base condition
         if(dp[i][j]!=-1)return dp[i][j];
         if(s[i-1]==t[j-1])return dp[i][j] = 1+f(i-1,j-1,s,t,dp); 
-        else dp[i][j]=max(f(i-1,j,s,t,dp),f(i,j-1,s,t,dp));                 //For substring : dp[i][j]=0;
-                                                                            //For substring : f(i-1,j,s,t,dp); f(i,j-1,s,t,dp);
-                                                                            //For substring : substring=max(substring,dp[i][j]);
+        else dp[i][j]=max(f(i-1,j,s,t,dp),f(i,j-1,s,t,dp));                 
         return dp[i][j];
 }
 int lcs(string s,string t){
-        int n=s.size(),m=t.size();
+        int n=s.size(),m=t.size(); 
         vector<vector<int>>dp(n+1,vector<int>(m+1,-1));
-        return f(n,m,s,t,dp);   //If we take n-1,m-1 instead of n,m then it cant be converted into tabulation simply & become hectic.
+        return f(n,m,s,t,dp);   
 }
 
 
-Tabulation:
+//🟩Special attention required : LONGEST COMMON SUBSTRING
+int ans;
+int dfs(vector<int>&nums1,vector<int>&nums2,int i,int j,vector<vector<int>>&dp){
+        if(i>=nums1.size() || j>=nums2.size())return 0;
+        if(dp[i][j]!=-1)return dp[i][j];
+        dfs(nums1,nums2,i+1,j,dp);
+        dfs(nums1,nums2,i,j+1,dp);
+        if(nums1[i]==nums2[j]){
+            int k=dfs(nums1,nums2,i+1,j+1,dp);
+            ans=max(ans,k+1);
+            return dp[i][j]=k+1;
+        }
+        return dp[i][j]=0;
+}
 
-int lcs(string s,string t){
+int findLength(vector<int>& nums1, vector<int>& nums2) {
+        ans=0;
+        vector<vector<int>>dp(nums1.size()+3,vector<int>(nums2.size()+3,-1));
+        dfs(nums1,nums2,0,0,dp);
+        return ans;
+}
+
+
+
+Tabulation:
+int lcsubstring(string s,string t){
         int n=s.size(),m=t.size();
         vector<vector<int>>dp(n+1,vector<int>(m+1,0));
        //for(int j=0;j<=m;j++)dp[0][j]=0;
