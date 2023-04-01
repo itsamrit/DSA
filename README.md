@@ -6,7 +6,7 @@ lexographically maximum no subset more than 10 questions with different just rem
 
 👉 ROWs == RECORDs while column means attributes
 
-
+👉In Matrix's 4 way travelling if(vis[i][j]) return; is not tle for dfs(i-1,j) & dfs(i,j-1);
 
 BUT once rejected/deleted element for current is then rejected for all other element
 IN NGR  element which is not next greater than current cant be next greater for the rest behind it
