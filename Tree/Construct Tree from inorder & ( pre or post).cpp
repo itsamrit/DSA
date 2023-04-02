@@ -6,8 +6,8 @@ Node* dfs(vector<int>&in, vector<int>&pre, int & i,int inorderStart,int inorderE
         Node* root=new Node(val);
         int position=m[val];
         
-        root->left=dfs(in, pre, i, inorderStart,position-1,n,m);  //In postorder: postion+1,inorderEnd,n
-        root->right=dfs(in,pre, i, position+1,inorderEnd,n,m);    //In postorder: inorderStart,post-1,n
+        root->left=dfs(in, pre, i, inorderStart,position-1,n,m);  //In postorder: root->right=dfs(..)
+        root->right=dfs(in,pre, i, position+1,inorderEnd,n,m);    //In postorder: root->left=dfs(..)
         return root;
 }
 
