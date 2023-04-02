@@ -1,5 +1,5 @@
 //Prerequisite : inorder = left,root,right ,        pre= root,left,right          post = left,right,root
-
+//tc=o(n)
 Node* dfs(vector<int>&in, vector<int>&pre, int & i,int inorderStart,int inorderEnd, int n,map<int,int>&m){
         if(i>=n || inorderStart>inorderEnd) return NULL;  //In postorder : i<0
         int val=pre[i++];          //INpost :i--
