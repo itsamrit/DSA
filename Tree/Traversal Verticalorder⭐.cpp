@@ -4,7 +4,7 @@
 vector<vector<int>> verticalTraversal(Node* root){
         vector<vector<int>> ans;
         if(!root)return ans;
-        map<int, vector<int>> m;             //🟩CANT USE UNORDERED_MAP key i,e int indicates col no & vector<int> is all nodes in that col.
+        map<int, vector<int>> m;             //🟩key i,e int indicates col no & vector<int> is all nodes in that col.
         queue<pair<TreeNode*, int>> q;       
         q.push({root, 0});                   // q.push(node,col no); We assume root as col no 0 & all left will become negative col no as ...-3, -2, -1, (root)0, 1,2 3 ...
         while(q.size()){
@@ -17,9 +17,9 @@ vector<vector<int>> verticalTraversal(Node* root){
                 if(temp.first->left)q.push({temp.first->left, temp.second - 1});
                 if(temp.first->right)q.push({temp.first->right, temp.second + 1});
             }
-            sort(a.begin(),a.end());
+            sort(a.begin(),a.end());                       //if 5,6 are in same col & same row i,e in same cell so 5 comes first
             for(auto it:a)m[it.first].push_back(it.second);   
         }
-        for(auto it:m)ans.push_back(it.second);
-        return ans;
+        for(auto it:m)ans.push_back(it.second);             //CANT USE UNORDERED_MAP since we want col no to be sorted
+        return ans; 
 }
