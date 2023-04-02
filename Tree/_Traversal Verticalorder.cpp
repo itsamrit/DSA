@@ -4,7 +4,7 @@
 vector<vector<int>> verticalTraversal(Node* root){
         vector<vector<int>> ans;
         if(!root)return ans;
-        unordered_map<int, vector<int>> m;   //🟩key i,e int indicates col no & vector<int> is all nodes in that col.
+        map<int, vector<int>> m;             //🟩CANT USE UNORDERED_MAP key i,e int indicates col no & vector<int> is all nodes in that col.
         queue<pair<TreeNode*, int>> q;       
         q.push({root, 0});                   // q.push(node,col no); We assume root as col no 0 & all left will become negative col no as ...-3, -2, -1, (root)0, 1,2 3 ...
         while(q.size()){
