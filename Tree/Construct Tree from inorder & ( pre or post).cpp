@@ -2,9 +2,9 @@
 
 Node* dfs(vector<int>&in, vector<int>&pre, int & i,int inorderStart,int inorderEnd, int n,map<int,int>&m){
         if(i>=n || inorderStart>inorderEnd) return NULL;  //In postorder : i<0
-        int temp=pre[i++];          //INpost :i--
-        Node* root=new Node(temp);
-        int position=m[temp];
+        int val=pre[i++];          //INpost :i--
+        Node* root=new Node(val);
+        int position=m[val];
         
         root->left=dfs(in, pre, i, inorderStart,position-1,n,m);  //In postorder: postion+1,inorderEnd,n
         root->right=dfs(in,pre, i, position+1,inorderEnd,n,m);    //In postorder: inorderStart,post-1,n
