@@ -15,5 +15,5 @@ TreeNode* buildTree(vector<int>& pre, vector<int>& in) {
         map<int,int>m;          //Node to index mapping of inorder
         for(int i=0;i<n;i++)
                 m[in[i]]=i;
-        return solve(in,pre, 0,0,n-1,n,m);  //in post pre,n-1 as index start from last in post
+        return solve(in,pre, 0,0,n-1,n,m);  //in postoder solve(in,post,n-1,rest same..) as index start from last in post
 }
