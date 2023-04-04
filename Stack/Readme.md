@@ -7,6 +7,7 @@ Famous problems :-
 AB has score A + B, where A and B are balanced parentheses strings.
 (A) has score 2 * A
 
+
 int scoreOfParentheses(string s) {
         int d=0,ans=0;
         for(int i=0;i<s.size();i++){
@@ -23,6 +24,7 @@ int scoreOfParentheses(string s) {
         }
         return ans;
 }
+
 
 🟩Remove All Adjacent Duplicates in String Input: s = "deeedbbcccbdaa", k = 3
 Output: "aa"
