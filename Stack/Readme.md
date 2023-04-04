@@ -1,3 +1,4 @@
+```
 Next greater element or Larget possible number from string maintains the stack as monotonically increasing.Each element of stack is smaller than prev element in next greater
 
 Famous problems :-
@@ -8,7 +9,7 @@ AB has score A + B, where A and B are balanced parentheses strings.
 (A) has score 2 * A
 
 
-int scoreOfParentheses(string s) {
+ int scoreOfParentheses(string s) {
         int d=0,ans=0;
         for(int i=0;i<s.size();i++){
             if(s[i]=='('){
