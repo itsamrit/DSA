@@ -42,7 +42,7 @@ int lenOfLongSubarr(int arr[],  int n, int k) {
         return cnt;
     }
 
-    //Total subarray divisible by k (DIVISIBILITY TEST : ✅Change all negative in pos by adding K. Since divisiblity cant be affected by pos or neg no. 
+    //Total subarray divisible by k (DIVISIBILITY TEST : ✅Make all nums[i] in remainder form num[i]%=k; && Change all negative in pos by adding K. Since divisiblity cant be affected by pos or neg no. 
     for(int i = 0; i < A.size(); i++) {
             m[rem]++;
             rem = (rem + A[i]) % K; 
