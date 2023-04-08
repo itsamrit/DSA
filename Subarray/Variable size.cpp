@@ -30,7 +30,7 @@ int lengthOfLongestSubstring(string s) {
 
 
 
-// MINIMUM WINDOW SUBSTRING  :  Give a substring of s such that every character in t(fixed) is included in that substring
+// MINIMUM WINDOW SUBSTRING/ Substring of string2 containig any PERMUTATION i,e all char of string1 (fixed)
 
 string minWindow(string s, string t) {
         int m=s.size(), n=t.size();
