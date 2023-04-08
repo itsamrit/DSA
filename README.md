@@ -1,3 +1,5 @@
+🟢Learn the techniques of all question which method will be used so that even implementation fails,u get points
+
 🟢Only normal queue & deque has front back
 
 lexographically maximum no subset more than 10 questions with different just remember it is solved by stack
