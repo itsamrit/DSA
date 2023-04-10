@@ -7,8 +7,8 @@
         Node* root=new Node(element);
         int position=m[element];
         
-        root->left=solve(in, pre, index, inorderStart,position-1,n,m);
-        root->right= solve(in,pre, index, position+1,inorderEnd,n,m);
+        root->left=solve(in, pre, index, inorderStart,position-1,n,m);//start->pos
+        root->right= solve(in,pre, index, position+1,inorderEnd,n,m);//pos->end
         return root;
 }
     TreeNode* buildTree(vector<int>& pre, vector<int>& in) {
@@ -27,8 +27,8 @@
         TreeNode* root=new TreeNode(inRoot);//
        int pos=m[inRoot];
         int numsLeft=pos-inStart;
-        root->left=dfs(postorder,inorder,preStart,preStart+numsLeft-1,inStart,pos-1,m);//
-        root->right=dfs(postorder,inorder,preStart+numsLeft,preEnd-1,pos+1,inEnd,m);//
+        root->left=dfs(postorder,inorder,preStart,preStart+numsLeft-1,inStart,pos-1,m);//start->pos
+        root->right=dfs(postorder,inorder,preStart+numsLeft,preEnd-1,pos+1,inEnd,m);//pos->end
         return root;
     }
     
