@@ -1,5 +1,6 @@
 //Prerequisite : inorder = left,root,right ,        pre= root,left,right          post = left,right,root
 //tc=o(n)
+///post & pree       cmvfnfnmnmf
      #define Node TreeNode
     Node* solve(vector<int>&in, vector<int>&pre, int & index,int inorderStart,int inorderEnd, int n,map<int,int>&m){
         if(index>=n || inorderStart>inorderEnd) return NULL;
