@@ -24,12 +24,12 @@
 
     TreeNode* dfs(vector<int>&postorder, vector<int>&inorder,int preStart, int preEnd, int inStart,int inEnd,map<int,int>&m){
         if(preStart>preEnd || inStart>inEnd)return NULL;
-        int inRoot=m[postorder[preEnd]];
-        TreeNode* root=new TreeNode(postorder[preEnd]);//
-       //
-        int numsLeft=inRoot-inStart;
-        root->left=dfs(postorder,inorder,preStart,preStart+numsLeft-1,inStart,inRoot-1,m);//
-        root->right=dfs(postorder,inorder,preStart+numsLeft,preEnd-1,inRoot+1,inEnd,m);//
+        int inRoot=postorder[preEnd];
+        TreeNode* root=new TreeNode(inRoot);//
+       int pos=m[inRoot];
+        int numsLeft=pos-inStart;
+        root->left=dfs(postorder,inorder,preStart,preStart+numsLeft-1,inStart,pos-1,m);//
+        root->right=dfs(postorder,inorder,preStart+numsLeft,preEnd-1,pos+1,inEnd,m);//
         return root;
     }
     
