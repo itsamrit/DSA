@@ -27,8 +27,8 @@
         TreeNode* root=new TreeNode(inRoot);//
        int pos=m[inRoot];
         int numsLeft=pos-inStart;
-        root->left=dfs(postorder,inorder,preStart,preStart+numsLeft-1,inStart,pos-1,m);//start->pos
-        root->right=dfs(postorder,inorder,preStart+numsLeft,preEnd-1,pos+1,inEnd,m);//pos->end
+        root->left=dfs(postorder,inorder,preStart,preStart+numsLeft-1,inStart,pos-1,m);//poststart->poststart+numleft.  start->pos
+        root->right=dfs(postorder,inorder,preStart+numsLeft,preEnd-1,pos+1,inEnd,m);//poststart+numsleft->preend.   pos->end
         return root;
     }
     
