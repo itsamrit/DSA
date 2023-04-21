@@ -1,20 +1,20 @@
 Arrow indicates whether left or right shift .If arrow points in left its left shift.
 
->>Right shift (removes x bits from last)
+>>Right shift (removes x bits from LAST)
   1101=11  by 2 
   num>>x = num/(2^x) 
 
-<<Left shift (adds x 0's in last)
+<<Left shift (adds x 0's in LAST)
   1101=110100 by 2
   num<<x = num*(2^x)
   
-     use to iterate over every bit 
+     use to iterate over every bit & get the value of that bit
      eg: 
      num&(1<<0)  num&(1<<1)   num&(1<<2)
      1101          1101       1101  .....
     &   1         &  10        100
     =   1         =  00      = 100
- 
+    =   1            0         1
 
 Dont do if(x&1 ==y&1) because x value changes here instead store a temporary int
 
@@ -23,17 +23,15 @@ Dont do if(x&1 ==y&1) because x value changes here instead store a temporary int
    In system -: 110 & 101010 = 000110 & 101010 = 000010 = 10 < 110 
 
 
-|-1  (| operator converts both to 1 if single 1 is present)
-
 ~(100)= 001
  
 x=4&3 kahi common ki baat ho toh & operator
 
+1>0 in bits.
+  
+  
+  
 
-
-  
-  
-  
   
 
 bitset<32>b(s);  int k=b.to_ullong();    s=b.to_string();
@@ -61,7 +59,6 @@ NOTE:1) bitset is not array but its element are int. eg: int tmp=x[4]; //1
 2) ^ & | can be applied direct to bitset also
 
 
-1>0 in bits.
   
 There are n numbers between 0 to 2^n -1  with each n bits.
 
