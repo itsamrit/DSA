@@ -1,5 +1,5 @@
 Arrow indicates whether left or right shift .If arrow points in left its left shift.
-
+// Use any both right & left shift are used for determining the value of a bit at a particular position.
 >>Right shift (removes x bits from LAST)
   1101=11  by 2 
   num>>x = num/(2^x) 
