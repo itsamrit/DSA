@@ -76,5 +76,6 @@ public:
 // time complexity is O(N*log(max(arr[i]))) where N is the number of elements in the array and max(arr[i]) is the maximum element in the array why log ? because we are iterating over the bits of the number so log(arr[i]) tells us the number of bits in the number
 
 // define the flow of the code
-// first we are creating a trie and inserting all the number in the trie then we are finding the max xor of each number with all the number in trie then we are taking the max of all the max xor of each number with all the number in trie & since we are going either left or right in the trie so we are iterating over the bits of the number and max bits is 32 so time complexity is O(32*N) where N is the number of elements in the array
+// first we are creating a trie and inserting all the number in the trie then we are finding the max xor of each number with all the number in trie 
+//    then we are taking the max of all the max xor of each number with all the number in trie & since we are going either left or right in the trie so we are iterating over the bits of the number and max bits is 32 so time complexity is O(32*N) where N is the number of elements in the array
 // yes it is like a binary trie 
