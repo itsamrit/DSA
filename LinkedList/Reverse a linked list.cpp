@@ -8,3 +8,4 @@
         }
         return prev;
     }
+    // trick : next curnai pi kar chalenge
