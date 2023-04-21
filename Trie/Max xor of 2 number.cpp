@@ -7,7 +7,7 @@ public:
 void insert(int n, TrieNode* head){
     TrieNode* curr = head;
     for(int i=31; i>=0; i--){
-        int b = (n>>i)&1;
+        int b = (n>>i)&1;   //here right shift is used to determine the value of 32-i th bit 
         if(b==0){
             if(!curr->left){
                 curr->left = new TrieNode();
