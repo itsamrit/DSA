@@ -8,4 +8,4 @@
         }
         return prev;
     }
-    // trick : next curnai pi kar chalenge
+    // cur occurs in after a gap in sequence
