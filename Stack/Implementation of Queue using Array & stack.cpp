@@ -1,112 +1,85 @@
-//LINk https://takeuforward.org/data-structure/implement-queue-using-array/
+implementation of queue with // Time Complexity:  pop function: O(1)   push function: O(1) top function: O(1) size function: O(1)
 
-// Time Complexity:  pop function: O(1)   push function: O(1) top function: O(1) size function: O(1)
+#include<iostream>
+using namespace std;
 
-// Space Complexity: Whole Queue: O(n)
-
-class Queue {
-  int * arr;
-  int start, end, currSize, maxSize;
-  public:
-    Queue() {
-      arr = new int[16];
-      start = -1;
-      end = -1;
-      currSize = 0;
+class Queue{
+    int *arr;
+    int front;
+    int back;
+    int n;
+    public:
+    Queue(int size){
+        arr = new int[size];
+        front = -1;
+        back = -1;
+        n = size;
     }
-
-  Queue(int maxSize) {
-    ( * this).maxSize = maxSize;
-    arr = new int[maxSize];
-    start = -1;
-    end = -1;
-    currSize = 0;
-  }
-  void push(int newElement) {
-    if (currSize == maxSize) {
-      cout << "Queue is full\nExiting..." << endl;
-      exit(1);
+    void push(int x){
+        if(back == n-1){
+            cout<<"Queue Overflow"<<endl;
+            return;
+        }
+        back++;
+        arr[back] = x;
+        if(front == -1){
+            front++;
+        }
     }
-    if (end == -1) {
-      start = 0;
-      end = 0;
-    } else
-      end = (end + 1) % maxSize;
-    arr[end] = newElement;
-    cout << "The element pushed is " << newElement << endl;
-    currSize++;
-  }
-  int pop() {
-    if (start == -1) {
-      cout << "Queue Empty\nExiting..." << endl;
+    void pop(){
+        if(front == -1 || front>back){
+            cout<<"No elements in queue"<<endl;
+            return;
+        }
+        front++;
     }
-    int popped = arr[start];
-    if (currSize == 1) {
-      start = -1;
-      end = -1;
-    } else
-      start = (start + 1) % maxSize;
-    currSize--;
-    return popped;
-  }
-  int top() {
-    if (start == -1) {
-      cout << "Queue is Empty" << endl;
-      exit(1);
+    int top(){
+        if(front == -1 || front>back){
+            cout<<"No elements in queue"<<endl;
+            return -1;
+        }
+        return arr[front];
     }
-    return arr[start];
-  }
-  int size() {
-    return currSize;
-  }
+    bool size(){
+        if(front == -1 || front>back){
+            return 0;
+        }
+        return back-front+1;
+    }
 };
 
+// time complexity of pop function is O(1), push function is O(1), peek function is O(1) and empty function is O(1)
+// implement queue using 2 stacks benefits no limitation of size of queue
 
-
-// USING 1 STACK :
-//push o(n) pop & top o(1)
-//Using 2 stack push o(1) while pop & top o(n)
-// LINK :https://takeuforward.org/data-structure/implement-queue-using-stack/
-//1stack implementation :
-struct Queue {
-  stack < int > input, output;
-  
-  // Push elements in queue
-  void Push(int data) {
-    // Pop out all elements from the stack input
-    while (!input.empty()) {
-      output.push(input.top());
-      input.pop();
+class Queue{
+    stack<int> s1;
+    stack<int> s2;
+    public:
+    void push(int x){
+        s1.push(x);
     }
-    // Insert the desired element in the stack input
-    cout << "The element pushed is " << data << endl;
-    input.push(data);
-    // Pop out elements from the stack output and push them into the stack input
-    while (!output.empty()) {
-      input.push(output.top());
-      output.pop();
+    int pop(){
+        if(s1.empty() && s2.empty()){
+            cout<<"Queue is empty"<<endl;
+            return -1;
+        }
+        if(s2.empty()){
+            while(!s1.empty()){
+                s2.push(s1.top());
+                s1.pop();
+            }
+        }
+        int topval = s2.top();
+        s2.pop();
+        return topval;
     }
-  }
-  // Pop the element from the Queue
-  int Pop() {
-    if (input.empty()) {
-      cout << "Stack is empty";
-      exit(0);
+    bool empty(){
+        if(s1.empty() && s2.empty()){
+            return true;
+        }
+        return false;
     }
-    int val = input.top();
-    input.pop();
-    return val;
-  }
-  // Return the Topmost element from the Queue
-  int Top() {
-    if (input.empty()) {
-      cout << "Stack is empty";
-      exit(0);
-    }
-    return input.top();
-  }
-  // Return the size of the Queue
-  int size() {
-    return input.size();
-  }
 };
+
+// time complexity of pop is o(n) or amortized o(1), push is O(1) and empty is O(1)
+// but why we are using 2 stack instead of array or vector because limitation of size of queue
