@@ -5,7 +5,7 @@ class Queue {
   int start, end, currSize, maxSize;  // all the variables inside constructor should be defined 
   public:
     Queue() {                  //constructor called when object is created without size provided by user
-      arr = new int[16];
+      arr = new int[1000];
       start = -1;
       end = -1;
       currSize = 0;

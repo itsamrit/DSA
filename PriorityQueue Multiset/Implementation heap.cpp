@@ -1,10 +1,10 @@
 // Two ways to implement heap with heapify algorithm & without heapify algorithm
-// If an array is given , without heafpify u can push all elements & with heapify u can run heapfiy 
-1st Without heapify 
+// In without heapify, there is no actual binary tree, we assume that the array is a binary tree
+1st Without heapify : the below code is for max heap  
 class heap{
     public :
     int arr[100];
-    int size =0;
+    int size = 0;
     
     void Insert(int val){   //log(n)
         size++;
@@ -44,20 +44,23 @@ class heap{
             }
         }
     }
-};
 
+    int Top(){
+        return arr[1];
+    }
+};
 //h.insert // by default .dot
 //After each insertion of deleteion run heapfiy for that node it takes  o(logn) time
 
 // WITH HEAPIFY :-
-void maxheapify (int arr[],int n, int i){  o(logn)
+void maxheapify (vector<int>&arr, int n, int i){  // o(logn)
     int largest =i;  
     int left=2*i;                          //For minheap 2*i+1;
     int right=2*i +1;                      //For minheap 2*i+2;
     if(left<n && arr[largest]<arr[left]){  //For minheap >
         largest=left;
     }
-    if(right<n && arr[largest]<arr[right]){//For minheap >
+    if(right<n && arr[largest]<arr[right]){//For minheap > // we cant do else if because we have to check for both left and right
         largest=right;
     }
     
@@ -68,11 +71,18 @@ void maxheapify (int arr[],int n, int i){  o(logn)
 }
 
 int main(){
-    int arr[6]={-1,34,56,45,43,2};
+    vector<int>arr={-1,34,56,45,43,2};
     int n=arr.size();
     for(int i=n/2;i>0;i--){            //For minheap i=n/2 -1;i>=0;   o(n)
         heapify(arr,n,i);
     }
-    
+    // pop out the top element and heapify the remaining array
+    swap(arr[1],arr[n-1]);
+    n--;
+    maxheapify(arr,n,1);
+    // insert 1 element and heapify the array
+    arr.push_back(100);
+    n++;
+    maxheapify(arr,n,1);
 }
 
