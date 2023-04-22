@@ -24,3 +24,17 @@ public:
         return st2.top();
     }
 };
+
+// st2 is monotoincally increasing stack and st1 is used to pop elements & we are not popping min element we are popping top element of st1
+// explain the above code flow with example of 5, 6, 3, 7, 2, 1, 8. 
+// so the code flow will be like this
+// push(5) -> st1 = 5, st2 = 5
+// push(6) -> st1 = 5, 6, st2 = 5
+// push(3) -> st1 = 5, 6, 3, st2 = 5, 3
+// push(7) -> st1 = 5, 6, 3, 7, st2 = 5, 3
+// push(2) -> st1 = 5, 6, 3, 7, 2, st2 = 5, 3, 2
+// push(1) -> st1 = 5, 6, 3, 7, 2, 1, st2 = 5, 3, 2, 1
+// push(8) -> st1 = 5, 6, 3, 7, 2, 1, 8, st2 = 5, 3, 2, 1
+// pop() -> st1 = 5, 6, 3, 7, 2, 1, st2 = 5, 3, 2, 1
+
+
