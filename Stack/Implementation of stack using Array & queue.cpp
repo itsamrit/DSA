@@ -40,21 +40,18 @@ int main() {
 //USING QUEUE(SINGLE QUEUE so that even if interviewer asks for doubly u can write this code)
 //https://takeuforward.org/data-structure/implement-stack-using-single-queue/
 class Stack {
-  queue < int > q;
+  queue <int> q;
   public:
-    void Push(int x) {
-      int s = q.size();
-      q.push(x);
-      for (int i = 0; i < s; i++) {
-
-        q.push(q.front());
-        q.pop();
-      }
+  void Push(int x) {       
+    int s = q.size();
+    q.push(x);
+    for (int i = 0; i < s; i++) {  
+      q.push(q.front());
+      q.pop();
     }
-  int Pop() {
-    int n = q.front();
+  }
+  void Pop() {
     q.pop();
-    return n;
   }
   int Top() {
     return q.front();

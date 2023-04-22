@@ -1,51 +1,60 @@
 implementation of queue with // Time Complexity:  pop function: O(1)   push function: O(1) top function: O(1) size function: O(1)
 
-#include<iostream>
-using namespace std;
+class Queue {
+  int * arr;  //since i dont know the size of array so i have to use dynamic array for that i have to use int *arr
+  int start, end, currSize, maxSize;  // all the variables inside constructor should be defined 
+  public:
+    Queue() {                  //constructor called when object is created without size provided by user
+      arr = new int[16];
+      start = -1;
+      end = -1;
+      currSize = 0;
+    }
 
-class Queue{
-    int *arr;
-    int front;
-    int back;
-    int n;
-    public:
-    Queue(int size){
-        arr = new int[size];
-        front = -1;
-        back = -1;
-        n = size;
+  Queue(int maxSize) {         //constructor called when object is created with size provided by user
+    (* this).maxSize = maxSize;
+    arr = new int[maxSize];
+    start = -1;
+    end = -1;
+    currSize = 0;
+  }
+  void push(int newElement) {
+    if (currSize == maxSize) {
+      cout << "Queue is full\nExiting..." << endl;
+      exit(1);
     }
-    void push(int x){
-        if(back == n-1){
-            cout<<"Queue Overflow"<<endl;
-            return;
-        }
-        back++;
-        arr[back] = x;
-        if(front == -1){
-            front++;
-        }
+    if (end == -1) {
+      start = 0;
+      end = 0;
+    } else
+      end = (end + 1) % maxSize;
+    arr[end] = newElement;
+    cout << "The element pushed is " << newElement << endl;
+    currSize++;
+  }
+  int pop() {        //nothing is poped just the start is changed
+    if (start == -1) {
+      cout << "Queue Empty\nExiting..." << endl;
     }
-    void pop(){
-        if(front == -1 || front>back){
-            cout<<"No elements in queue"<<endl;
-            return;
-        }
-        front++;
+    int popped = arr[start];
+    if (currSize == 1) {
+      start = -1;
+      end = -1;
+    } else
+      start = (start + 1) % maxSize;
+    currSize--;
+    return popped;
+  }
+  int top() {
+    if (start == -1) {
+      cout << "Queue is Empty" << endl;
+      exit(1);
     }
-    int top(){
-        if(front == -1 || front>back){
-            cout<<"No elements in queue"<<endl;
-            return -1;
-        }
-        return arr[front];
-    }
-    bool size(){
-        if(front == -1 || front>back){
-            return 0;
-        }
-        return back-front+1;
-    }
+    return arr[start];
+  }
+  int size() {
+    return currSize;
+  }
 };
 
 // time complexity of pop function is O(1), push function is O(1), peek function is O(1) and empty function is O(1)
@@ -58,28 +67,41 @@ class Queue{
     void push(int x){
         s1.push(x);
     }
-    int pop(){
-        if(s1.empty() && s2.empty()){
+
+    void pop(){
+        if(!s1.size() && !s2.size()){
             cout<<"Queue is empty"<<endl;
-            return -1;
+            return;
         }
-        if(s2.empty()){
+        if(s2.empty()){   
             while(!s1.empty()){
                 s2.push(s1.top());
                 s1.pop();
             }
         }
-        int topval = s2.top();
         s2.pop();
-        return topval;
     }
-    bool empty(){
-        if(s1.empty() && s2.empty()){
-            return true;
+
+    int top(){
+        if(!s1.size() && !s2.size()){
+            cout<<"Queue is empty"<<endl;
+            return -1;
         }
-        return false;
+        if(s2.empty()){            //this case will be very few times so time complexity will be o(1) amortized
+            while(!s1.empty()){
+                s2.push(s1.top());
+                s1.pop();
+            }
+        }
+        return s2.top();
+    }
+    
+    int size(){
+        return s1.size()+s2.size();
     }
 };
+//best explanation : https://www.youtube.com/watch?v=3Et9MrMc02A&ab_channel=takeUforward
 
 // time complexity of pop is o(n) or amortized o(1), push is O(1) and empty is O(1)
-// but why we are using 2 stack instead of array or vector because limitation of size of queue
+// but why we are using 2 stack instead of array or vector because limitation of size of queue  
+
