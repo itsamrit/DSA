@@ -1,9 +1,8 @@
 ✅Dfs checks all possibilities,but here is a restriction that once visited cant be visited again. So we visit a node with random possible path & after that we cant visit that node again with any other possible path.
-
-In graph where there is only one possible path from source to a node like non-cyclic undirected graph :-
-
-U can also use dfs to calculate shortest/longest distance since there is only one possible path i,e it is both shotest & longest. Use either bfs or dfs in this case.
-
+```
+  In graph where there is only one possible path from source to a node like non-cyclic undirected graph :-
+    U can also use dfs to calculate shortest/longest distance since there is only one possible path i,e it is both shotest & longest. Use either bfs or dfs in this case.
+```
 ✅Shortest dis/weight when dis/weight betn all pair = 1 i,e unweighted then apply bfs with normal queue. o(n+e) i,e check all adjacent nodes attached first & then go to next node
 
 🟢You cant solve any graph distance problem with normal matrix dp because even if you convert it in adjaceny matrix, u can move from 1 cell to any cell having 1 in that row. So dp cant be applied. i,e solve using priority_queue,queuue 2.Specilized dp for graph like bellman ford or floyd warshall
