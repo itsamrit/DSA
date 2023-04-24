@@ -9,7 +9,7 @@
 
 🟢Solve all normal matrix problem having adjacent movements i,e no graph involved using dp(tc=o(n^2) not with bfs(priority_queue) having more tc= oklogk where k=o(n^2)).
 
--> When to apply bfs in normal matrix having no graph-: 
+-> Exception i,e When to apply bfs in normal matrix having no graph-: 
 
 1.If more than 2 variable in recursive function( int i,int j, int 3rd) in normal matrix even with adjacent movement i,e no cicular movement even then dp will cost o(n^3).Consider bfs,if possible.
 
