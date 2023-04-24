@@ -17,7 +17,7 @@
 
 ⭐SubTopic: Prob in which u need to store a group of nodes or start dfs or bfs from a grp of nodes :-
 
-⭐SubTopic :For shortest dis between 2 group of indexes like island in matrix/graph use dfs+bfs.Find all index of 1st group using dfs & intialize the bfs queue with it.
+⭐SubTopic :For shortest dis between 2 group of indexes like island in matrix/graph use dfs+bfs.Find all index of 1st group using dfs & intialize the bfs queue with all the nodes i,e starting bfs from a grp of nodes.
 
 Using Dfs :U can store all index of group1 & group2 in separete vector & run loop to find dis between all pair & select smallest dis.
 
