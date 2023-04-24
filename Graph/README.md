@@ -5,7 +5,7 @@
 ```
 ✅Shortest dis/weight when dis/weight betn all pair = 1 i,e unweighted then apply bfs with normal queue. o(n+e) i,e check all adjacent nodes attached first & then go to next node
 
-🟢You cant solve any graph distance problem with normal matrix dp because even if you convert it in adjaceny matrix, u can move from 1 cell to any cell having 1 in that row. So dp cant be applied. i,e solve using priority_queue,queuue 2.Specilized dp for graph like bellman ford or floyd warshall
+🟢You cant solve any graph distance problem with normal matrix dp because even if you convert it in adjaceny matrix, u can move from 1 cell to any cell having 1 in that row. So dp cant be applied. i,e solve using either priority_queue,queuue or Specilized dp for graph like bellman ford or floyd warshall
 
 🟢Solve all shortest dis matrix problem where u can go to adjacent movement node like diagonal,right,left with dp. If u solve using bfs it will cost u same o(n^2 + (2n)^2) or o(n^2 + (2n)^2)log(n^2) if use priority_queue . (2n)^2 edges in normal matrix going to right down. So dont use in non cyclic traversal.
 
