@@ -18,12 +18,12 @@ void prim(int s){
         int c = pq.top().second;
         pq.pop();
         if(vis[c] == 1)continue;
-        vis[c] = 1;
-        
+        vis[c] = 1;  //Once we have visited a node, we dont need to reiterate over it again
+                     
         for(auto i:g[c]){
-            if (vis[i.first] == 0 && dis[i.first] > i.second){ 
+            if (vis[i.first] == 0 && dis[i.first] > i.second){  //🟩MEMOIZE : logic very hard : there is no link between parent & child distance in mst
                 dis[i.first] = i.second;                          
-                pq.push({dis[i.first], i.first});
+                pq.push({dis[i.first], i.first});  
                 par[i.first]=c;
             }
         }
