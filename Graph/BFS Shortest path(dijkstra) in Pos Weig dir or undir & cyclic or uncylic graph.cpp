@@ -22,8 +22,7 @@ void bfs(int s){
         pair<int,int> c=pq.top();
         pq.pop();
         for(auto i:g[c]){
-            if (dis[i.first] > dis[c.second] + i.second){//Prim MST: Normal dijkstra will give shortest dis from root to all nodes which may include cycles because at each step it checks pq pops out or gives shortest from root
-                                                         //To avoid cycle We dont check shortest from root.We check shortest from cur node. So we dont include the dis of par dis[c.second]
+            if (dis[i.first] > dis[c.second] + i.second){  //🟩MEMOIZE for prim mst: logic very hard : there is no link between parent & child distance in mst
                 dis[i.first] = dis[c.second] + i.second;   
                 pq.push({dis[i.first], i.first});
                                                     // To find path : par[i.first]=c;
