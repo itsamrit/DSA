@@ -1,28 +1,27 @@
 ✅Dfs checks all possibilities,but here is a restriction that once visited cant be visited again. So we visit a node with random possible path & after that we cant visit that node again with any other possible path.
-
-In graph where there is only one possible path from source to a node like non-cyclic undirected graph :-
-
-U can also use dfs to calculate shortest/longest distance since there is only one possible path i,e it is both shotest & longest. Use either bfs or dfs in this case.
-
+```
+  In graph where there is only one possible path from source to a node like non-cyclic undirected graph :-
+    U can also use dfs to calculate shortest/longest distance since there is only one possible path i,e it is both shotest & longest. Use either bfs or dfs in this case.
+```
 ✅Shortest dis/weight when dis/weight betn all pair = 1 i,e unweighted then apply bfs with normal queue. o(n+e) i,e check all adjacent nodes attached first & then go to next node
 
-🟢You cant solve any graph distance problem with normal matrix dp because even if you convert it in adjaceny matrix, u can move from 1 cell to any cell having 1 in that row. So dp cant be applied. i,e solve using priority_queue,queuue 2.Specilized dp for graph like bellman ford or floyd warshall
+🟢You cant solve any graph distance problem with normal matrix dp because even if you convert it in adjaceny matrix, u can move from 1 cell to any cell having 1 in that row. So dp cant be applied. i,e solve using either priority_queue,queuue or Specilized dp for graph like bellman ford or floyd warshall
 
-🟢Solve all shortest dis matrix problem where u can go to adjacent movement node like diagonal,right,left with dp. If u solve using bfs it will cost u same o(n^2 + (2n)^2) or o(n^2 + (2n)^2)log(n^2) if use priority_queue . (2n)^2 edges in normal matrix going to right down. So dont use in non cyclic traversal.
+🟢Solve all normal matrix problem having adjacent movements i,e no graph involved using dp(tc=o(n^2) not with bfs(priority_queue) having more tc= oklogk where k=o(n^2)).
 
--> When to apply bfs in normal matrix -: 
+-> Exception i,e When to apply bfs in normal matrix having no graph-: 
 
 1.If more than 2 variable in recursive function( int i,int j, int 3rd) in normal matrix even with adjacent movement i,e no cicular movement even then dp will cost o(n^3).Consider bfs,if possible.
 
 2.If in normal matrix we can move cyclic i,e like moving in all 4 directions & distance is postive then apply bfs it will take o(n^2 + (4n)^2) or o(n^2 + (4n)^2)logn^2 if use priority  which is still lower than o(2^n).
 
-⭐SubTopic :For shortest dis between 2 group of indexes like island in matrix/graph use dfs+bfs.Find all index of 1st group using dfs & intialize the bfs queue with it.
+⭐SubTopic: Prob in which u need to store a group of nodes or start dfs or bfs from a grp of nodes :-
+
+⭐SubTopic :For shortest dis between 2 group of indexes like island in matrix/graph use dfs+bfs.Find all index of 1st group using dfs & intialize the bfs queue with all the nodes i,e starting bfs from a grp of nodes.
 
 Using Dfs :U can store all index of group1 & group2 in separete vector & run loop to find dis between all pair & select smallest dis.
 
 ⭐SubTopic : Given 01 matrix,find nearest 0 for each cell. Store all the 0 in queue as group1 like in above problem & initalize all nodes which are in queue as 0 distance from 0 & apply normal bfs to find no of steps to go to each cell
-
-⭐ There are many prob in which u need to store a group of nodes or start dfs or bfs from a grp of nodes.
 
 👉All path from source to target : just like normal matrix use dfs.
 
