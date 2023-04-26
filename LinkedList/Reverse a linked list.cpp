@@ -4,7 +4,7 @@
             next = cur->next;    //next
             cur->next = prev;    //cur->next
             prev = cur;          //prev
-            cur = next;          //cur
+            cur = next;          //cur next
         }
         return prev;
     }
