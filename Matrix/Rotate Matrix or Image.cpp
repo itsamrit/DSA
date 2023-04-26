@@ -6,7 +6,7 @@
     //1 : transpose : converting rows into columns & columns into rows
     void transpose(int[][] matrix) {
         for (int i = 0; i < n; i++) {
-            for (int j = i+1; j < n; j++) {   // ✅✅ V imp : for(j=i+1 to n-1)  If for(i=0 to n-1) then 2 time transpose will be done & it will cause no effect on matrix
+            for (int j = i+1; j < n; j++) {   // ✅✅ V imp : If for(j=0 to n-1) then 2 time transpose will be done & it will cause no effect on matrix
                 swap(matrix[i][j],matrix[j][i]);
             }
         }
