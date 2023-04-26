@@ -48,7 +48,8 @@ public:
 class MyHashMap {
 public:
     const static int size = 19997;
-    const static int mult = 12582917;
+    const static int mult = 12582917;   // prime no are used to reduce collisions i,e same index for different keys i,e having same linked list node for diff keys.
+                                        // Since prime numbers only 2 factor 1 and itself so less collision
 
     // initialize the data array to hold pointers to Node objects
     Node* data[size] = {};
