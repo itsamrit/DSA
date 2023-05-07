@@ -66,7 +66,6 @@ public:
         return (int)((long)key * mult % size);
     }
 
-    // put method to add or update a key-value pair
     void put(int key, int val) {
         // remove any existing key-value pair with the same key
         remove(key);
@@ -77,9 +76,7 @@ public:
         data[h] = node;  // head yakes 1 steps ahead
     }    
 
-    // get method to retrieve the value associated with a key
     int get(int key) {
-        // get the index for the key
         int h = hash(key);
         // iterate over the linked list at the index and return the value associated with the key, if found
         Node* node = data[h];
@@ -89,9 +86,7 @@ public:
         return -1;
     }    
 
-    // remove method to delete a key-value pair
     void remove(int key) {
-        // get the index for the key
         int h = hash(key);
         // get the first node in the linked list at the index
         Node* node = data[h];
