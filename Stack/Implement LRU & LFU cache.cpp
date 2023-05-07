@@ -16,9 +16,9 @@ public:
             int val;
             node* prev;
             node* next;
-            node(int key, int val){   //you can also do node(int k ,int v){ key=k;val=v;} 
-                this->key = key;
-                this->val = val;
+            node(int k, int v){ 
+                key = k;
+                val = v;
             }
     };
     
