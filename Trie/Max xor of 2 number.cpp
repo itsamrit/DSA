@@ -15,7 +15,7 @@ class Trie{
 	void insert(int num){
 		Node* node=root;
 		for(int i=31; i>=0; i--){
-			int bit=(num>>i)&1;
+			int bit=(num>>i)&1;   //Right Shift : Remove i bits from last &1 is used to determine the bit value
 			if(!node->links[bit]){
 				node->links[bit]=new Node();
 			}
