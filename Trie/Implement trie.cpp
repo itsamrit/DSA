@@ -18,7 +18,7 @@ public:
         TrieNode* node = root;
         for(auto it:word){
             int ind = it - 'a';    //🟩Assumption all char are in small letters
-            if(node->children[ind] == NULL)
+            if(!node->children[ind])
                 node->children[ind] = new TrieNode();
             node = node->children[ind];
         }
@@ -29,7 +29,7 @@ public:
         TrieNode* node = root;
         for(auto it:word){
             int ind = it - 'a';
-            if(node->children[ind] == NULL)
+            if(!node->children[ind])
                 return false;
             node = node->children[ind];
         }
@@ -40,7 +40,7 @@ public:
         TrieNode* node = root;
         for(auto it:prefix){
             int ind = it - 'a';
-            if(node->children[ind] == NULL)
+            if(!node->children[ind])
                 return false;
             node = node->children[ind];
         }
