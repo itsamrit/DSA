@@ -17,7 +17,7 @@ public:
     void insert(string word) {
         TrieNode* node = root;
         for(auto it:word){
-            int ind = it - 'a';
+            int ind = it - 'a';    //🟩Assumption all char are in small letters
             if(node->children[ind] == NULL)
                 node->children[ind] = new TrieNode();
             node = node->children[ind];
