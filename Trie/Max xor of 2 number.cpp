@@ -28,7 +28,7 @@ class Trie{
 		for(int i=31; i>=0; i--){
 			int bit=(num>>i)&1;
 			if(!node->links[1-bit]){
-				node=node->links[bit];
+				node=node->links[bit];  //go forward with whatever bit is present
 			}
 			else{
 				maxi=maxi|(1<<i);
