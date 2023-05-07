@@ -36,7 +36,7 @@ public:
         return node->isComplete;
     }
     
-    bool startsWith(string prefix) {
+    bool startsWith(string prefix) {   // Checking whether there is word having all the starting words of prefix whether it at prefix or not
         TrieNode* node = root;
         for(auto it:prefix){
             int ind = it - 'a';
