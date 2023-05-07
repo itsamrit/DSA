@@ -1,7 +1,7 @@
 class TrieNode{
     public:
         bool isComplete;
-        TrieNode* children[26];
+        TrieNode* children[26];   // IN tree Node* left; the we check if(!left) here we check if(!children[i])
         // TrieNode(){             // 🟩 Since by deault isCompleete is false and all children values are NUll or 0 we dont need constructor
         //     isComplete = false;
         //     memset(children,0,sizeof(children));
@@ -18,7 +18,7 @@ public:
         TrieNode* node = root;
         for(auto it:word){
             int ind = it - 'a';    //🟩Assumption all char are in small letters
-            if(!node->children[ind])
+            if(!node->children[ind])    
                 node->children[ind] = new TrieNode();
             node = node->children[ind];
         }
