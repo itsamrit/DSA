@@ -67,7 +67,7 @@ public:
         int h = hash(key);
         // create a new Node object with the key-value pair and add it to the start of the linked list at the index
         Node* node = new Node(key, val, data[h]);
-        data[h] = node;
+        data[h] = node;  // head yakes 1 steps ahead
     }    
 
     // get method to retrieve the value associated with a key
