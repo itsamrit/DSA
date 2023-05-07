@@ -27,7 +27,7 @@ public:
     int capacity;
     unordered_map<int,node*> map;
     
-    LRUCache(int capacity) {        //it is called only when new object is created 
+    LRUCache(int capacity) {        //it is called only when new object is created //u can also do (int c){ capacity = c;
         this->capacity = capacity;
         head->next = tail;
         tail->prev = head;
