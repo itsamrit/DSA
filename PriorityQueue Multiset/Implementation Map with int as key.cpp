@@ -45,6 +45,13 @@ public:
 // This is a common approach for handling collisions in hash tables, where multiple keys may hash to the same index in the array. 
 // The linked list allows us to store multiple key-value pairs at the same index in the array.
 
+// size is the size of the data array. Here's how the formula works:
+    
+// Multiply the input key key by the prime number mult.
+// Take the remainder of the result of the multiplication with the size of the data array.
+// The remainder is the index in the data array where the corresponding value will be stored.
+    
+// By using a prime number for mult, the chance of collisions is reduced since the resulting index is more likely to be evenly distributed across the data array
 class MyHashMap {
 public:
     const static int size = 19997;
