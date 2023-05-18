@@ -8,15 +8,20 @@ Create another ans vector to insert the intervals.Dont modify existing array.If 
 
     vector<vector<int>> insert(vector<vector<int>>& in, vector<int>& neww) {
     🟩Code to insert
-//         int n=in.size();
-//         for(int i=0;i<in.size();i++){
-//             if(in[i][0]>=neww[0]){
-//                 in.insert(in.begin()+i,neww);
+//         bool flag=0;
+//         for(int i=0;i<intervals.size();i++){
+//             if(neww[0]<=intervals[i][1]){
+//                 if(intervals[i][0]<neww[0]){
+//                     intervals.insert(intervals.begin()+i+1,neww);
+//                 }
+//                 else{
+//                     intervals.insert(intervals.begin()+i,neww);
+//                 }
+//                 flag=1;
 //                 break;
 //             }
 //         }
-//         if(in.size()==0)return {neww};
-//         if(n==in.size())in.push_back(neww);
+//         if(flag==0)intervals.insert(intervals.begin()+intervals.size(),neww);
         
         🟩Code to merge
         vector<vector<int>>ans;
