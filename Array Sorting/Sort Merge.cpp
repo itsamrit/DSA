@@ -3,19 +3,17 @@
 //t.c=0(n*logn)              s.c=o(n) because of left[n/2] + right[n/2].
 
 void merge(int *Arr, int start, int mid, int end,int &inversion) {    
+	//🟩😊😊start to mid and mid to end are already sorted so just compare arr[i] and arr[j] && MERGE THEM
+	
 	vector<int>temp;
 	int i = start, j = mid+1;     
     
-//     To find pairs/inversion such that arr[i]>2*arr[j] with i<j
-//     while(i<=mid && j<=end){    
-//         if(Arr[i] <= Arr[j]*2) temp.pb(Arr[i++]);      
-//         else { inversion+=mid-i; temp.pb(Arr[j++]); }     
-//     }
-    
 	while(i <= mid && j <= end) {
 	     if(Arr[i] <= Arr[j]) temp.push_back(Arr[i++]);  //🟩😊start to mid and mid to end are already sorted so just compare arr[i] and arr[j]
-	     else temp.push_back(Arr[j++]);
+	     else temp.push_back(Arr[j++]);  // inversion+=mid-i; && REST SAME
 	}
+	//To find pairs/inversion such that arr[i]>2*arr[j] with i<j  : if(arr[i] <= arr[j]*2)  && Rest same in above loop
+	
 	while(i <= mid) { temp.push_back(Arr[i]); i++;}
   
 	while(j <= end) { temp.push_back(Arr[j]); j++;}
