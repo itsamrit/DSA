@@ -8,8 +8,8 @@ void merge(int *Arr, int start, int mid, int end,int &inversion) {
     
 //     To find pairs/inversion such that arr[i]>2*arr[j] with i<j
 //     while(i<=mid && j<=end){    
-//         if(Arr[i] <= Arr[j]*2) i++;      //For pair arr[i]>arr[j] simply : if(Arr[i] <= Arr[j]) i++;
-//         else { inversion+=mid-i; j++;}     
+//         if(Arr[i] <= Arr[j]*2) temp.pb(Arr[i++]);      
+//         else { inversion+=mid-i; temp.pb(Arr[j++]); }     
 //     }
     
 	while(i <= mid && j <= end) {
