@@ -23,7 +23,7 @@ int bs(vector<int>&nums,int target,int s,int e){
                 ind=mid;
                 break;
             }
-            else if(nums[mid]>nums[right]){   //😊🟩Either compare with nums[right] or nums[left] to decide the movemenet of mid.
+            else if(nums[mid]>nums[right]){   //😊🟩Always compare with nums[right] NOT WITH nums[left]
                                               //          DONT COMPARE WITH BOTH LEFT AND RIGHT
                 left=mid+1;
             }
