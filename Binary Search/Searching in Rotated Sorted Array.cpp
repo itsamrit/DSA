@@ -19,7 +19,7 @@ int bs(vector<int>&nums,int target,int s,int e){
         int ind=-1;
         while(left<=right){
             mid=left+(right-left)/2;
-            if((mid==0 || nums[mid]<nums[mid-1]) && (mid==nums.size()-1 || nums[mid]<nums[mid+1])){
+            if((mid==0 || nums[mid]<nums[mid-1]) && (mid==nums.size()-1 || nums[mid]<nums[mid+1])){   //😊🟩 First condition if found & break
                 ind=mid;
                 break;
             }
