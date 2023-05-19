@@ -13,7 +13,7 @@ int bs(vector<int>&nums,int target,int s,int e){
         }
         return -1;
     }
-    int search(vector<int>& nums, int target) {
+    int search(vector<int>& nums, int target) {   
         int left=0,right=nums.size()-1;
         int mid;
         int ind=-1;
@@ -23,7 +23,7 @@ int bs(vector<int>&nums,int target,int s,int e){
                 ind=mid;
                 break;
             }
-            else if(nums[mid]>nums[right]){
+            else if(nums[mid]>nums[right]){   //😊🟩Either compare with nums[right] or nums[left] to decide the movemenet of mid
                 left=mid+1;
             }
             else{
