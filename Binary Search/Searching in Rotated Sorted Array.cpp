@@ -1,3 +1,4 @@
+//🟩🟩🟩🟩ALWAYS COMPARE WITH RIGHT PERSON i,e INDEX
 int bs(vector<int>&nums,int target,int s,int e){
         while(s<=e){
             int mid=(s+(e-s)/2);
