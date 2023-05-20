@@ -24,7 +24,7 @@ int bs(vector<int>&nums,int target,int s,int e){
                 break;
             }
             else if(nums[mid]>nums[right]){   //😊🟩Always compare with nums[right] NOT WITH nums[left]
-                                              //          DONT COMPARE WITH BOTH LEFT AND RIGHT
+                                              //  U can also do this else if(nums[mid]<nums[right])    DONT COMPARE WITH BOTH LEFT AND RIGHT
                 left=mid+1;
             }
             else{
