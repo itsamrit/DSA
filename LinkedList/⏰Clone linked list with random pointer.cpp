@@ -1,6 +1,6 @@
 //USING MAP : 
 //tc=o(N) sc=o(N)
-
+//Just learn map solution. NO need to learn second one🟩🟩
 class Solution {
 public:
     Node* copyRandomList(Node* head) {
