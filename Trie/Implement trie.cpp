@@ -16,25 +16,25 @@ public:
     }
     
     void insert(string word) {
-        TrieNode* node = root;
+        TrieNode* temp = root;
         for(auto it:word){
             int ind = it - 'a';    //🟩Assumption all char are in small letters
-            if(!node->child[ind])    
-                node->child[ind] = new TrieNode();
-            node = node->child[ind];
+            if(!temp->child[ind])    
+                temp->child[ind] = new TrieNode();
+            temp = temp->child[ind];
         }
-        node->isComplete = true;
+        temp->isComplete = true;
     }
     
     bool search(string word) {
-        TrieNode* node = root;
+        TrieNode* temp = root;
         for(auto it:word){
             int ind = it - 'a';
-            if(!node->child[ind])
+            if(!temp->child[ind])
                 return false;
-            node = node->child[ind];
+            temp = temp->child[ind];
         }
-        return node->isComplete;    // If Checking whether there is word having all the starting words of prefix whether it at prefix or not then : return true;
+        return temp->isComplete;    // If Checking whether there is word having all the starting words of prefix whether it at prefix or not then : return true;
     }
 };
 
