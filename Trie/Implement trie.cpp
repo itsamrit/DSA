@@ -33,18 +33,7 @@ public:
                 return false;
             node = node->children[ind];
         }
-        return node->isComplete;
-    }
-    
-    bool startsWith(string prefix) {   // Checking whether there is word having all the starting words of prefix whether it at prefix or not
-        TrieNode* node = root;
-        for(auto it:prefix){
-            int ind = it - 'a';
-            if(!node->children[ind])
-                return false;
-            node = node->children[ind];
-        }
-        return true;
+        return node->isComplete;    // If Checking whether there is word having all the starting words of prefix whether it at prefix or not then : return true;
     }
 };
 
