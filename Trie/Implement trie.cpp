@@ -15,7 +15,7 @@ public:
         root = new TrieNode();   // here position of above pointer is declared i,e root of whole tree
     }
     
-    void insert(string word) {
+    void insert(string word) {     // NEVER USE & like string &word : gives error
         TrieNode* temp = root;
         for(auto it:word){
             int ind = it - 'a';    //🟩Assumption all char are in small letters
