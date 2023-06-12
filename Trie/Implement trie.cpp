@@ -1,8 +1,11 @@
 class TrieNode{
     public:
         bool isComplete;
-        TrieNode* child[26];   // IN tree Node* left; the we check if(!left) here we check if(!child[i])
-        // TrieNode(){             // 🟩 Since by deault isCompleete is false and all child values are NUll or 0 we dont need constructor
+        TrieNode* child[26];   // 🟩IN tree Node* left; the we check if(!left) here we check if(!child[i])   
+                               // Each trieNode have 2 prop 1. bool isComplete 2. TrieNode will contain another array of trieNode of size 26 like 
+                                   //🟩char name[size] : TrieNode* child[26];
+    
+        // TrieNode(){             //  Since by deault isCompleete is false and all child values are NUll or 0 we dont need constructor
         //     isComplete = false;
         //     memset(child,0,sizeof(child));
         // }
