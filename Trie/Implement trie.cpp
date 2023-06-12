@@ -9,10 +9,10 @@ class TrieNode{
 };
 class Trie {
 public:
-    TrieNode* root;    // root Node of the whole tree 
+    TrieNode* root;    // defining pointer to point at root node. Here only pointer is declared not its position.
     
     Trie() {
-        root = new TrieNode();
+        root = new TrieNode();   // here position of above pointer is declared i,e root of whole tree
     }
     
     void insert(string word) {
