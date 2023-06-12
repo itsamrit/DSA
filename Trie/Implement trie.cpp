@@ -9,7 +9,8 @@ class TrieNode{
 };
 class Trie {
 public:
-    TrieNode* root;
+    TrieNode* root;    // root Node of the whole tree 
+    
     Trie() {
         root = new TrieNode();
     }
