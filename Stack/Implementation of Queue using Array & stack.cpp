@@ -23,7 +23,7 @@ class Queue {
       cout << "Queue is full\nExiting..." << endl;
       exit(1);
     }
-    if (end == -1) {
+    if (end == -1) { // if it's empty 
       start = 0;
       end = 0;
     } else
