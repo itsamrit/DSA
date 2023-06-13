@@ -8,9 +8,10 @@
  * int param_1 = obj->get(key);
  * obj->put(key,value);
  */
+
 class LRUCache {
 public:
-    class node{
+    class node{ //👍U can make class node outside this class also like in implementation of trie
         public:
             int key;
             int val;
