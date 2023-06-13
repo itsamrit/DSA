@@ -1,5 +1,5 @@
 implementation of queue with // Time Complexity:  pop function: O(1)   push function: O(1) top function: O(1) size function: O(1)
-
+//👍 whenever queue is empty start and end should be -1
 class Queue {
   int * arr;  //since i dont know the size of array so i have to use dynamic array for that i have to use int *arr
   int start, end, currSize, maxSize;  // all the variables inside constructor should be defined 
