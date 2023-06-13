@@ -79,77 +79,69 @@ public:
 //LFU CACHE HARD
 
 class LFUCache {
-public:
-    int Capacity, minFrequency = 0, currentSize = 0;
-    unordered_map<int, list<int>>frequencyList;
-    unordered_map<int, list<int>::iterator>keyNode;
-    unordered_map<int, pair<int, int>>frequency;
+    unordered_map<int,pair<int,int>> cache; // map[key] = {value,count}
+    vector<deque<int>> counter; // one deque per count
+    int max_size, num_elements;
 
-    LFUCache(int capacity) {
-        Capacity = capacity;
-        minFrequency = 0, currentSize = 0;
+    void increment_element(int key) {
+        // increment cache counter
+        cache[key].second++;
+        // increase size of counter if necessary
+        while (counter.size() <= cache[key].second)
+            counter.push_back(deque<int>());
+        // add a new element into the appropriate deque
+        counter[cache[key].second].push_back(key);
     }
-    
+
+    void remove_LFU_element() {
+        bool success = false;
+        // start from the front of the counter
+        for (int i = 0; i < counter.size() && !success; i++) {
+            // start at the front of each deque
+            while (!counter[i].empty() && !success) {
+                // if this count is valid, delete the entry in the cache
+                if (cache[counter[i].front()].second == i) {
+                    success = true;
+                    cache.erase(counter[i].front());
+                    num_elements--;
+                }
+                counter[i].pop_front(); // delete invalid and 1st valid
+            }
+        }
+    }
+
+public:
+    LFUCache(int c) {
+        max_size = c;
+        num_elements = 0;
+        counter = {{}};
+    }
+
     int get(int key) {
-        if(keyNode.find(key) == keyNode.end()) return -1;
-        int keyFreq = frequency[key].first;
-        frequencyList[keyFreq].erase(keyNode[key]);
-        frequency[key].first++;
-        frequencyList[frequency[key].first].push_front(key);
-        keyNode[key] = frequencyList[frequency[key].first].begin();
-        if(frequencyList[minFrequency].size() == 0) minFrequency++;
-        return frequency[key].second;
+        // if not found, return -1
+        if (cache.find(key) == cache.end())
+            return -1;
+        // count use
+        increment_element(key);
+        // return the value
+        return cache[key].first;
     }
     
     void put(int key, int value) {
-        if(Capacity <= 0) return;
-        if(keyNode.find(key) != keyNode.end()){
-            frequency[key].second = value;
-            get(key);
+        // protect against capacity = 0
+        if (max_size == 0) return;
+        // if key exists
+        if (cache.find(key) != cache.end()) {
+            cache[key].first = value;
+            increment_element(key);
             return;
         }
-        // New Element
-        if(currentSize == Capacity){
-            int minFreqBack = frequencyList[minFrequency].back();
-            keyNode.erase(minFreqBack);
-            frequency.erase(key);
-            frequencyList[minFrequency].pop_back();
-            currentSize--;
-        }
-        currentSize++;
-        minFrequency = 1;
-        frequencyList[minFrequency].push_front(key);
-        keyNode[key] = frequencyList[minFrequency].begin();
-        frequency[key].first = 1, frequency[key].second = value;
-    }
-};
-
-
-//If asked to implement list also 
-struct List{
-    int size;
-    Node* head;
-    Node* tail;
-    List(){
-        head=new Node(0,0);
-        tail=new Node(0,0);
-        head->next=tail;
-        tail->prev=head;
-        size=0;
-    }
-    void addfront(Node* node){
-        Node* temp=head->next;
-        node->next=temp;
-        node->prev=head;
-        temp->prev=node;
-        head->next=node;
-        size++;
-    }
-    void removenode(Node* delnode){
-        Node* delprev=delnode->prev;
-        Node* delnext=delnode->next;
-        delprev->next=delnext;
-        delnext->prev=delprev;
-        size--;
+        // if at capacity
+        if (num_elements == max_size)
+            remove_LFU_element();
+        // add the new key
+        cache[key] = make_pair(value,0);
+        counter[0].push_back(key);
+        num_elements++;
     }
 };
