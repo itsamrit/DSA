@@ -3,8 +3,8 @@
 
 class MinStack {
 public:
-    stack<int> st1;
-    stack<int> st2;
+    stack<int> st1;  //🟩Like normal stack which push,pop & give top like normal stack
+    stack<int> st2;  //🟩Maintaining a Monotonically decreasing stack to have a additional functionality of giving min element of stack
     MinStack() {  // why nothing in constructor? because we are using stl stack so no need to initialize it
     }
 
