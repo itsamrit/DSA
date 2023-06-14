@@ -1,3 +1,6 @@
+// MinStack Properties: it push,pops & give top like normal stack i,e never pops min element 
+//           🟩   Additional functionality of giving min element using another stack which stores monotonically decreasing elements
+
 class MinStack {
 public:
     stack<int> st1;
