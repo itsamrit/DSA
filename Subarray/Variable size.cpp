@@ -45,7 +45,7 @@ string minWindow(string s, string t) {
             mp[s[j]]--;                   //🟩This will make faltu elements count negative so that in mp[s[i]]++ cant make them 1 max go to 0
             if (mp[s[j]] == 0) count--;          
  
-            while (count == 0) {         // Till all element of t are present in current substring with respected amount of frequecies
+            while (count == 0) {         //🟩 While valid unlike above problem keep updating the ans and deleting the leftmost
                     if (ans > j - i + 1) {
                         ans = j - i + 1;
                         start = i;
