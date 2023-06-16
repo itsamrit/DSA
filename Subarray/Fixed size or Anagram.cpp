@@ -10,7 +10,7 @@ int maxSum(int arr[], int n, int k){
 }
 
 
-Anagram :Either use unordered_map or normal hashing 
+Find all Anagram of p in a string s  :Either use unordered_map or normal hashing 
 
 vector<int> findAnagrams(string s, string p) {             
         vector<int> freq_p(26,0);
