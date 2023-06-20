@@ -8,6 +8,32 @@
 
 // ✅If asked to return no of subsequences in a string which is equal to given in a vector<string>v. Check each word of v . SO tc=o(n^2) instead of checking each subsequnce o(2^n)
 
+
+
+
+    vector<vector<int>>ans;
+    void dfs(vector<int>&nums,int i,vector<int>&temp){
+        // if(i>nums.size())return;
+        if(i>=nums.size()){
+            ans.push_back(temp);
+            return;
+        }
+        temp.push_back(nums[i]);
+        dfs(nums,i+1,temp);
+        temp.pop_back();
+        while(i<nums.size()-1 && nums[i]==nums[i+1])i++;   //🟩 For avoiding duplicates in 01 
+        dfs(nums,i+1,temp);
+    }
+    
+    vector<vector<int>> subsetsWithDup(vector<int>& nums) {
+        sort(nums.begin(),nums.end());
+        vector<int>temp;
+        dfs(nums,0,temp);
+        return ans;
+    }
+
+
+
 int f(vector<int>& wt, vector<int>& val, int ind, int W, vector<vector<int>>& dp){
     if(wt==0)return 1;                 //Boundry conditions   //For max/min value return 0; Think if wt is 0 max we can have 0 while if wt=0, total ways is 1 
     if(ind<0)return 0;                 //Boundry conditions
