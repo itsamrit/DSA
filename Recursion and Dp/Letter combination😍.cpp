@@ -1,4 +1,4 @@
-// Bounded Combination of array of string of chars but code is of bounded permutation
+//😍😍This problem is of 01 Combination of array of string of chars but code is like 01 permutation
 //🟩🟩🟩🟩RATNA
 vector<string> mappings = {"abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"}, ans;    
 vector<string> letterCombinations(string digits) {
