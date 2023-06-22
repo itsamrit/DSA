@@ -67,8 +67,8 @@ reverse(s.begin(),s.end());
 
 
 // Shortest common superseq i,e shortest sequence from which we can obtain both x & y by deleting some element = x.size()+y.size()-longest common subsequence
-// LPS:Longest palindromic subsequence of an arr : x=a & y=reverse(a);  lcs(x,y)    Follow up que: Min no of deletion to make array palindrom: arr.size()-lps
-// Min no insertion and deletion to make string palindrom : no of insertion = no of deletion = s.size()-lps(s)
+// LPS:Longest palindromic subsequence of an arr : x=a & y=reverse(a);  lcs(x,y)    
+//      Follow up que: Min no insertion and deletion to make string palindrom : no of insertion = no of deletion = s.size()-lps(s)
 // LRS:Longest repeting subsequence of an arr : aabbdd =3 abd coming 2times: x=arr,y=arr; lcs(x,y) with restriction if(X[i-1]==Y[j-1] && i!=j).....
 // Check if x is a subsequence of y : if(lcs(x,y)==x.size()) cout<<"yes"; 
 // In problems like min insertion, deletion to make string x to y , U dont actually insert, delete or replace a char, u just assume char inserted so move to next char
