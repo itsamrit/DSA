@@ -1,4 +1,4 @@
-//😍😍This problem is of 01 Combination of array of string of chars so its code looks like unbounded permutation but index is passed in dfs like we pass in combination
+//😍😍Letter combination algo in 1 LINE : LAYER OF for loop in COMBINATION 01 algorithm : so we're passing c+1 unaffected by for loop's int i
 //🟩🟩🟩🟩RATNA   ❤️❤️Since we're just adding a layer of loop in combination 01 algo to generate the strings, so our passing of 😍😍❤️❤️c is unaffected by loop's int i
 
 vector<string> mapp = {"abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
@@ -13,7 +13,7 @@ void dfs(string &digits, int c, string &temp){
 	for(auto &i : mapp[digits[c] - '2']){
 		temp.push_back(i);
 		helper(digits, c + 1, temp);    // 😍Since its a combination problem we pass index c which is uneffected by for loop.
-		// ❤️❤️Since we're just adding a layer of loop in combination 01 algo to generate the strings, so our passing of 😍😍❤️❤️c is unaffected by loop's int i
+		// ❤️❤️Since we're just adding a layer of loop in COMBINATION 01 algo to generate the strings, so our passing of 😍😍❤️❤️c is unaffected by loop's int i
 		temp.pop_back();
 	}
 }
