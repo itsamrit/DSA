@@ -3,7 +3,7 @@ DP ON Comparision of STRINGS (Comparision between two or more strings or vectors
 int f(int i,int j,string &s,string &t,vector<vector<int>>&dp){ 
         if(i==0||j==0)return 0;    // Base condition
         if(dp[i][j]!=-1)return dp[i][j];
-        if(s[i-1]==t[j-1])return dp[i][j] = 1+f(i-1,j-1,s,t,dp); 
+        if(s[i-1]==t[j-1])return dp[i][j] = 1+f(i-1,j-1,s,t,dp);   // 🟩LRS:Longest repeting subsequence of an arr : aabbdd =3 abd coming 2times: s=t=arr; lcs(s,t) with restriction i!=j in 1st code of this file like if(s[i-1]==t[j-1] && i!=j).....
         else dp[i][j]=max(f(i-1,j,s,t,dp),f(i,j-1,s,t,dp));                 
         return dp[i][j];
 }
