@@ -1,28 +1,20 @@
 LONGEST INCREASING SUBSEQUENCE :  Generate all subsequence like subset 01 combination & take longest increasing of that.
 ✅Whenever previous index is a parameter in recursion then in tabulation 2nd loop i,e prev cant go beyond 1stloop i,e cur.  
         So we run for(i=0 to n){ for(j=0 to i) otherwise wrong ans will come.
+🟩🟩🟩🟩🟩💀💀💀🤣🤣 We check dp[i][prev] as dp[i][prev+1] because prev can be -1 and it will be error           
 
-int dfs(int a[],int i,int prev,int n){    //  Intialize : prev=-1
-        if(i==n)return 0;
-        if(dp[i][prev+1]!=-1)return dp[i][prev+1];
-    
-        dp[i][prev+1]=dfs(a,i+1,prev,n);     //✅💀💀💀💀💀RATNA prev doesn't change RATNA  You cant change prev i,e dfs(nums,i+1,i) because if cur lis is 1,4,5 & cur index value is 3 then if we changed prev than new seq is 1,4,3 which is not LIS i,e wrong
-        if(prev==-1 || a[prev]<a[i]){
-            dp[i][prev+1]=max(dp[i][prev+1],1+dfs(a,i+1,i,n));
-        }
-        return dp[i][prev+1];
-}
-// TO further explain see this code                           
-int dfs(vector<int>&nums,int i,int prev){
+
+int dfs(vector<int>&nums,int i,int prev){    // Intialize : prev=-1
         if(i>=nums.size())return 0;
-        if(prev!=-1){
+        if(dp[i][prev+1]!=-1)return dp[i][prev+1];    //🟩💀 We check dp[i][prev] as dp[i][prev+1] because prev can be -1 and it will be error
+        if(prev!=-1){                        // If there is no previous element
             if(nums[prev]<nums[i]){
-                return max(1+dfs(nums,i+1,i),dfs(nums,i+1,prev));
+                return dp[i][prev+1]=max(1+dfs(nums,i+1,i),dfs(nums,i+1,prev));
             }
-            else return dfs(nums,i+1,prev);       //🟩🟩🟩🟩🟩💀💀💀 You cant change prev i,e dfs(nums,i+1,i) because sequece 1,4,5 & a[i] is 3 then 1,4,3 wrong 
+            else return dp[i][prev+1]=dfs(nums,i+1,prev);       //✅💀💀RATNA prev doesn't change RATNA  You cant change prev i,e dfs(nums,i+1,i) because if cur lis is 1,4,5 & cur index value is 3 then if we changed prev than new seq is 1,4,3 which is not LIS i,e wrong
         }
         else{
-            return max(1+dfs(nums,i+1,i),dfs(nums,i+1,prev));
+            return dp[i][prev+1]=max(1+dfs(nums,i+1,i),dfs(nums,i+1,prev));
         }
 }
 
