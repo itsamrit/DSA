@@ -19,6 +19,7 @@ int dfs(vector<int>&nums,int i,int prev){    // Intialize : prev=-1
 }
 
 //✅💀💀💀💀💀Binary Search : U can only find length of LIS , u cant print it & u cant find count of all LIS (tc:nlogn)
+//     If current index is greater than our so far LIS last element stored in a array temp than push otherwise if lesser than replace the element just greater than it with current element
 
 int solve(int arr[],int n){
   vector<int>temp;
