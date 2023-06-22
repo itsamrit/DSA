@@ -20,7 +20,7 @@ int f(int i,int j,vector<vector<int>>&dp){
 
 int solve(int m,int n){
   vector<vector<int>>dp(m,vector<int>(n,-1));
-  //if Asked max/min path from any node of 1st row/colum to any node of last row / colum
+  //🟩if Asked max/min path from any node of 1st row/colum to any node of last row / colum
   // just run this loop till row acordin to que for(i -0 ton n-1) (max(ans,f(m-1,n-1,dp)) no reinst of dp same dp & same time compl o(nm) magic
   return f(m-1,n-1,dp);  
 }
