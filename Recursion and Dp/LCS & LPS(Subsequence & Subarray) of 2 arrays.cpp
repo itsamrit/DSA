@@ -71,4 +71,4 @@ reverse(s.begin(),s.end());
 //      Follow up que: Min no insertion and deletion to make string palindrom : no of insertion = no of deletion = s.size()-lps(s)
 // LRS:Longest repeting subsequence of an arr : aabbdd =3 abd coming 2times: x=arr,y=arr; lcs(x,y) with restriction if(X[i-1]==Y[j-1] && i!=j).....
 // Check if x is a subsequence of y : if(lcs(x,y)==x.size()) cout<<"yes"; 
-// In problems like min insertion, deletion to make string x to y , U dont actually insert, delete or replace a char, u just assume char inserted so move to next char
+// In problems like min insertion, deletion to make string x to y , U dont actually insert, delete or replace a char, u just assume char inserted, deleted or replaced
