@@ -40,7 +40,7 @@ int solve(int arr[],int n){
 
 NOTE : If question asked longest subset of anything firstly sort the array. Else if asked subsequence dont sort the array.
 // Largest Divisible Subset (Subset whose every element are gives remainder 0 when divided a%b=0) :
-            Sort the arr. Then inside code to print LIS, instead of checking if(arr[i]>arr[j] && dp..) check if(arr[i] % arr[j]==0 && dp..)
+            Sort the arr. Then inside code to print LIS, instead of checking if(nums[prev]<nums[i] ..) check if(nums[i] % arr[prev]==0 ..)
 
 // Longest String Chain Subset(chain in which adding 1 char in prev string makes cur string): 
              Sort the array using customized compare function. In code of LIS, instead of checking if(arr[i]>arr[j] && dp..) , check if((checkpossible(arr[i],arr[j])) && dp..) ,where 
