@@ -1,4 +1,4 @@
-//😍😍This problem is of 01 Combination of array of string of chars but code is like 01 permutation
+//😍😍This problem is of 01 Combination of array of string of chars so its code looks like 01 permutation
 //🟩🟩🟩🟩RATNA
 vector<string> mappings = {"abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
 vector<string> ans;
