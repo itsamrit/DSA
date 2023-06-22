@@ -4,17 +4,17 @@
 vector<string> mappings = {"abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
 vector<string> ans;
 
-void dfs(string &digits, int c, string combi){	
+void dfs(string &digits, int c, string &temp){	
 	if(c == size(digits)) { 
-		ans.push_back(combi);    
+		ans.push_back(temp);    
 		return;
 	}
 
 	for(auto &i : mappings[digits[c] - '2']){
-		combi.push_back(i);
-		helper(digits, c + 1, combi);    // 😍Since its a combination problem we pass index c which is uneffected by for loop.
+		temp.push_back(i);
+		helper(digits, c + 1, temp);    // 😍Since its a combination problem we pass index c which is uneffected by for loop.
 		// ❤️❤️Since we're just adding a layer of loop in combination 01 algo to generate the strings, so our passing of 😍😍❤️❤️c is unaffected by loop's int i
-		combi.pop_back();
+		temp.pop_back();
 	}
 }
 
