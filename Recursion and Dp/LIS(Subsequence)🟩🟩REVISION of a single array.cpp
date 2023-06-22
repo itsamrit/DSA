@@ -6,7 +6,7 @@ int dfs(int a[],int i,int prev,int n){    //  Intialize : prev=-1
         if(i==n)return 0;
         if(dp[i][prev+1]!=-1)return dp[i][prev+1];
     
-        dp[i][prev+1]=dfs(a,i+1,prev,n);     //✅💀💀💀💀💀RATNA prev doesn't change RATNA  You cant change prev i,e dfs(nums,i+1,i) because sequece 1,4,5 & a[i] is 3 then 1,4,3 wrong
+        dp[i][prev+1]=dfs(a,i+1,prev,n);     //✅💀💀💀💀💀RATNA prev doesn't change RATNA  You cant change prev i,e dfs(nums,i+1,i) because if cur lis is 1,4,5 & cur index value is 3 then if we changed prev than new seq is 1,4,3 which is not LIS i,e wrong
         if(prev==-1 || a[prev]<a[i]){
             dp[i][prev+1]=max(dp[i][prev+1],1+dfs(a,i+1,i,n));
         }
