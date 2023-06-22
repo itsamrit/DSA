@@ -35,9 +35,7 @@ int solve(int arr[],int n){
 }
       
 
-// Longest Bitonic Subsequence (Subsequence which first increases & then decreases) : Tabulation only by striver (same on gfg)
-             Find LIS till each element of array & then find LIS of each element by reversing the array.
-             Then for each element sum up their LIS of both normal array & revesed array & element having max sum has max bitonic subsequence.
+
 
 NOTE : If question asked longest subset of anything firstly sort the array. Else if asked subsequence dont sort the array.
 // Largest Divisible Subset (Subset whose every element are gives remainder 0 when divided a%b=0) :
@@ -55,3 +53,8 @@ NOTE : If question asked longest subset of anything firstly sort the array. Else
                  if(i==s1.size() && j==s2.size()) return true;
                  return false; 
              }
+
+// 🟥🟥HARD Doesnt come in interview :
+//Longest Bitonic Subsequence (Subsequence which first increases & then decreases) : Tabulation only by striver (same on gfg)
+             Find LIS till each element of array & then find LIS of each element by reversing the array.
+             Then for each element sum up their LIS of both normal array & revesed array & element having max sum has max bitonic subsequence.
