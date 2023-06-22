@@ -11,7 +11,7 @@ void dfs(vector<int>& num, vi &vis, vi &temp, vector<vi>&ans){
                 if (i > 0 && num[i] == num[i-1] && vis[i-1]) return;     //Remove for unbounded
                 vis[i] = 1;                                              //Remove for unbounded
                 temp.push_back(num[i]);                                
-                dfs(num, vis,temp,ans);
+                dfs(num, vis,temp,ans);                                  //😍We dont pass index c in permutation
                 temp.pop_back();            
                 vis[i] = 0;                                              ✅Unmark it so that element can be permuted with other things also//Remove for unbounded
             }
