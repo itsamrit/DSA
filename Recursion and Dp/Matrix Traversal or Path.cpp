@@ -26,9 +26,7 @@ int solve(int m,int n){
 }
 
 
-//READ BINARY SEARCH FOR THIS AFTER RECURSION AND DP DONE
-
-// Tabulation : Write two for loops 0 to m-1 & 0 to n-1 & copy whole recursion inside it & ignore boundry conditions like if(i<0) because loop will run till inside for loop only,no need to check it.
+//READ BINARY SEARCH FOR THIS AFTER RECURSION AND DP DONE.
 //For any non cyclical traversal whose traversal is other or more than right & down : use simple recursion & memozise it
 //Non cyclical directions means once a cell is visited is impossible to visit it again
 //     eg:1)mover can move only in 2 direction right and down.
