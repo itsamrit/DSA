@@ -66,7 +66,7 @@ reverse(s.begin(),s.end());
 
 
 // Shortest common superseq i,e shortest sequence from which we can obtain both x & y by deleting some element = x.size()+y.size()-longest common subsequence
-// Min no of insertion and deletion to make string x to string y :  insertion(x.size()-lcs)  +  deletion(y.size()-lcs)   lcs:longest common subsequence
+// Min no of insertion and deletion to make string x to string y :  deletion(x.size()-lcs)  +  insertion(y.size()-lcs)   lcs:longest common subsequence
 // Min no insertion and deletion and replacement to make string x to y:EDIT DISTANCE  for..{for..
                                                                                          //if(i==0)dp[i][j]=j; 
                                                                                          //else if(j==0)dp[i][j]=i;    
