@@ -1,12 +1,12 @@
 LONGEST INCREASING SUBSEQUENCE :  Generate all subsequence like subset 01 combination & take longest increasing of that.
 ✅Whenever previous index is a parameter in recursion then in tabulation 2nd loop i,e prev cant go beyond 1stloop i,e cur.  
         So we run for(i=0 to n){ for(j=0 to i) otherwise wrong ans will come.
-🟩🟩🟩🟩🟩💀💀💀🤣🤣 We check dp[i][prev] as dp[i][prev+1] because prev can be -1 and it will be error           
+🟩🟩🟩🟩🟩💀💀💀🤣🤣😍😍❤️ We check dp[i][prev] as dp[i][prev+1] because prev can be -1 and it will be error           
 
 
 int dfs(vector<int>&nums,int i,int prev){    // Intialize : prev=-1
         if(i>=nums.size())return 0;
-        if(dp[i][prev+1]!=-1)return dp[i][prev+1];    //🟩💀 We check dp[i][prev] as dp[i][prev+1] because prev can be -1 and it will be error
+        if(dp[i][prev+1]!=-1)return dp[i][prev+1];    🟩🟩🟩🟩🟩💀💀💀🤣🤣😍😍❤️ We check dp[i][prev] as dp[i][prev+1] because prev can be -1 and it will be error  
         if(prev!=-1){                        // If there is no previous element
             if(nums[prev]<nums[i]){
                 return dp[i][prev+1]=max(1+dfs(nums,i+1,i),dfs(nums,i+1,prev));
