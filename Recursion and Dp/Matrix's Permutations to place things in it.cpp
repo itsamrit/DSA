@@ -17,14 +17,14 @@ bool safe(vector<vector<char>> board,int i,int j,char k){
 
 bool dfs(vector<vector<char>>& board){
     
-        for(int i=0;i<9;i++){
+        for(int i=0;i<9;i++){                  // 😍😍Since we need to check all type of permutation we start from scratch for all dfs & hence were not passing current row or col in dfs
             for(int j=0;j<9;j++){
                 if(board[i][j]=='.')
                  { for(char k='1';k<='9';k++)
                     { 
                         if(safe(board,i,j,k)){
                             board[i][j]=k;
-                            if(dfs(board))          // 😍😍Since its permutation were not passing current row or col in dfs
+                            if(dfs(board))          // 😍😍Since we need to check all type of permutation we start from scratch for all dfs & hence were not passing current row or col in dfs
                               return true;
                               board[i][j]='.';
                               
