@@ -16,7 +16,7 @@ void queensPermutations(int qpsf, int tq, int[][] chess){
             for(int col = 0; col < chess.length; col++){
                 if(chess[row][col] == 0){
                     chess[row][col] = qpsf + 1;
-                    queensPermutations(qpsf + 1, tq, chess);
+                    queensPermutations(qpsf + 1, tq, chess);   //😍😍Permutation no int c passed & qpsf is count to mark not affecting loop
                     chess[row][col] = 0;
                 }
             }
