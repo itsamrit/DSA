@@ -1,31 +1,6 @@
+// 🟥🟥TOO LONG TO COME IN INTERVIEW.
+// 🟥🟥TOO LONG TO COME IN INTERVIEW.
 // ALL QUESTIONS ARE BOUNED unlike unbounded subset & on SQUARE MATRIX
-
-void queensPermutations(int qpsf, int tq, int[][] chess){
-        if(qpsf == tq){
-            for(int row = 0; row < chess.length; row++){
-                for(int col = 0; col < chess.length; col++){
-                    System.out.print(chess[row][col] != 0? "q"+ chess[row][col] + "\t": "-\t");
-                }
-                System.out.println();
-            }
-            System.out.println();
-            return;
-        }
-        
-        for(int row = 0; row < chess.length; row++){
-            for(int col = 0; col < chess.length; col++){
-                if(chess[row][col] == 0){
-                    chess[row][col] = qpsf + 1;
-                    queensPermutations(qpsf + 1, tq, chess);   //😍😍Permutation no int c passed & qpsf is count to mark not affecting loop
-                    chess[row][col] = 0;
-                }
-            }
-        }
-}
-
-
-
-
 
 //CROSSWORD PUZZLE : A matrix is provided with + - sign and there is vector of strings which need to filled in matrix. Only - can be filled. eg : car should remain car while filling it cant be filled in arc.
 
@@ -61,7 +36,7 @@ void solvePuzzle(vector<string>& words, vector<string> matrix, int index, int n)
         for (int i = 0; i < n; i++) {
             for (int j = 0; j <= maxLen; j++) {
                 vector<string> temp = checkVertical(j, i, matrix, currentWord);
-                if (temp[0][0] != '@') solvePuzzle(words, temp, index + 1, n);
+                if (temp[0][0] != '@') solvePuzzle(words, temp, index + 1, n);   //😍😍Permutation code, Since current index passed but not affecting the decision of next recursion
             }
         }
   
