@@ -11,6 +11,5 @@ int countSquares(vector<vector<int>>& matrix) {
 			
 	                 count +=matrix[i][j];   // Add all squares associated with each index
 	                 //For max area square submatrix with all ones : ans = max(matrix[i][j], ans);
-       .
 		return count;
 }
