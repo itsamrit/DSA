@@ -1,7 +1,7 @@
 // Like all other dp questions all permutation except printing can be solved using adding dp
 //     eg: finding no of permutations having sum equal to target (1d dp since in void dfs(..,int sum) only 1 variable sum)
 
-void dfs(vector<int>& num, vi &vis, vi &temp, vector<vi>&ans){             //😍😍😍we dont pass index c in permutation                        
+void dfs(vector<int>& num, vi &vis, vi &temp, vector<vi>&ans){             //😍😍😍we dont pass index c in permutation, we call dfs for i=0 to nums.size()                      
         if(temp.size()==num.size()){                                        
             ans.push_back(temp);
         }
@@ -11,7 +11,7 @@ void dfs(vector<int>& num, vi &vis, vi &temp, vector<vi>&ans){             //�
                 if (i > 0 && num[i] == num[i-1] && vis[i-1]) return;     //Remove for unbounded
                 vis[i] = 1;                                              //Remove for unbounded
                 temp.push_back(num[i]);                                
-                dfs(num, vis,temp,ans);                                  //😍We check vis[i] but we dont pass index c in permutation
+                dfs(num, vis,temp,ans);                                  //😍We check vis[i] but we dont pass index c in permutation, we call dfs for i=0 to nums.size()
                 temp.pop_back();            
                 vis[i] = 0;                                              ✅Unmark it so that element can be permuted with other things also//Remove for unbounded
             }
