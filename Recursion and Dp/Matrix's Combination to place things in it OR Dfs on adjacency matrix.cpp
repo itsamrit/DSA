@@ -20,7 +20,7 @@ void dfs(int n,vector<string>&temp,int row){
         for(int col=0;col<n;col++){
             if(safe(n,temp,row,col)){
                 temp[row][col]='Q';
-                dfs(n,temp,row+1);     // 😍😍😍Combination code, Since row is passed & its affecting the current decision.
+                dfs(n,temp,row+1);     // 😍😍😍Combination code, Since row is passed & its affecting the current decision.  U can also pass col instead of row
                 temp[row][col]='.';
             }
         }
