@@ -16,7 +16,7 @@ void printNQueens(vector<vector<int>> chess,string qsf,int row){
     }
     for(int col=0;col<chess.size();col++){     
         if(isQueenSafe(row,col,chess)){ //Boundry conditions
-            chess[row][col]=1;                    // 😍😍😍Combination code, Since row is passed & its affecting the current decision.
+            chess[row][col]=1;                                                      // 😍😍😍Combination code, Since row is passed & its affecting the current decision.
             printNQueens(chess,qsf+to_string(row)+"-"+to_string(col)+", ",row+1);  
             chess[row][col]=0;          //Backtracking to explore all solutions
         }
