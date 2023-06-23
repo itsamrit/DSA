@@ -2,25 +2,28 @@ TC: o(n!) // NOTE : ALL QUESTIONS ARE on SQUARE MATRIX & BOUNDED
 // Que : Print all combinations(not 1 combination) to place n queen in n*n board. eg: 4*4
 // Ans : in form of [2,3,1,4],  [ 1,2,4,3]  (it means there are 2 combinations in 2,3,1,4 denotes that we can put 1st queen in 2 column in 1st row and 2nd q in 3 col of 2nd row and so on
 
-bool isQueenSafe(int row,int col,vector<vector<int>> chess){
-    for(int i=row-1,j=col;i>=0;i--)if(chess[i][j]==1) return false;  // Check upper row
-    for(int i=row-1,j=col-1;i>=0 && j>=0;i--,j--) if(chess[i][j]==1) return false;  // Check diagonals
-    for(int i=row-1,j=col+1;i>=0 && j< chess.size();i--,j++) if(chess[i][j]==1) return false; // Check diagonals
+vector<vector<string>>ans;
+
+bool safe(int n, vector<string>&chess, int row, int col){
+    for(int i=row-1,j=col;i>=0;i--)if(chess[i][j]=='Q') return false;  // Check upper row
+    for(int i=row-1,j=col-1;i>=0 && j>=0;i--,j--) if(chess[i][j]=='Q') return false;  // Check diagonals
+    for(int i=row-1,j=col+1;i>=0 && j< chess.size();i--,j++) if(chess[i][j]=='Q') return false; // Check diagonals
     return true;
 }
 
-void printNQueens(vector<vector<int>> chess,string qsf,int row){
-    if(row==chess.size()){              //Base condition
-        cout << qsf << ". "<<endl;    
-        return;
-    }
-    for(int col=0;col<chess.size();col++){     
-        if(isQueenSafe(row,col,chess)){ //Boundry conditions
-            chess[row][col]=1;                                                      // 😍😍😍Combination code, Since row is passed & its affecting the current decision.
-            printNQueens(chess,qsf+to_string(row)+"-"+to_string(col)+", ",row+1);  
-            chess[row][col]=0;          //Backtracking to explore all solutions
+void dfs(int n,vector<string>&temp,int row){
+        if(row == n){
+            ans.push_back(temp);
+            return;
         }
-    }
+        
+        for(int col=0;col<n;col++){
+            if(safe(n,temp,row,col)){
+                temp[row][col]='Q';
+                dfs(n,temp,row+1);     // 😍😍😍Combination code, Since row is passed & its affecting the current decision.
+                temp[row][col]='.';
+            }
+        }
 }
 
 
