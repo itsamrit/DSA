@@ -1,3 +1,5 @@
+//Longest Common Subsequence 
+
 DP ON Comparision of STRINGS (Comparision between two or more strings or vectors)   eg wildcard matching, lca, edit distance etc
 
 int f(int i,int j,string &s,string &t,vector<vector<int>>&dp){ 
