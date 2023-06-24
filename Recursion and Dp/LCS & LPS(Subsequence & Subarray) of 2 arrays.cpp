@@ -70,10 +70,10 @@ reverse(s.begin(),s.end());
 
 // Shortest common superseq i,e shortest sequence from which we can obtain both x & y by deleting some element = x.size()+y.size()-longest common subsequence
 
-// LPS:Longest palindromic subsequence of an arr : x=a & y=reverse(a);  lcs(x,y)    
-//      Follow up que: Min no insertion and deletion to make string palindrom : no of insertion = no of deletion = s.size()-lps(s)
+// LPS:Longest palindromic subsequence of an arr 'a' : x=a & y=reverse(a);  lcs(x,y)    
+//      Follow up que: Min no insertion and deletion to make string palindrom : no of insertion = no of deletion = a.size()-lps(a)
 
-// LRS:Longest repeting subsequence of an arr : aabbdd =3 abd coming 2times: s=t=arr; lcs(s,t) with restriction i!=j in 1st code of this file like if(s[i-1]==t[j-1] && i!=j).....
+// LRS:Longest repeting subsequence of an arr  : aabbdd =3 abd coming 2times: s=t=arr; lcs(s,t) with restriction i!=j in 1st code of this file like if(s[i-1]==t[j-1] && i!=j).....
 
 // Check if x is a subsequence of y : if(lcs(x,y)==x.size()) cout<<"yes"; 
 
