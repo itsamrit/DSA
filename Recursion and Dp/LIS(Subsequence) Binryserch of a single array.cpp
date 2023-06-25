@@ -37,8 +37,6 @@ int solve(int arr[],int n){
       
 
 
-
-NOTE : If question asked longest subset of anything firstly sort the array. Else if asked subsequence dont sort the array.
 // Largest Divisible Subset (Subset whose every element are gives remainder 0 when divided a%b=0) :
             Sort the arr. Then inside code to print LIS, instead of checking if(nums[prev]<nums[i] ..) check if(nums[i] % nums[prev]==0 ..)
 
