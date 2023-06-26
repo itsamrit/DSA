@@ -7,11 +7,10 @@ Famous problems : 1st Next greater ,2ndcalculator & 3rd type is any question whe
 
 🟩3rd type is any question where adjacent can be deleted & new adjacent formed may be deleted   :
  Remove All Adjacent Duplicates in String Input: s = "deeedbbcccbdaa", k = 3
- ASTEROID COLLISION IS also example of this
-Output: "aa"
+ Output: "aa"
+ use stack<pair<char,int>>st; & run for loop & if current char is same as previous update count of top & else if st.push(new char) && now check if(st.top==k) pop
 
-use stack<pair<char,int>>st; & run for loop & if current char is same as previous update count of top & else if st.push(new char) && now check if(st.top==k) pop
-
+ASTEROID COLLISION IS also example of this
 
 
 🟩Score of Parentheses :-
