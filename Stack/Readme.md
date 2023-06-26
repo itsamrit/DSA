@@ -20,15 +20,15 @@ AB has score A + B, where A and B are balanced parentheses strings.
 
 
  int scoreOfParentheses(string s) {
-        int d=0,ans=0;
+        int depth=0,ans=0;
         for(int i=0;i<s.size();i++){
             if(s[i]=='('){
-                d++;
+                depth++;
             }
             else{
-                d--; 
+                depth--; 
                 if(i!=0 && s[i-1]=='('){
-                    ans+=pow(2,d); //take score of all upper nested ((( && coming ))) attached to its
+                    ans+=pow(2,depth); //take score of all upper nested ((( && coming ))) attached to its
                 }
                 //else its score is already included into ans as we take whole score of upper nested while finding lowest level () 
             }
