@@ -1,6 +1,9 @@
 ```
 
-Famous problems : 1st Next greater ,2ndcalculator & 3rd type is any question where adjacent can be deleted & new adjacent formed may be deleted :-
+Famous problems : 1st Next greater ,
+                  2nd calculator
+                  3rd type is any question where adjacent can be deleted & new adjacent formed may be deleted
+                  4th type Score of Parenthesis
 
 🟩1st type : Next greater element or Larget possible number from string maintains the stack as monotonically increasing.Each element of stack is smaller than prev element in next greater
 
@@ -13,7 +16,7 @@ Famous problems : 1st Next greater ,2ndcalculator & 3rd type is any question whe
 ASTEROID COLLISION IS also example of this
 
 
-🟩Score of Parentheses :-
+🟩4th type : Score of Parentheses :-
 "()" has score 1.
 AB has score A + B, where A and B are balanced parentheses strings.
 (A) has score 2 * A
