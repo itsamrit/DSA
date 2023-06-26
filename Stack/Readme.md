@@ -1,7 +1,8 @@
 ```
-Next greater element or Larget possible number from string maintains the stack as monotonically increasing.Each element of stack is smaller than prev element in next greater
 
-Famous problems : 1st Next greater ,2ndcalculator & 3rd type is any question where adjacent can be deleted & new adjacent formed may be deleted :-  
+Famous problems : 1st Next greater ,2ndcalculator & 3rd type is any question where adjacent can be deleted & new adjacent formed may be deleted :-
+
+🟩1st type : Next greater element or Larget possible number from string maintains the stack as monotonically increasing.Each element of stack is smaller than prev element in next greater
 
 🟩Score of Parentheses :-
 "()" has score 1.
@@ -25,7 +26,6 @@ AB has score A + B, where A and B are balanced parentheses strings.
         }
         return ans;
 }
-
 
 🟩3rd type is any question where adjacent can be deleted & new adjacent formed may be deleted   :
  Remove All Adjacent Duplicates in String Input: s = "deeedbbcccbdaa", k = 3
