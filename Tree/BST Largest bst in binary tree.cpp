@@ -27,7 +27,7 @@ private:
         auto right = largestBSTSubtreeHelper(root->right);
         
         if (left.maxNode < root->val && root->val < right.minNode) {            //🟩 If Current node is greater than max in left AND smaller than min in right, it is a BST.
-            return NodeValue(min(root->val, left.minNode), max(root->val, right.maxNode), left.maxSize + right.maxSize + 1));
+            return NodeValue( min(root->val, left.minNode), max(root->val, right.maxNode), left.maxSize + right.maxSize + 1);
         }
         
         return NodeValue(INT_MIN, INT_MAX, max(left.maxSize, right.maxSize));   // Otherwise, return [-inf, inf] so that parent can't be valid BST
