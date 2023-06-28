@@ -1,5 +1,6 @@
 // In both insert & delete : Space =o(n). We can reduce auxiliary space to o(1) by doing it iterative
 // In both cases : Tc=o(height) or o(logn). In worst o(n) if height=nodes i,e squessed tree
+// 🟩Insertion always happens at last level i,e as leaf node
 
 TreeNode* insertIntoBST(TreeNode* root, int val) {
         if(!root){
