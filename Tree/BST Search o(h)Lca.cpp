@@ -8,7 +8,7 @@ TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
             else if(root->val >p->val && root->val >q->val) 
                 root=root->left;
             else 
-                break;
+                break;                //🟩Never return inside loop put break when ans found otherwise lots of error
         }
         return root;
 }
