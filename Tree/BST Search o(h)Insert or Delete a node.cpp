@@ -26,7 +26,7 @@ int findminfromright(TreeNode* root){
 
 
 TreeNode* deleteNode(TreeNode* root, int key) {
-        if(root==nullptr) return root;
+        if(!root) return root;
         else if(root->val>key) root->left=deleteNode(root->left,key);
         else if(root->val<key) root->right=deleteNode(root->right,key);
         else{
