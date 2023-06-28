@@ -1,7 +1,7 @@
 // Traversal :
 // Tc : o(n) SC; o(n) auxiliary space.Use this as striver has use recursive solution
 // Use intuitive/non recursive solution only in searching in bst
-// No questions on Inorder to bst 
+// ⭐No questions on Inorder to bst 
 // 🟩root->val=NULL means root->val=0 not null . So dont return root->val =NULL, return NULL
         
 TreeNode* dfs(vector<int>& A, int& i, int bound) {
