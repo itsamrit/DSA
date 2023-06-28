@@ -4,7 +4,7 @@
 // No questions on Inorder to bst 
 
 TreeNode* build(vector<int>& A, int& i, int bound) {
-        if (i == A.size() || A[i] > bound) return NULL;// In postorder : i==-1 || A[i]<bound
+        if (i == A.size() || A[i] > bound) return NULL;// In postorder : i==-1 || A[i]<bound  // 🟩root->val=NULL means root->val=0 not null . So dont return root->val =NULL, return NULL;
         TreeNode* root = new TreeNode(A[i++]);         // In postorder : A[i--]
         root->left = build(A, i, root->val);
         root->right = build(A, i, bound);
