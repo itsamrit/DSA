@@ -18,7 +18,7 @@ TreeNode* bstFromPreorder(vector<int>& A) {
 }
 
 
-// Construct HEIGHt balanced tree from inorder i,e sorted list :-    
+// Construct HEIGHt balanced tree from inorder Linked List i,e sorted linked list :-    
 TreeNode* sortedListToBST(ListNode* head) {
         if(!head)  return NULL;
         if(!head->next) return new TreeNode(head->val);
