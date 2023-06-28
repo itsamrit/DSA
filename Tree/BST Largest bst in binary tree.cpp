@@ -12,15 +12,14 @@ public:
 };
 
 class Solution {
-    private:                                                    //👍U can make this public,but private will make impact on interviewer
-    NodeValue largestBSTSubtreeHelper(TreeNode* root) {
-        // An empty tree is a BST of size 0.
+    private:                                                                   //👍U can make this public,but private will make impact on interviewer
+    NodeValue dfs(TreeNode* root) {
         if (!root) {
             return NodeValue(INT_MAX, INT_MIN, 0);
         }
         
-        auto left = largestBSTSubtreeHelper(root->left);
-        auto right = largestBSTSubtreeHelper(root->right);
+        auto left = dfs(root->left);
+        auto right = dfs(root->right);
         
         if (left.maxNode < root->val && root->val < right.minNode) {            //🟩 If Current node is greater than max in left AND smaller than min in right, it is a BST.
             return NodeValue( min(root->val, left.minNode), max(root->val, right.maxNode), left.maxSize + right.maxSize + 1);
@@ -31,6 +30,6 @@ class Solution {
 
     public:
     int largestBSTSubtree(TreeNode* root) {
-        return largestBSTSubtreeHelper(root).maxSize;
+        return dfs(root).maxSize;
     }
 };
