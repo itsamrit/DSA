@@ -3,17 +3,16 @@ You can solve it by making NodeValue datasturcture as normal vector<int> . See c
 
 class NodeValue {
 public:
-    int maxNode, minNode, maxSize;
-    
-    NodeValue(int minNode, int maxNode, int maxSize) {
-        this->maxNode = maxNode;
-        this->minNode = minNode;
-        this->maxSize = maxSize;
+    int maxNode, minNode, maxSize;  
+    NodeValue(int minn, int maxx, int maxSizee) {
+        maxNode = maxx;
+        minNode = minn;
+        maxSize = maxSizee;
     }
 };
 
 class Solution {
-private:
+    private:                                                    //👍U can make this public,but private will make impact on interviewer
     NodeValue largestBSTSubtreeHelper(TreeNode* root) {
         // An empty tree is a BST of size 0.
         if (!root) {
