@@ -3,9 +3,9 @@
 
 TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
         while(root){
-            if(root->val < p->val && root->val < q->val) 
+            if(root->val < p->val && root->val < q->val)      // Both p & q greater than root
                 root=root->right;
-            else if(root->val >p->val && root->val >q->val) 
+            else if(root->val >p->val && root->val >q->val)   // Both lesser than root
                 root=root->left;
             else 
                 break;                //🟩Never return inside loop put break when ans found otherwise lots of error
