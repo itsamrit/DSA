@@ -1,9 +1,10 @@
 // tc:o(n) sc other than auxiliary space:o(1)  Auxiliary space: o(n) 
 // We can further do morris traversal to reduce auxiliary stack space to o(1)
 
-TreeNode*first,second;
+TreeNode*first;
+TreeNode*second;
 
-void dfs(TreeNode*root,TreeNode*&pre){
+void dfs(TreeNode*root, TreeNode*&pre){
         if(!root)return;
         dfs(root->left,pre);
         if(!first && root->val<pre->val){
