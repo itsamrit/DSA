@@ -1,9 +1,8 @@
 // Low chance of coming in interview
 
 
-You can solve it by makign NodeValue datasturcture as normal vector<int> . See codelibrary by yogesh video. 
+You can solve it by making NodeValue datasturcture as normal vector<int> . See codelibrary by yogesh video. 
 // tc:o(n) sco(n) 
-
 
 class NodeValue {
 public:
@@ -24,20 +23,16 @@ private:
             return NodeValue(INT_MAX, INT_MIN, 0);
         }
         
-        // Get values from left and right subtree of current tree.
         auto left = largestBSTSubtreeHelper(root->left);
         auto right = largestBSTSubtreeHelper(root->right);
         
-        // Current node is greater than max in left AND smaller than min in right, it is a BST.
-        if (left.maxNode < root->val && root->val < right.minNode) {
-            // It is a BST.
-            return NodeValue(min(root->val, left.minNode), max(root->val, right.maxNode), 
-                            left.maxSize + right.maxSize + 1);
+        if (left.maxNode < root->val && root->val < right.minNode) {            //🟩 If Current node is greater than max in left AND smaller than min in right, it is a BST.
+            return NodeValue(min(root->val, left.minNode), max(root->val, right.maxNode), left.maxSize + right.maxSize + 1));
         }
         
-        // Otherwise, return [-inf, inf] so that parent can't be valid BST
-        return NodeValue(INT_MIN, INT_MAX, max(left.maxSize, right.maxSize));
+        return NodeValue(INT_MIN, INT_MAX, max(left.maxSize, right.maxSize));   // Otherwise, return [-inf, inf] so that parent can't be valid BST
     }
+
     public:
     int largestBSTSubtree(TreeNode* root) {
         return largestBSTSubtreeHelper(root).maxSize;
