@@ -28,8 +28,8 @@ TreeNode* sortedListToBST(ListNode* head) {
             slow=slow->next;
             fast=fast->next->next;   
         }
-        ListNode *mid=slow->next;
-        slow->next=NULL;
+        ListNode *mid=slow->next;  
+        slow->next=NULL;                          // Breaking the linkedlist into 2 equal halves
         
         TreeNode *root=new TreeNode(mid->val);
         root->left=sortedListToBST(head);
