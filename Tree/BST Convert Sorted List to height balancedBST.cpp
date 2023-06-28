@@ -1,3 +1,5 @@
+//Convert Sorted linked list i,e inorder linkedlist to height balanced bst
+
 TreeNode* sortedListToBST(ListNode* head) {
         if(!head)  return NULL;
         if(!head->next) return new TreeNode(head->val);
@@ -8,7 +10,7 @@ TreeNode* sortedListToBST(ListNode* head) {
             fast=fast->next->next;   
         }
         ListNode *mid=slow->next;
-        slow->next=NULL;
+        slow->next=NULL;                         // Breaking the linkedlist into 2 equal halves
         
         TreeNode *root=new TreeNode(mid->val);
         root->left=sortedListToBST(head);
