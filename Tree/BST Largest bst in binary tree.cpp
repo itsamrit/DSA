@@ -1,6 +1,3 @@
-// Low chance of coming in interview
-
-
 You can solve it by making NodeValue datasturcture as normal vector<int> . See codelibrary by yogesh video. 
 // tc:o(n) sco(n) 
 
