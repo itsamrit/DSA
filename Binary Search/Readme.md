@@ -1,10 +1,10 @@
 🟢Inclusive binary serc algo i,e if start or end are target then it has abilty to find them. 
 
-For that inclusivity,Specify the target u are searching for all edge case if its inddex i,e like 
+For that inclusivity,Specify the target u are searching for all edge cases.
 
 while(start<=end) //(<= : To also check left & right instead of only checking index betw them INCLUSIVITY)
 
-if((mid==0 || nums[mid-1]<nums[mid]))   //🟢define target for edge cases such that while writing else if & else we are damn sure its not mid i,e write else if mid-1 & mid+1
+if((mid>0 && nums[mid-1]<nums[mid]))   //🟢define target for edge cases such that while writing else if & else we are damn sure its not mid i,e write else if mid-1 & mid+1
 
 
 else if() r=mid-1;  
@@ -12,9 +12,9 @@ else if() r=mid-1;
 else l = mid+1;
 
 
-🟢Writing an algo by not returning/break when target found & assuming it will loop will stop when target found & then RETURN MID after loop ends cause many severe edge case problem
+🟢Writing an algo by not returning/breaking when target found & assuming its loop will stop when target found & then RETURN MID after loop ends cause many severe edge case problem
 
-🟢For upper bound/lower bound & lower bound 
+🟢For upper bound/lower bound
 
 if(target==nums[mid] with no same element after that i,e edge case) 
 
@@ -25,7 +25,6 @@ else if(>) s=mid-1;
 else e=mid+1;
 
 👉while(left<=right) mid=(left+right)/2  =  left + (right-left)/2 [both are totally same in all cases][used for int overflow];
-
 
 👉Universal truth = upper - lower = no of elements present of given value
 
