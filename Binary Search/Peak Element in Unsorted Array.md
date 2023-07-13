@@ -1,3 +1,6 @@
+![peak element in unsorted array](https://github.com/itsamrit/DSA/assets/86003701/5b8b6778-ba9c-4a6b-aeaa-aa7a26cbd96d)
+
+```
 int findPeakElement(vector<int>& nums) {
         int left=0,right=nums.size()-1;
         if(nums.size()==1)return 0;
@@ -16,3 +19,4 @@ int findPeakElement(vector<int>& nums) {
         }
         return -1;
 }
+
