@@ -7,7 +7,7 @@ int findPeakElement(vector<int>& nums) {
             if( (mid==0 && nums[mid]>nums[mid+1]) || (mid==nums.size()-1 && nums[mid]>nums[mid-1])   ||   (mid!=0 && mid!=nums.size()-1 && nums[mid-1]<nums[mid] && nums[mid+1]<nums[mid]) ){
                 return mid;
             }
-            else if((mid==0 || nums[mid-1]<nums[mid]) && (mid==nums.size()-1 ||nums[mid+1]>nums[mid])){
+            else if( (mid==0 || nums[mid-1] < nums[mid]) && (mid==nums.size()-1 || nums[mid] < nums[mid+1]) ){
                 left=mid+1;
             }
             else{
