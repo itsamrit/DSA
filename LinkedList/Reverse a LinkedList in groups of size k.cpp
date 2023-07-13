@@ -1,6 +1,6 @@
 ✅Always recursion intutive very hard
 
-ListNode* rec(ListNode* head, int k) {
+ListNode* dfs(ListNode* head, int k) {
         ListNode* temp = head;
         for(int i = 0; i < k; i++){            // 🟩Loop to check whether there is k elements or not. If not dont reverse
             if(!temp) return head;
@@ -14,6 +14,6 @@ ListNode* rec(ListNode* head, int k) {
             prev = curr;
             curr = nxt;
         }
-        head->next = reverseKGroup(curr, k);
+        head->next = dfs(curr, k);
         return prev;
 }
