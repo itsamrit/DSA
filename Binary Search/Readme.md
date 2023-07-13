@@ -1,3 +1,4 @@
+```
 🟢Inclusive binary serc algo i,e if start or end are target then it has abilty to find them. 
 
 For that inclusivity,Specify the target u are searching for all edge cases.
@@ -12,7 +13,8 @@ else if() r=mid-1;
 else l = mid+1;
 
 
-🟢Writing an algo by not returning/breaking when target found & assuming its loop will stop when target found & then RETURN MID after loop ends cause many severe edge case problem
+🟢 Always break or return when target found
+Writing an algo by not returning/breaking when target found & assuming its loop will stop when target found & then RETURN MID after loop ends cause many severe edge case problem
 
 🟢For upper bound/lower bound
 
