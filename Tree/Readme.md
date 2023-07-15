@@ -5,7 +5,7 @@
    All elements of BST are unique.
    
 
-🟢If we need to start a fresh traversing from topmost root for each node our soln is o(n^2) i,e data till parent node is not used by child node then not dp
+🟢If we need to start a fresh traversing from topmost root for each node our soln is o(n^2) i,e data till parent node is not used by child node, then solution is not dp
 or data of leaf to child node is not used in parent node.
 
 else we are using data till parent node in child node or or data of leaf to child node is used in parent node. then solution is called dp i,e o(n)
