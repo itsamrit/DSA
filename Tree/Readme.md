@@ -1,8 +1,9 @@
 ```
 ⭐Order is decided by when root comes Preorder : root,left, right   Inorder left,root ,right    Post Order : left,right,root
 
-⭐BST : All left element strictly lesser & right stictly greater than root just like sorted array.
+⭐BST : All left element strictly lesser & right stictly greater than root just like sorted array i,e Inorder traversal gives a sorted array.
    All elements of BST are unique.
+   
 
 🟢If we need to start a fresh traversing from topmost root for each node our soln is o(n^2) i,e data till parent node is not used by child node then not dp
 or data of leaf to child node is not used in parent node.
