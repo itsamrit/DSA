@@ -1,9 +1,9 @@
-void flatten(TreeNode* root) {
+void dfs(TreeNode* root) {
         if(!root) return;
-        flatten(root->left);
-        flatten(root->right);
+        dfs(root->left);
+        dfs(root->right);
         
-        if(root->left){  // Change limks : make left subtree attached with root->right & then new root->right with previous root->right  as preorder : root->left->right
+        if(root->left){  // Change links : make left subtree attached with root->right & then new root->right with previous root->right  as preorder : root->left->right
             TreeNode *right = root->right;
             root->right = root->left;
             root->left = NULL;             //🟩Dont forget to make left NULL,otherwise 000f error
