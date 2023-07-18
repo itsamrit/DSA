@@ -19,7 +19,7 @@ int findHeightRight(TreeNode* node) {
 }
 
 int countNodes(TreeNode* root) {
-        if(root == NULL) return 0; 
+        if(!root) return 0; 
         
         int lh = findHeightLeft(root); 
         int rh = findHeightRight(root); 
