@@ -18,7 +18,9 @@ vector<vector<int>> verticalTraversal(Node* root){
                 if(c.first->right) q.push({c.first->right,c.second + 1});
             }
             sort(temp.begin(),temp.end());                       //if 5,6 are in same col & same row i,e in same cell so 5 comes first
-            for(auto it:temp)m[it.first].push_back(it.second);   
+            for(int i=0;i<temp.size();i++){
+                m[temp[i].first].push_back(temp[i].second);
+            }  
         }
         for(auto it:m)ans.push_back(it.second);             //CANT USE UNORDERED_MAP since we want col no to be sorted
         return ans; 
