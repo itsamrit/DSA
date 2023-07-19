@@ -8,9 +8,9 @@ vector<vector<int>> verticalTraversal(Node* root){
         queue<pair<TreeNode*, int>> q;       
         q.push({root, 0});                   // q.push(node,col no); We assume root as col no 0 & all left will become negative col no as ...-3, -2, -1, (root)0, 1,2 3 ...
         while(q.size()){
-            int sz = q.size();
+            int sizee = q.size();
             vector<pair<int, int>>temp; 
-            for(int i=0;i<sz;i++){
+            for(int i=0;i<sizee;i++){
                 pair<Node*, int> c = q.front();
                 q.pop();
                 temp.push_back({c.second, c.first->val});
