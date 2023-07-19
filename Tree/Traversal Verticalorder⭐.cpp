@@ -11,7 +11,7 @@ vector<vector<int>> verticalTraversal(Node* root){
             int sizee = q.size();
             vector<pair<int, int>>temp; 
             for(int i=0;i<sizee;i++){
-                pair<Node*, int> c = q.front();
+                pair<TreeNode*, int> c = q.front();
                 q.pop();
                 temp.push_back({c.second, c.first->val});
                 if(c.first->left) q.push({c.first->left,  c.second - 1});
