@@ -29,7 +29,7 @@ vector<vector<int>> levelOrder(Node* root) {
 
 
 
-// Use case of Level order algorithm :- Max width of binary tree: tc: o(n) 
+// Use case of Level order algorithm :- Max width of binary tree: tc: o(n)   
                                int width(Node* root){
                                     if(!root)return 0;
     	                            queue<pair<Node*, int>> q;
@@ -42,7 +42,7 @@ vector<vector<int>> levelOrder(Node* root) {
     			                     Node* c = q.front().first;                  
     			                     int n = q.front().second;                      
     			                     q.pop();                                     
-    			                     if(c->left)q.push({c->left, n*2});       
+    			                     if(c->left)q.push({c->left, n*2});       //🟩 use unsigned long long int if n*2 exceeds the int size
     			                     if(c->right)q.push({c->right, n*2+1});    
     		                         }
     	                            }	
