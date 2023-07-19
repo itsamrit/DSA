@@ -7,9 +7,9 @@ void diagonal(Node* root){
     queue<Node*> q;
     q.push(root);
     while(q.size()){
-        int size = q.size();
+        int sizee = q.size();
         vector<int> temp;
-        while(size--){
+        while(sizee--){
             Node* c = q.front();
             q.pop();
             while(c){
