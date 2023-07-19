@@ -1,5 +1,5 @@
 // Diagonal clockwise(upperLeft to LowerRight) and anticlock(upperRight to LowerLeft)wise Order Traversal BFS
-// Iterative: // NOTE : ONLY BFS SOLUTION likE dijkstra since dfs will take o(nlogn).No required to read it.
+// Iterative: // NOTE : ONLY BFS SOLUTION likE dijkstra since dfs will take o(nlogn).No required to study that.
 Clockwise:
 void diagonal(Node* root){
     vector<vector<int>> ans;
