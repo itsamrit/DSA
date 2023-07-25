@@ -21,7 +21,7 @@ class Solution {
         auto left = dfs(root->left);
         auto right = dfs(root->right);
         
-        if (left.maxNode < root->val && root->val < right.minNode) {            //🟩 If Current node is greater than max in left AND smaller than min in right, it is a BST.
+        if (left.maxNode < root->val && root->val < right.minNode) {            //🟩 If Current node is greater than max in left AND smaller than min in right and below subtree is already bst i,e it doesn't return intmax and intmin then  it is a BST.
             return NodeValue( min(root->val, left.minNode), max(root->val, right.maxNode), left.maxSize + right.maxSize + 1);
         }
         
