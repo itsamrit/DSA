@@ -9,6 +9,7 @@ Famous problems : 1st Next greater ,
 
 
 🟩3rd type is any question where adjacent can be deleted & new adjacent formed may be deleted   :
+   🟩Code changes according to question, but it can be solved in o(n)
  Remove All Adjacent Duplicates in String Input: s = "deeedbbcccbdaa", k = 3
  Output: "aa"
  use stack<pair<char,int>>st; & run for loop & if current char is same as previous update count of top & else if st.push(new char) && now check if(st.top==k) pop
