@@ -2,6 +2,9 @@
 
 🟢Only normal queue & deque has front back
 
+🟢To convert int to long long : long long new= (long long)old;  & vice versa i,e int new = (int)old;
+  
+
 lexographically maximum no subset more than 10 questions with different just remember it is solved by stack
 
 👉 for(auto &i:mapp) Use &i otherwise iterator will remain on 1st element
