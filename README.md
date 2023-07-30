@@ -2,7 +2,15 @@
 
 🟢Only normal queue & deque has front back
 
-🟢To convert int to long long : long long new= (long long)old;  & vice versa i,e int new = (int)old;
+🟢For online round :
+
+To convert int to long long : long long new= (long long)old;  & vice versa i,e int new = (int)old;
+
+int to string : to_string(num);
+
+string to int : stoi(str);
+
+char to int & int to char : -'0' - 'a' respectively
   
 
 lexographically maximum no subset more than 10 questions with different just remember it is solved by stack
