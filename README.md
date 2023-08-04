@@ -10,6 +10,10 @@ string to int : stoi(str);
 
 char to int & int to char : -'0' - 'a' respectively
 
+Size of string is not in int when applying max,min function
+
+(int)forbidden[i].size()
+
 🟢Only normal queue & deque has front back
   
 lexographically maximum no subset more than 10 questions with different just remember it is solved by stack
