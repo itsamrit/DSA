@@ -1,3 +1,6 @@
+🟢😊 Always analyze the time complexity.
+If its 10^4 or 10^5, there is high chance it uses map or set nlogn
+
 🟢Learn the techniques of all question which method will be used so that even implementation fails,u get points
 
 🟢For online round :
