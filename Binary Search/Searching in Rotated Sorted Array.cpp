@@ -1,4 +1,4 @@
-//🟩🟩🟩🟩ALWAYS COMPARE WITH RIGHT PERSON i,e INDEX
+//🟩🟩🟩🟩ALWAYS COMPARE WITH last element i,e nums.size()-1
 int bs(vector<int>&nums,int target,int s,int e){
         while(s<=e){
             int mid=(s+(e-s)/2);
@@ -24,8 +24,8 @@ int bs(vector<int>&nums,int target,int s,int e){
                 ind=mid;
                 break;
             }
-            else if(nums[mid]>nums[right]){   //😊🟩Always compare with nums[right] NOT WITH nums[left]
-                                              //  U can also do this else if(nums[mid]<nums[right])    DONT COMPARE WITH BOTH LEFT AND RIGHT
+            else if(nums[mid]>nums[nums.size()-1]){   //😊🟩Always compare with nums[nums.size()-1 ] NOT WITH nums[0]
+                                              //  U can also do this else if(nums[mid]<nums[nums.size()-1])    DONT COMPARE WITH BOTH 0 AND last element
                 left=mid+1;
             }
             else{
