@@ -33,30 +33,27 @@ x=4&3 kahi common ki baat ho toh & operator
   
 
   
+Binary to Decimal conversion :
+    string s = "110010"; 
+    bitset<32> b(s);
+    unsigned long val = b.to_ulong();
 
-bitset<32>b(s);  int k=b.to_ullong();    s=b.to_string();
+Decimal to Binary conversion :
+    unsigned long val = 50; 
+    bitset<32> b(val);
+    string s = b.to_string();
+
+
 b.flip(i);    b.flip(); / flips whole
-bitset datatype is array of bool whose indexing start from right
-Everything must be in ()
-Greater the num greater the bit representation 
-1101(2) is used to denote bitset
-long long is used for both 32 and 64 bits but functions of 32 bits are used as normal int not long long 
-because ll represents 64 bits.
-cdbitset<32>b(s);
-
-
-
-
-
-bitset<32>b(s);  // size maybe anything like 9484  
-int x = 5328;
-string s= "1010011010000";
-b.flip(i);
-b.flip(); // flips whole 
-cout<<b;  // 00000000000000000001010011010000              
-int k=b.to_ullong();    s=b.to_string();
 NOTE:1) bitset is not array but its element are int. eg: int tmp=x[4]; //1
 2) ^ & | can be applied direct to bitset also
+3)bitset datatype is array of bool whose indexing start from right
+4)Everything must be in ()
+4)Greater the num greater the bit representation 
+5)1101(2) is used to denote bitset in problems given to u
+
+
+
 
 
   
