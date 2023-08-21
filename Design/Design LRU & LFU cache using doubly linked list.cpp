@@ -34,21 +34,21 @@ public:
         tail->prev = head;
     }
     
-    void deleteNode(node* curNode){
+    void deleteNode(node* curNode){              // as u delete in doubly linked list
         node* prevNode = curNode->prev;
         node* nextNode = curNode->next;
         prevNode->next = nextNode;
         nextNode->prev = prevNode;
     }
     
-    void addNode(node* curNode){
+    void addNode(node* curNode){                // as u add in doubly linked list
         curNode->next = head->next;
         curNode->prev = head;
         curNode->next->prev = curNode;
         head->next = curNode;
     }
     
-    int get(int key) {
+    int get(int key) {                         
         if(map.find(key) == map.end()) return -1;
         node* curNode = map[key];
         int result = curNode->val;
