@@ -11,7 +11,7 @@
 
 class LRUCache {
 public:
-    class node{ //👍U can make class node outside this class also like in implementation of trie
+    class node{ //👍U can make class node outside this class also like in implementation of trie   //🟩DOUBLY LINKEDLIST
         public:
             int key;
             int val;
