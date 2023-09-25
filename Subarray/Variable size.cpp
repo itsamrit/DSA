@@ -33,35 +33,32 @@ int lengthOfLongestSubstring(string s) {
 // MINIMUM WINDOW SUBSTRING/ Substring of string2 containig any PERMUTATION i,e all char of string1 (fixed)
 
 string minWindow(string s, string t) {
-        int m=s.size(), n=t.size();
-        map<char, int> mp;
-        
-        for(auto x:t)  mp[x]++;
-        
-        int count = mp.size();
-        int i = 0, j = 0 , start=0 , ans=INT_MAX;
-
-        while (j < s.length()) {
-            mp[s[j]]--;                   //🟩This will make faltu elements count negative so that in mp[s[i]]++ cant make them 1 max go to 0
-            if (mp[s[j]] == 0) count--;          
- 
-            while (count == 0) {         //🟩 While valid unlike above problem keep updating the ans and deleting the leftmost
-                    if (ans > j - i + 1) {
-                        ans = j - i + 1;
-                        start = i;
-                    }
-                    mp[s[i]]++;         // Removing elements of s from left. ++ here doesnt mean including, it means excluding
-                    if (mp[s[i]] > 0)   // if any 1 frquency of any element of t becomes less
-                        count++;
-                    i++;
-            }
-            
-            j++;
+        unordered_map<char,int>m1,m2;
+        for(int i=0;i<t.size();i++){
+            m1[t[i]]++;
         }
-        if (ans != INT_MAX) return s.substr(start, ans);
-        else return "";
-}
+        int ans=INT_MAX;
+        int cnt =0;
+        int j=0;
+        int ii=-1;
+        for(int i=0;i<s.size();i++){
+            m2[s[i]]++;
+            if(m1.find(s[i])!=m1.end() && m2[s[i]]==m1[s[i]])cnt++;
+                
+            while(cnt==m1.size()){      //🟩 While valid unlike above problem keep updating the ans and deleting the leftmost
+                if(i-j+1<ans){
+                    ans=i-j+1;
+                    ii=j;
+                }
+                m2[s[j]]--;
+                if(m1.find(s[j])!=m1.end() && m2[s[j]]<m1[s[j]])cnt--;
+                j++;
+            }
 
+        }
+        if(ii==-1)return "";
+        return s.substr(ii,ans);
+}
 
 // Shortest Subarray with sum at least k with array having no negative value : 👉Prefix sum of array is monotonic increasing.
 //          So we dont store prefix sum & dont pop any right element to make prefix sum monotinically increasing
