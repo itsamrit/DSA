@@ -43,7 +43,7 @@ string minWindow(string s, string t) {
         int ii=-1;
         for(int i=0;i<s.size();i++){
             m2[s[i]]++;
-            if(m1.find(s[i])!=m1.end() && m2[s[i]]==m1[s[i]])cnt++;
+            if(m1.count(s[i]) && m2[s[i]]==m1[s[i]])cnt++;
                 
             while(cnt==m1.size()){      //🟩 While valid unlike above problem keep updating the ans and deleting the leftmost
                 if(i-j+1<ans){
@@ -51,7 +51,7 @@ string minWindow(string s, string t) {
                     ii=j;
                 }
                 m2[s[j]]--;
-                if(m1.find(s[j])!=m1.end() && m2[s[j]]<m1[s[j]])cnt--;
+                if(m1.count(s[j]) && m2[s[j]]<m1[s[j]])cnt--;
                 j++;
             }
 
