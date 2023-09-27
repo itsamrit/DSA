@@ -1,5 +1,5 @@
 //Next Greater Element to right
-
+//In circular array, just copy the whole array at end. 
 vector<int> nextLargerElementtoright(vector<int>nums, int n){
         stack<int> s;        
         vector<int> ans(n);
