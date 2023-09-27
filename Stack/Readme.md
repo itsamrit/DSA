@@ -39,3 +39,9 @@ AB has score A + B, where A and B are balanced parentheses strings.
         }
         return ans;
 }
+
+
+🟩132 pattern can be solved finding next smaller to left & right of all elements and then checking if any elements have both return true. U can modify it to make it in 1 loop
+
+Once rejected/deleted element for current is then rejected for all other element IN NGR element which is not next greater than current cant be next greater for the rest behind it
+
