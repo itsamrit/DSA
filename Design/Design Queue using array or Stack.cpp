@@ -12,7 +12,7 @@ class Queue {
     }
 
   Queue(int maxSize) {         //constructor called when object is created with size provided by user
-    (* this).maxSize = maxSize;
+    this->maxSize = maxSize;   // or  maxSize = maxSize;  or  (*this). == this->
     arr = new int[maxSize];
     start = -1;
     end = -1;
