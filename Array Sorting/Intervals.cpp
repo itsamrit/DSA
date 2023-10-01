@@ -3,7 +3,7 @@
   Merge the intervals  starting from interval where you inserted .tc for insertion: tc=0(n/2 inserting) & 0(n/2merging) =0(n)
   
 Sort the interval based on requirement either by starting index v[i][0] or ending index v[i][1] 
-Create another ans vector to insert the intervals.Dont modify existing array.If ans coming you can optimize space complex by modifying
+Create another ans vector to merge the intervals.Dont modify existing array.If ans coming you can optimize space complex by modifying
 
 
     vector<vector<int>> insert(vector<vector<int>>& in, vector<int>& neww) {
