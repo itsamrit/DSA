@@ -23,8 +23,8 @@ public:
             }
     };
     
-    node* head = new node(-1,-1);
-    node* tail = new node(-1,-1);
+    node* head = new node(-1,-1);    // head is always null. Everthing is inserted as head->next i,e at starting; 
+    node* tail = new node(-1,-1);    // tail is always null. If capacity full tail->prev i,e last element is deleted
     int capacity;
     unordered_map<int,node*> m;
     
