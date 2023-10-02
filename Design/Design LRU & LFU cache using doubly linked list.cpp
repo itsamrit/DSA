@@ -26,7 +26,7 @@ public:
     node* head = new node(-1,-1);
     node* tail = new node(-1,-1);
     int capacity;
-    unordered_map<int,node*> map;
+    unordered_map<int,node*> m;
     
     LRUCache(int cap) {        //it is called only when new object is created //u can also do (int c){ capacity = c;
         capacity = cap;        
@@ -34,43 +34,43 @@ public:
         tail->prev = head;
     }
     
-    void deleteNode(node* curNode){              // as u delete in doubly linked list
+    void deleteNode(node* curNode){              // helper functions // as u delete in doubly linked list  
         node* prevNode = curNode->prev;
         node* nextNode = curNode->next;
         prevNode->next = nextNode;
         nextNode->prev = prevNode;
     }
     
-    void addNode(node* curNode){                // as u add in doubly linked list
+    void addNode(node* curNode){                // helper functions // as u add in doubly linked list
         curNode->next = head->next;
         curNode->prev = head;
         curNode->next->prev = curNode;
         head->next = curNode;
     }
     
-    int get(int key) {                         
-        if(map.find(key) == map.end()) return -1;
-        node* curNode = map[key];
+    int get(int key) {                            
+        if(m.find(key) == m.end()) return -1;
+        node* curNode = m[key];
         int result = curNode->val;
-        map.erase(key);
+        m.erase(key);
         deleteNode(curNode);
         addNode(curNode);
-        map[key] = head->next;
+        m[key] = head->next;
         return result;
     }
     
     void put(int key, int value) {
-        if(map.find(key) != map.end()){
-            node* curNode = map[key];
-            map.erase(key);
+        if(m.find(key) != m.end()){
+            node* curNode = m[key];
+            m.erase(key);
             deleteNode(curNode);
         }
-        if(map.size() == capacity){
-            map.erase(tail->prev->key);
+        if(m.size() == capacity){
+            m.erase(tail->prev->key);
             deleteNode(tail->prev);
         }
         addNode(new node(key,value));
-        map[key] = head->next;
+        m[key] = head->next;
     }
 };
 
