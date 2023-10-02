@@ -1,5 +1,6 @@
 //Time Complexity : o(n) for both cases
 // https://takeuforward.org/data-structure/implement-stack-using-array/
+// 🟩🟩Stack is same as array, so we its implementation is simple
 class Stack {
   int size;
   int * arr;
