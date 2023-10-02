@@ -38,7 +38,6 @@ int main() {
 
 
 //USING QUEUE
-// 🟩🟩 We also implement stack using 2 queue same as we implement queue using 2 stack
 //https://takeuforward.org/data-structure/implement-stack-using-single-queue/
 class Stack {
   queue <int> q;
@@ -46,7 +45,7 @@ class Stack {
   void Push(int x) {       
     int s = q.size();
     q.push(x);
-    for (int i = 0; i < s; i++) {  
+    for (int i = 0; i < s; i++) {     
       q.push(q.front());
       q.pop();
     }
