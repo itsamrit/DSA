@@ -1,3 +1,5 @@
+🟢We never used & with int i,e int& i 
+
 🟢We can apply dp to all 4 direction if we need to run 4 direction for each cell : https://leetcode.com/problems/longest-increasing-path-in-a-matrix/
 
 🟢First think of first line i,e what if array of 0 size in recursion, half problem solved
