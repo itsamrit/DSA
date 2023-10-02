@@ -9,7 +9,7 @@
 🟢😊😒😒 Always always analyze the time complexity.
 If its 10^4 or 10^5, there is high chance it uses map or set nlogn
 
-
+🟢max/min between any number of arguments :  int a= max({a,b,c});
 
 🟢Learn the techniques of all question which method will be used so that even implementation fails,u get points
 
