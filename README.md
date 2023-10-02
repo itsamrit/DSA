@@ -1,4 +1,5 @@
 🟢😊 c++ over python because, u need to explain what is array in commment instead directly write in cpp as vector
+      Similar to java , i,e spring boot
       No multiple library , only bits 
       No priority queue hard. 
       Majority leetcode in cpp
