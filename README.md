@@ -1,3 +1,5 @@
+🟢😊 c++ over python because, u need to explain what is array in commment instead directly write in cpp as vector
+
 🟢😊😒😒 Always always analyze the time complexity.
 If its 10^4 or 10^5, there is high chance it uses map or set nlogn
 
