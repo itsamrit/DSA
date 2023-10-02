@@ -37,7 +37,8 @@ int main() {
 }
 
 
-//USING QUEUE(SINGLE QUEUE so that even if interviewer asks for doubly u can write this code)
+//USING QUEUE
+// 🟩🟩 We also implement stack using 2 queue same as we implement queue using 2 stack
 //https://takeuforward.org/data-structure/implement-stack-using-single-queue/
 class Stack {
   queue <int> q;
