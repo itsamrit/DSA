@@ -1,4 +1,4 @@
-//🟩🟩🟩🟩ALWAYS prefer to COMPARE WITH last element i,e nums.size()-1
+//🟩🟩🟩🟩ALWAYS prefer to COMPARE WITH RIGHT PERSON 💞💞❣️right person< or right person<= both gives correct answer
 int bs(vector<int>&nums,int target,int s,int e){
         while(s<=e){
             int mid=(s+(e-s)/2);
