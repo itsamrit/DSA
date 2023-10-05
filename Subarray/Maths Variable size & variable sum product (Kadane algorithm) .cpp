@@ -18,7 +18,7 @@ int maxProduct(vector<int>& nums) {
             if(nums[i]<0)
                 swap(minn,maxx);
                 
-            maxx=max(nums[i],maxx*nums[i]);
+            maxx=max(nums[i],maxx*nums[i]);  //maxx & minn stores max & min subarray attached with current nums[i]
             minn=min(nums[i],minn*nums[i]);
             ans=max(ans,maxx);
         }
