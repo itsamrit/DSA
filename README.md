@@ -1,3 +1,5 @@
+Java syntax : https://leetcode.com/discuss/study-guide/1170715/java-data-structure-mostly-used-syntax
+
 ```
 🟢😊 c++ over python because, u need to explain what is array in commment instead directly write in cpp as vector
       Similar to java , i,e spring boot
