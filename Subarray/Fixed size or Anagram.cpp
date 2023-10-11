@@ -42,20 +42,20 @@ vector<int> findAnagrams(string s, string p) {
 
 vector<int> maxSlidingWindow(vector<int>& nums, int k) {
         int n = nums.size();
-		vector<int> res;
-        deque<int> mq;              // Here deque store index not value
+	vector<int> res;
+        deque<int>d;              // Here deque store index not value
     
         for(int i=0;i<k;i++){
-            while(mq.size() && nums[mq.back()] < nums[i]) mq.pop_back();   // pop if back is lesser than new element i,e nums[i]
-            mq.push_back(i);
+            while(d.size() && nums[d.back()] < nums[i]) d.pop_back();   // pop if back is lesser than new element i,e nums[i]
+            d.push_back(i);
         }
-        res.push_back(nums[mq.front()]);   // mq.front () always have maximum value of that window & we will maintain this in next loop
+        res.push_back(nums[d.front()]);   // d.front () always have maximum value of that window & we will maintain this in next loop
         
         for (int i=k; i<n; i++) {
-            if (mq.size() && mq.front() <= i-k) mq.pop_front();      //pop if it is previous window's 1st element i,e it cant be part of current window
-            while (mq.size() && nums[mq.back()] < nums[i]) mq.pop_back();   // pop if back is lesser than new element i,e nums[i]
-            mq.push_back(i);  
-            res.push_back(nums[mq.front()]);
+            if (d.size() && d.front() <= i-k) d.pop_front();      //pop if it is previous window's 1st element i,e it cant be part of current window
+            while (d.size() && nums[d.back()] < nums[i]) d.pop_back();   // pop if back is lesser than new element i,e nums[i]
+            d.push_back(i);  
+            res.push_back(nums[d.front()]);
         }
         
         return res;
