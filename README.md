@@ -1,4 +1,4 @@
-Java syntax : https://leetcode.com/discuss/study-guide/1170715/java-data-structure-mostly-used-syntax
+describe how to declare, add , remove and determine size in  java  of following datatypes array , dynamic array , string , char , stack , queue, deque, priority queue, map
 
 ```
 🟢😊 c++ over python because, u need to explain what is array in commment instead directly write in cpp as vector
