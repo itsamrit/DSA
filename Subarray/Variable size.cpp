@@ -8,6 +8,8 @@
 // Unique elements longest or total subarray
 
 // Longest substring with all unique elements i,e j-i unique(fixed) characters if size of substring is k then all k must be different characters
+https://leetcode.com/problems/longest-substring-without-repeating-characters/
+
 TC=o(nlogn)
 int lengthOfLongestSubstring(string s) {
         int i=0,j=0;
@@ -31,6 +33,7 @@ int lengthOfLongestSubstring(string s) {
 
 
 // MINIMUM WINDOW SUBSTRING/ Substring of string2 containig any PERMUTATION i,e all char of string1 (fixed)
+https://leetcode.com/problems/minimum-window-substring/
 
 string minWindow(string s, string t) {
         unordered_map<char,int>m1,m2;
@@ -65,7 +68,7 @@ string minWindow(string s, string t) {
 //          When subarray found store it in ans & then pop left element till it subarray sum becomes less than k & then again start adding right element. again found subarray store (ans=min(..)) repeat the process
 
 
-
+https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/
 // Shortest Subarray with Sum at Least K with array having negative value : We need to pop rightmost elements to make prefix sum monotonically increasing
                                                                             // We need basic feature of pop left most element
                                                                         // We need to store prefix sum of each index . 
