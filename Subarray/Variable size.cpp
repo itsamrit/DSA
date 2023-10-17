@@ -94,3 +94,7 @@ https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/
         if(ans!=INT_MAX)return ans;
         return -1;
     }
+
+
+Practise :-
+https://leetcode.com/problems/longest-repeating-character-replacement/
