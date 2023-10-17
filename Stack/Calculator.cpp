@@ -6,49 +6,46 @@ https://leetcode.com/problems/basic-calculator-ii/
    In both cases we need to make number from char so there will be another while loop inside main loop
    🟢IN +-/* whenever +- comes we simply push it into stack & whenever /* comes we go back or pop 1 element and push the current element multiplied or divided by poped element.
        At last we add all elemetns of stack.
-           int calculate(string s) {
+
+    int calculate(string s) {
         stack<int>st;
+        char prev ='+';
         int i=0;
-        int pre=1;
-        char prev='+';
         while(i<s.size()){
-            
-            int temp=0;
-            while(i<s.size() && s[i]==' '){
+            while(i<s.size() && s[i]==' ')i++;
+            string temp="";
+            while(i<s.size() && s[i]>='0' && s[i]<='9'){
+                temp.push_back(s[i]);
                 i++;
             }
-            while(i<s.size() && s[i]-'0'>=0 && s[i]-'0'<=9){
-                temp*=10;
-                temp+=s[i]-'0';
-                i++;
+            int tempp=0;
+            if(temp!=""){
+                tempp=stoi(temp);
+                if(prev=='+'){
+                    st.push(tempp);
+                }
+                else if(prev =='-'){
+                    st.push(-1*tempp);
+                }
+                else if(prev == '*'){
+                    st.top()*=tempp;
+                }
+                else if(prev == '/'){
+                    st.top()/=tempp;
+                }
             }
-            
-            if(prev=='*'){
-                st.top()*=temp;
-            }
-            else if(prev=='/'){
-                st.top()/=temp;
-            }
-            else {
-                st.push(temp*pre);
-            }
-            while(i<s.size() && s[i]==' '){
-                i++;
-            }
-            if(i<s.size()){
-                if(s[i]=='+'){prev='+';pre=1;}
-                else if(s[i]=='-') {prev='+';pre=-1;}
-                else prev=s[i];
+            while(i<s.size() && s[i]==' ')i++;
+            if(i<s.size() && (s[i]=='+' || s[i]=='-' || s[i]=='*' || s[i]=='/')){
+                prev =s[i];
                 i++;
             }
         }
-        int ans=0;
+        int ans =0;
         while(st.size()){
-            ans+=st.top();
+            ans += st.top();
             st.pop();
         }
         return ans;
-        
     }
 
 https://leetcode.com/problems/basic-calculator/
