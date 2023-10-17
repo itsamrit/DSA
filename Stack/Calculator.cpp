@@ -1,5 +1,5 @@
 🟢Like +- have same priority so as /* have same priority.eg: 2*3/2 .U either divide first or multiply ans will be same
-
+👌U can, Instead of else always write else if to easily debug
 
 🟢You will be given either +-/* or +-() questions . You cant have */ and () combined and solved using stack
    In both cases we need to make number from char so there will be another while loop inside main loop
@@ -52,7 +52,7 @@
        
    🟢IN +-() push all element in stack and when ) comes we go back and add each element of stack till ( appers. At last we can add all elements of stack.
        Improvement : We can add each element while traversing and only push sumation of all element before ( appears & pop that top most sumation when ) appears & add it to current sum.
-           int calculate(string s) {
+           
     int calculate(string s) {
         int ans =0;
         int sign=1;
@@ -71,7 +71,8 @@
                 tempp=stoi(temp);
                 ans += sign*tempp;
             }
-            while(i<s.size() && s[i]==' ')i++;
+            while(i<s.size() && s[i]==' ')i++;  //😊either u write this or not, no difference in output
+           
             if(i<s.size() && s[i]=='+'){
                 sign=1;
                 i++;
