@@ -1,6 +1,7 @@
 🟢Like +- have same priority so as /* have same priority.eg: 2*3/2 .U either divide first or multiply ans will be same
 👌U can, Instead of else always write else if to easily debug
 
+https://leetcode.com/problems/basic-calculator-ii/
 🟢You will be given either +-/* or +-() questions . You cant have */ and () combined and solved using stack
    In both cases we need to make number from char so there will be another while loop inside main loop
    🟢IN +-/* whenever +- comes we simply push it into stack & whenever /* comes we go back or pop 1 element and push the current element multiplied or divided by poped element.
@@ -49,7 +50,8 @@
         return ans;
         
     }
-       
+
+https://leetcode.com/problems/basic-calculator/
    🟢IN +-() push all element in stack and when ) comes we go back and add each element of stack till ( appers. At last we can add all elements of stack.
        Improvement : We can add each element while traversing and only push sumation of all element before ( appears & pop that top most sumation when ) appears & add it to current sum.
            
