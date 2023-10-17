@@ -64,25 +64,25 @@
             else if(s[i]=='-'){
                 sign=-1;
             }
-            else if(s[i]-'0'>=0 && s[i]-'0'<=9){
+            else if(i<s.size() && s[i]-'0'>=0 && s[i]-'0'<=9){
                 int temp;
                 string tep="";
-                while(s[i]-'0'>=0 && s[i]-'0'<=9){
+                while(i<s.size() && s[i]-'0'>=0 && s[i]-'0'<=9){
                     tep.push_back(s[i]);
                     i++;
                 }
                 i--;
-                temp=stoi(tep);
+                if(tep!="")temp=stoi(tep);
                 ans+=sign*temp;
                 
             }
-            else if(s[i]=='('){
+            else if(i<s.size() && s[i]=='('){
                 st.push(ans);
                 st.push(sign);
                 ans=0;
                 sign=1;
             }
-            else if(s[i]==')'){
+            else if(i<s.size() && s[i]==')'){
                 ans*=st.top();
                 st.pop();
                 ans+=st.top();
