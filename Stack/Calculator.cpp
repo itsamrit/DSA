@@ -53,43 +53,47 @@
    🟢IN +-() push all element in stack and when ) comes we go back and add each element of stack till ( appers. At last we can add all elements of stack.
        Improvement : We can add each element while traversing and only push sumation of all element before ( appears & pop that top most sumation when ) appears & add it to current sum.
            int calculate(string s) {
-        stack<int>st;
+    int calculate(string s) {
+        int ans =0;
         int sign=1;
+        stack<int>st;
         int i=0;
-        int ans=0;
+       
         while(i<s.size()){
-            if(s[i]=='+'){
+            while(i<s.size() && s[i]==' ')i++;
+            string temp="";
+            while(i<s.size() && s[i]>='0' && s[i]<='9'){
+                temp.push_back(s[i]);
+                i++;
+            }
+            int tempp=0;
+            if(temp!=""){
+                tempp=stoi(temp);
+                ans += sign*tempp;
+            }
+            while(i<s.size() && s[i]==' ')i++;
+            if(i<s.size() && s[i]=='+'){
                 sign=1;
+                i++;
             }
-            else if(s[i]=='-'){
+            else if(i<s.size() && s[i]=='-'){
                 sign=-1;
-            }
-            else if(i<s.size() && s[i]-'0'>=0 && s[i]-'0'<=9){
-                int temp;
-                string tep="";
-                while(i<s.size() && s[i]-'0'>=0 && s[i]-'0'<=9){
-                    tep.push_back(s[i]);
-                    i++;
-                }
-                i--;
-                if(tep!="")temp=stoi(tep);
-                ans+=sign*temp;
-                
+                i++;
             }
             else if(i<s.size() && s[i]=='('){
                 st.push(ans);
                 st.push(sign);
                 ans=0;
-                sign=1;
+                sign =1;
+                i++;
             }
             else if(i<s.size() && s[i]==')'){
-                ans*=st.top();
+                ans = ans*st.top();
                 st.pop();
-                ans+=st.top();
+                ans += st.top();
                 st.pop();
+                i++;
             }
-            i++;
         }
         return ans;
-        
     }
