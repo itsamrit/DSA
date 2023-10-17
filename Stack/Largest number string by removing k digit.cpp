@@ -1,5 +1,8 @@
 Next greater element or Larget possible number from string maintains the stack as monotonically increasing.Each element of stack is smaller than prev element in next greater
 
+
+https://leetcode.com/problems/remove-duplicate-letters/
+//Remove Dublicates letters 
 string removeDuplicateLetters(string s) {
         unordered_map<char,int>vis;
         unordered_map<char,int>last;
