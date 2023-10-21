@@ -6,3 +6,4 @@ Always use map instead of set and priority queue all have same time complexity
 set is use to just find whether present or not or to sort but both these can be performed by map .
 map<int, set<pair<int, string>>> m; // used to find lowest or highest sorted 
 map<int , map<int,string>>m;
+use rbegin and rend to use descend ing order
