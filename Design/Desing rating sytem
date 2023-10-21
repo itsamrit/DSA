@@ -1,5 +1,5 @@
 MUST DO QUESTION TO UNDERSTAND NESTED MAP,SET, and priority queue
-
+map<int,int> is actually set<pair<int,int>> so tc doesnt effected even if u use map 
 https://leetcode.com/problems/design-a-food-rating-system/description/
 Always use map instead of set and priority queue all have same time complexity 
 
