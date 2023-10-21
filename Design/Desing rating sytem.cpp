@@ -13,3 +13,6 @@ use rbegin and rend to use descend ing order
   Since even after finding key we need to loop to search for particular value .
 We use set<pair<key,value>>   or map<pair<key,value>, useless>>  not map<key,value> 
 becaue we search in logn m.count({key,value})   m.erase({key,value})
+
+
+💕Multiset or multimap has 1 problem u need another internal serach since there can be multiple same key
