@@ -18,6 +18,8 @@ becaue we search in logn m.count({key,value})   m.erase({key,value})
 💕Multiset or multimap has 1 problem u need another internal serach since there can be multiple same key
 
 
+
+
 Design rating system
 https://leetcode.com/problems/design-a-food-rating-system/description/
 
@@ -28,6 +30,10 @@ https://leetcode.com/problems/design-a-food-rating-system/description/
 
 Design number container system
 https://leetcode.com/problems/design-a-number-container-system/
+💕1 to many relationship with map<int,set<int>>  provides
+    logn searchibility
+    logn sorting in value
+
 
 class NumberContainers {
 public:
