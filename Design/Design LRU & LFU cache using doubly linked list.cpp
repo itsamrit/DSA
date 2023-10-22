@@ -15,7 +15,7 @@ public:
         public:
             int key;
             int val;   
-            node* prev;
+            node* prev;     // in singly linked list prev is not present. Rest same
             node* next;
             node(int k, int v){ 
                 key = k;
@@ -30,8 +30,9 @@ public:
     
     LRUCache(int cap) {        //it is called only when new object is created //u can also do (int c){ capacity = c;
         capacity = cap;        
-        head->next = tail;
-        tail->prev = head;
+        head->next = tail;     // Since head and tail always be null so added to head->next and deltion to tail->prev;
+        tail->prev = head;     //  or if u change head->prev= tail & tail->next = head then del tail->next and add node in head->prev
+                            //         otherwise lot of boundry cases error 
     }
     
     void deleteNode(node* curNode){              // helper functions // as u delete in doubly linked list  
