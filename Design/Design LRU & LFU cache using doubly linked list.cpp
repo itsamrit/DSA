@@ -8,13 +8,13 @@
  * int param_1 = obj->get(key);
  * obj->put(key,value);
  */
-
+//🟩Modified DOUBLY LINKEDLIST which stores 2 values instead of 1 since we need to store key-value pair
 class LRUCache {
 public:
-    class node{ //👍U can make class node outside this class also like in implementation of trie   //🟩DOUBLY LINKEDLIST
+    class node{ //👍U can make class node outside this class also like in implementation of trie   //🟩Modified DOUBLY LINKEDLIST which stores 2 values instead of 1 
         public:
             int key;
-            int val;
+            int val;   
             node* prev;
             node* next;
             node(int k, int v){ 
@@ -23,7 +23,7 @@ public:
             }
     };
     
-    node* head = new node(-1,-1);    // head is always null. Everthing is inserted as head->next i,e at starting; 
+    node* head = new node(-1,-1);   // since 0 to 10^5 is range of key & val so default value can be any neg number // head is always null. Everthing is inserted as head->next i,e at starting; 
     node* tail = new node(-1,-1);    // tail is always null. If capacity full tail->prev i,e last element is deleted
     int capacity;
     unordered_map<int,node*> m;
