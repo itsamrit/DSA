@@ -30,9 +30,9 @@ public:
     
     LRUCache(int cap) {        //it is called only when new object is created //u can also do (int c){ capacity = c;
         capacity = cap;        
-        head->next = tail;     // Since head and tail always be null so added to head->next and deltion to tail->prev;
-        tail->prev = head;     //  or if u change head->prev= tail & tail->next = head then del tail->next and add node in head->prev
-                            //         otherwise lot of boundry cases error 
+        head->next = tail;     //👌👌👌👌Head is always at starting tail is in right side at end. so head->next = tail otherwise lot of boundry cases
+        tail->prev = head;     
+                            
     }
     
     void deleteNode(node* curNode){              // helper functions // as u delete in doubly linked list  
