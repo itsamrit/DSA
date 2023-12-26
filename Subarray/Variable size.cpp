@@ -30,6 +30,29 @@ int lengthOfLongestSubstring(string s) {
         //return totalsubarrays with k unique char;
 }
 
+PYTHON CODE :
+    def lengthOfLongestSubstring(self, s: str) -> int:
+        i = 0
+        j = 0
+        m = {}
+        mx = 0
+
+        while (j < len(s)):
+            m[s[j]] = m.get(s[j], 0) + 1
+
+            while len(m) < j + 1 - i and i < len(s):
+                m[s[i]] -= 1
+                if m[s[i]] == 0:
+                    del m[s[i]]
+                i += 1
+
+            if len(m) == j - i + 1:
+                mx = max(mx, j + 1 - i)
+
+            j += 1
+        return mx   
+
+
 
 
 // MINIMUM WINDOW SUBSTRING/ Substring of string2 containig any PERMUTATION i,e all char of string1 (fixed)
